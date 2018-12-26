@@ -25,7 +25,7 @@ SECRET_KEY = 'wpd&wsp*0x5%u1x%_!lwq1vu!dn6rp8@lvzh0gpb*lr5bx#v6u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
