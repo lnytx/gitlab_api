@@ -19,6 +19,7 @@ from django.conf.urls import url
 from devops import views as cty_devops
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^index/$', cty_devops.test,name='test'),
