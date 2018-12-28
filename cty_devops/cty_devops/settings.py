@@ -66,7 +66,6 @@ TEMPLATES = [
         },
     },
 ]
-print("TEMPLATES",TEMPLATES[0]['DIRS'])
 WSGI_APPLICATION = 'cty_devops.wsgi.application'
 
 

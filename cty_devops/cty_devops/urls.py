@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from devops import views as test
+from devops import views as cty_devops
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^index/$', test.test,name='test'),
+    url(r'^index/$', cty_devops.test,name='test'),
+    url(r'^gitlab/$', cty_devops.gitlab_commit,name='gitlab_commit'),
+    url(r'^cty-gov/*', cty_devops.gitlab_commit,name='gitlab_commit'),
 ]
