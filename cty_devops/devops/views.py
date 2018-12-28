@@ -2,14 +2,13 @@ import logging
 import os
 from datetime import datetime, timedelta
 
-from django.http import response, HttpResponse, JsonResponse
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
 
 import requests
 import json
 
 # Create your views here.
-from pycharm_django.tools.python_hooks import pexpect_command, python_ssh_command
+from pycharm_django.cty_devops.tools.python_hooks import pexpect_command, python_ssh_command
 
 
 def test(request):
