@@ -79,7 +79,7 @@ def gitlab_commit(request):
     print("project_name1111111", project_name)
     print("sub_project_name", sub_project_name)
     cmds = ['git pull', 'scp', 'git clone']
-    pathDir = src  # 先检查当前目录是否存在项目，
+    pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
     print("pathDir", pathDir)
     if project_name in pathDir:
         logging.info(str(project_name) + '已存在')
