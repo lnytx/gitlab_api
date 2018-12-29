@@ -8,7 +8,7 @@ import requests
 import json
 
 # Create your views here.
-from python_hooks  import pexpect_command, python_ssh_command
+from python_hooks import python_ssh_command, pexpect_command
 
 
 def test(request):
@@ -22,9 +22,7 @@ def gitlab_commit(request):
     url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/commits?private_token=%s&per_page=50' % private_token
     r = requests.get(url3)
     data = r.text
-    print("data1", type(data), data)
     a = json.loads(data)
-    print("data", type(a), len(a), a)
     my_project = []
     result={}
     msg = []
@@ -78,15 +76,15 @@ def gitlab_commit(request):
         sub_project_name = '/'.join(tmp[i] for i in range(1, len(tmp) - 1))  # 获取小的项目名称
     else:
         sub_project_name = project_name
-    print("project_name", project_name)
+    print("project_name1111111", project_name)
     print("sub_project_name", sub_project_name)
     cmds = ['git pull', 'scp', 'git clone']
-    pathDir = os.listdir(os.getcwd())  # 先检查当前目录是否存在项目，
+    pathDir = src  # 先检查当前目录是否存在项目，
     print("pathDir", pathDir)
     if project_name in pathDir:
         logging.info(str(project_name) + '已存在')
         cmd = cmds[0]
-        project_src = os.path.join(os.path.join(os.getcwd(), src), project_name)
+        project_src = os.path.join(src, project_name)
         # 有项目就先git pull
         pexpect_command(cmd, master_ip, username[1], password[1], project_name, project_src)
         logging.info("git pull:%s" % cmd)
