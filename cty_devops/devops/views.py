@@ -8,7 +8,7 @@ import requests
 import json
 
 # Create your views here.
-from pycharm_django.tools.python_hooks import pexpect_command, python_ssh_command
+from python_hooks  import pexpect_command, python_ssh_command
 
 
 def test(request):

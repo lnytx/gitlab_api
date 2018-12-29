@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from pycharm_django.cty_devops.devops import views as cty_devops
+from devops import views as cty_devops
 
 
 
