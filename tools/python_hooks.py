@@ -168,13 +168,13 @@ def application(environ, start_response):
     return '<h1>deploy %s</h1>' % (environ['PATH_INFO'][1:])
 
 
-if __name__=='__main__':
-    # s=b'\xe6\x89\xa7\xe8\xa1\x8c\xe7\xbb\x93\xe6\x9e\x9c'
-    # print(s.decode('utf-8'))
-
-
-    httpd = make_server('', 8099, application)  # 监听8009端口
-    print('Serving HTTP on port 8009...')#启动一个简单的web服务
-    httpd.serve_forever()
+# if __name__=='__main__':
+#     # s=b'\xe6\x89\xa7\xe8\xa1\x8c\xe7\xbb\x93\xe6\x9e\x9c'
+#     # print(s.decode('utf-8'))
+#
+#
+#     httpd = make_server('', 8099, application)  # 监听8009端口
+#     print('Serving HTTP on port 8009...')#启动一个简单的web服务
+#     httpd.serve_forever()
 
 
