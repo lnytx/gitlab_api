@@ -1,0 +1,288 @@
+[2018-12-29 14:26:18] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2018-12-29 14:26:18] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.025289973005326354
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.07860264500577333
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.050768772469940916
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03699646486360079
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.5400228773801715
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:26:19] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:26:19] INFO [gitlab_commit: views.py, 93] git clone:git clone http://192.168.77.151:8084/root/cty-gov.git
+[2018-12-29 14:26:19] INFO [pexpect_command: python_hooks.py, 25] git clone http://192.168.77.151:8084/root/cty-gov.git开始
+[2018-12-29 14:26:19] ERROR [pexpect_command: python_hooks.py, 59] module 'pexpect' has no attribute 'spawn'
+[2018-12-29 14:33:23] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2018-12-29 14:33:23] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.025289973005326354
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.07860264500577333
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.050768772469940916
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03699646486360079
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.5400228773801715
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:33:23] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:33:23] INFO [gitlab_commit: views.py, 93] git clone:git clone http://192.168.77.151:8084/root/cty-gov.git
+[2018-12-29 14:33:23] INFO [pexpect_command: python_hooks.py, 25] git clone http://192.168.77.151:8084/root/cty-gov.git开始
+[2018-12-29 14:33:23] ERROR [pexpect_command: python_hooks.py, 59] module 'pexpect' has no attribute 'spawn'
+[2018-12-29 14:35:01] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2018-12-29 14:35:01] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.025289973005326354
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.07860264500577333
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.050768772469940916
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03699646486360079
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.5400228773801715
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:35:01] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:35:01] INFO [gitlab_commit: views.py, 93] git clone:git clone http://192.168.77.151:8084/root/cty-gov.git
+[2018-12-29 14:35:01] INFO [pexpect_command: python_hooks.py, 25] git clone http://192.168.77.151:8084/root/cty-gov.git开始
+[2018-12-29 14:35:01] ERROR [pexpect_command: python_hooks.py, 59] module 'pexpect' has no attribute 'spawn'
+[2018-12-29 14:36:10] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2018-12-29 14:36:10] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.025289973005326354
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.07860264500577333
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.050768772469940916
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03699646486360079
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.5400228773801715
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:36:10] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:36:10] INFO [gitlab_commit: views.py, 93] git clone:git clone http://192.168.77.151:8084/root/cty-gov.git
+[2018-12-29 14:36:10] INFO [pexpect_command: python_hooks.py, 25] git clone http://192.168.77.151:8084/root/cty-gov.git开始
+[2018-12-29 14:36:10] ERROR [pexpect_command: python_hooks.py, 59] module 'pexpect' has no attribute 'spawn'
+[2018-12-29 14:37:47] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2018-12-29 14:37:47] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.025289973005326354
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.07860264500577333
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.050768772469940916
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03699646486360079
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.5400228773801715
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:37:47] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:37:47] INFO [gitlab_commit: views.py, 93] git clone:git clone http://192.168.77.151:8084/root/cty-gov.git
+[2018-12-29 14:37:47] INFO [pexpect_command: python_hooks.py, 25] git clone http://192.168.77.151:8084/root/cty-gov.git开始
+[2018-12-29 14:37:47] ERROR [pexpect_command: python_hooks.py, 59] module 'pexpect' has no attribute 'spawn'
+[2018-12-29 14:39:24] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2018-12-29 14:39:24] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.02550114086242778
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.08170642594264645
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.05135130784419598
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.037597246420164404
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.5390240407108638
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:39:24] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:39:24] INFO [gitlab_commit: views.py, 93] git clone:git clone http://192.168.77.151:8084/root/cty-gov.git
+[2018-12-29 14:39:24] INFO [pexpect_command: python_hooks.py, 25] git clone http://192.168.77.151:8084/root/cty-gov.git开始
+[2018-12-29 14:39:24] ERROR [pexpect_command: python_hooks.py, 59] module 'pexpect' has no attribute 'spawn'
+[2018-12-29 14:41:52] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2018-12-29 14:41:52] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.02550114086242778
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.08170642594264645
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.05135130784419598
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.037597246420164404
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.5390240407108638
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:41:52] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:41:52] INFO [gitlab_commit: views.py, 93] git clone:git clone http://192.168.77.151:8084/root/cty-gov.git
+[2018-12-29 14:41:52] INFO [pexpect_command: python_hooks.py, 25] git clone http://192.168.77.151:8084/root/cty-gov.git开始
+[2018-12-29 14:41:52] ERROR [pexpect_command: python_hooks.py, 59] module 'pexpect' has no attribute 'spawn'
+[2018-12-29 14:46:01] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2018-12-29 14:46:01] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.02550114086242778
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.08170642594264645
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.05135130784419598
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.037597246420164404
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.5390240407108638
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2018-12-29 14:46:01] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2018-12-29 14:46:01] INFO [gitlab_commit: views.py, 93] git clone:git clone http://192.168.77.151:8084/root/cty-gov.git
+[2018-12-29 14:46:01] INFO [pexpect_command: python_hooks.py, 25] git clone http://192.168.77.151:8084/root/cty-gov.git开始
+[2018-12-29 14:46:01] ERROR [pexpect_command: python_hooks.py, 59] module 'pexpect' has no attribute 'spawn'

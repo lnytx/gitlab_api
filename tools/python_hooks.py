@@ -29,7 +29,7 @@ def pexpect_command(cmd,ip,username,password,project_name,project_src):
         print("bb")
         # logFileId = open(log_file, 'w')
         # process.logfile = logFileId
-        index = process.expect(["Username for", 'Password for', "password:","\(yes\/no\)\?", pexpect.EOF, pexpect.TIMEOUT])
+        index = process.expect(["Username for", 'Password for', "password:","\(yes\/no\)\?"])
         print("ss")
         print("index1",index,process.after)
         if index == 0:#git 命令
