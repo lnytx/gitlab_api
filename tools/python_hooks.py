@@ -24,7 +24,9 @@ def pexpect_command(cmd,ip,username,password,project_name,project_src):
     print("%s开始...." %cmd)
     logging.info('%s开始' %cmd)
     try:
+        print("aa")
         process = pexpect.spawn(cmd,cwd=project_src,logfile=sys.stdout)
+        print("bb")
         # logFileId = open(log_file, 'w')
         # process.logfile = logFileId
         index = process.expect(["Username for", 'Password for', "password:","\(yes\/no\)\?", pexpect.EOF, pexpect.TIMEOUT])
@@ -124,19 +126,19 @@ def application(environ, start_response):
     print("project_name",project_name)
     print("sub_project_name",sub_project_name)
     cmds=['git pull','scp','git clone']
-    pathDir = os.listdir(os.getcwd())#先检查当前目录是否存在项目，
+    pathDir = src#先检查当前目录是否存在项目，
     print("pathDir",pathDir)
     if project_name in pathDir:
         logging.info(str(project_name) + '已存在')
         cmd=cmds[0]
-        project_src = os.path.join(os.path.join(os.getcwd(), src),project_name)
+        project_src = os.path.join(src,project_name)
         #有项目就先git pull
         pexpect_command(cmd, master_ip, username[1], password[1], project_name, project_src)
         logging.info("git pull:%s" % cmd)
     else:#无项目就clone
         cmd='git clone http://192.168.77.151:8084/root/%s.git'%project_name
         logging.info("git clone:%s"%cmd)
-        project_src = os.getcwd()
+        project_src = src
         pexpect_command(cmd, master_ip, username[1], password[1], project_name, project_src)
     # 然后推送
     project_src = os.path.join(os.path.join(os.getcwd(), src), project_name)#重新设置project_src的值
