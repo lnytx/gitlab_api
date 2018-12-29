@@ -25,7 +25,7 @@ def pexpect_command(cmd,ip,username,password,project_name,project_src):
     logging.info('%s开始' %cmd)
     try:
         print("aa")
-        process = pexpect.spawn(cmd,cwd=project_src,logfile=sys.stdout)
+        process = pexpect.spawn(cmd,cwd=project_src)
         print("bb")
         # logFileId = open(log_file, 'w')
         # process.logfile = logFileId
