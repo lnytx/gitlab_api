@@ -24,13 +24,10 @@ def pexpect_command(cmd,ip,username,password,project_name,project_src):
     print("%s开始...." %cmd)
     logging.info('%s开始' %cmd)
     try:
-        print("aa")
         process = pexpect.spawn(cmd,cwd=project_src)
-        print("bb")
         # logFileId = open(log_file, 'w')
         # process.logfile = logFileId
         index = process.expect(["Username for", 'Password for', "password:","\(yes\/no\)\?", pexpect.EOF, pexpect.TIMEOUT])
-        print("ss")
         print("index1",index,process.after)
         if index == 0:#git 命令
             process.sendline(username)
