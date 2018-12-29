@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^index/$', cty_devops.test,name='test'),
     url(r'^gitlab/$', cty_devops.gitlab_commit,name='gitlab_commit'),
     url(r'^cty-gov/*', cty_devops.gitlab_commit,name='gitlab_commit'),
+    url(r'^test_gov/*', cty_devops.gitlab_commit,name='gitlab_commit'),
 ]
