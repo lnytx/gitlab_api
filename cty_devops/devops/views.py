@@ -91,10 +91,10 @@ def gitlab_commit(request):
     else:  # 无项目就clone
         cmd = 'git clone http://192.168.77.151:8084/root/%s.git' % project_name
         logging.info("git clone:%s" % cmd)
-        project_src = os.getcwd()
+        project_src = src
         pexpect_command(cmd, master_ip, username[1], password[1], project_name, project_src)
     # 然后推送
-    project_src = os.path.join(os.path.join(os.getcwd(), src), project_name)  # 重新设置project_src的值
+    project_src = os.path.join(src, project_name)  # 重新设置project_src的值
     sub_project = os.path.join(project_src, sub_project_name)  # 获取小项目路径
     if not os.path.isdir(sub_project):
         status={'msg':"%s不存的项目路径，请检查后重试"%sub_project_name}
