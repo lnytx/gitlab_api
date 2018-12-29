@@ -55,7 +55,7 @@ def gitlab_commit(request):
     password = ['zwfw2wsx#EDC', 'rootroot']  # 0为主机密码，1为gitlab密码
     src = '/data/projects'  # 项目所在路径，脚本文件放入此目录中
     # target = '/data/robert/app'#要分发的目标机器路径,存放jar包的目录
-    target = '/data/test'
+    target = '/data/test2'
     JAVA_HOME = '/opt/jdk1.8.0_171/bin/java'
     # os.system('cd /soft ； touch aaa.txt') # 切换到项目的目录，并且执行pull操作
     pathDirs = request.path.split('/')  # 获取前台传入的不带参数的项目路径
