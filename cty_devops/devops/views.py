@@ -62,7 +62,7 @@ def gitlab_commit(request):
     pathDirs = request.path.split('/')  # 获取前台传入的不带参数的项目路径
     tmp = [x for x in pathDirs if x != '']
     if ''.join(tmp[-1]).lower() == 'test':
-        ips = ['192.168.77.159']
+        ips = ['192.168.77.154']
     elif ''.join(tmp[-1]).lower() == 'pro':
         ips = []
     elif ''.join(tmp[-1]).lower() == 'dev':
