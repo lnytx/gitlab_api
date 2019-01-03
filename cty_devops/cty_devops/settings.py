@@ -16,9 +16,8 @@ import os
 import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print("BASE_DIR",BASE_DIR)
 sys.path.insert(0,os.path.join(os.path.dirname(BASE_DIR),'tools'))
-
+print("BASE_DIR",BASE_DIR)
 ALLOWED_HOSTS = ['*']
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -120,4 +119,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+print("ss",os.path.join(os.path.dirname(BASE_DIR), 'static'))
+
 STATIC_URL = '/static/'
+
+
+
+STATICFILES_DIRS = (
+os.path.join(os.path.dirname(BASE_DIR), 'static'),
+)

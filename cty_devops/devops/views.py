@@ -2,6 +2,7 @@ import logging
 import os
 from datetime import datetime, timedelta
 
+from django.http import HttpResponse
 from django.shortcuts import render
 
 import requests
@@ -61,7 +62,7 @@ def gitlab_commit(request):
     pathDirs = request.path.split('/')  # 获取前台传入的不带参数的项目路径
     tmp = [x for x in pathDirs if x != '']
     if ''.join(tmp[-1]).lower() == 'test':
-        ips = ['192.168.77.154']
+        ips = ['192.168.77.159']
     elif ''.join(tmp[-1]).lower() == 'pro':
         ips = []
     elif ''.join(tmp[-1]).lower() == 'dev':
@@ -124,3 +125,31 @@ def gitlab_commit(request):
     status={'sccuss':'提交成功'}
     return render(request,'index.html', {'result':msg,'status':status})
     # return HttpResponse(json.dumps(msg,ensure_ascii=False), content_type="application/json,charset=utf-8")
+
+def test1(request):
+    status = {'sccuss': '提交成功'}
+    return render(request, 'aaa/test.html', { 'status': status})
+def ddd(request):
+    private_token = 'x_aXP2ZJV89b2q3dWsRw'
+    #url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=cty-config&private_token=%s&per_page=50' % private_token
+    url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?private_token=%s&per_page=50' % private_token
+    r = requests.get(url3)
+    data = r.text
+    a = json.loads(data)
+    print("父节点",a)
+    return HttpResponse(json.dumps(a), content_type="application/json")
+
+def aaa(request):
+    if request.is_ajax():
+        if 'text' in request.GET:
+            parent_dir = request.GET.get('text')
+            print("父级目录",parent_dir)
+    private_token = 'x_aXP2ZJV89b2q3dWsRw'
+    #url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=cty-config&private_token=%s&per_page=50' % private_token
+    url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=%s&private_token=%s&per_page=50' % (parent_dir,private_token)
+    r = requests.get(url3)
+    data = r.text
+    a = json.loads(data)
+    print("子级目录", type(a), len(a),a)
+    print("子级目录",type(json.dumps(a)),json.dumps(a))
+    return HttpResponse(json.dumps(a), content_type="application/json")
