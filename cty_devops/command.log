@@ -2996,3 +2996,1155 @@ TypeError: not all arguments converted during string formatting
 [2019-01-03 16:42:15] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
 [2019-01-03 16:51:03] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
 [2019-01-03 16:51:03] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:06:49] WARNING [log_response: log.py, 228] Not Found: /favicon.ico
+[2019-01-04 10:11:14] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:11:14] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:12:06] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:12:06] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:12:37] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:12:37] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:14:27] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:14:27] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:14:47] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:14:47] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:15:44] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:15:44] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:16:35] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:16:35] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:16:37] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:16:37] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:17:08] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:17:08] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:18:01] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:18:01] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:18:04] ERROR [log_response: log.py, 228] Internal Server Error: /gov_cty/aaa/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\devops\views.py", line 149, in aaa
+    url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=%s&private_token=%s&per_page=50' % (parent_dir,private_token)
+UnboundLocalError: local variable 'parent_dir' referenced before assignment
+[2019-01-04 10:19:38] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:19:38] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:19:40] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:19:40] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:20:40] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:20:40] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:20:44] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:20:44] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:20:57] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:20:57] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:21:00] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:21:00] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:22:12] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:22:12] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:22:13] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:22:13] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:22:13] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:22:14] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:22:14] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:22:14] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:34:46] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:34:46] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:35:14] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:35:14] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:35:32] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:35:32] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:36:14] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:14] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:36:16] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:16] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:16] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:36:16] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:36:17] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:17] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:17] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:36:17] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:36:17] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:17] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:17] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:36:17] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:36:17] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:17] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:17] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:36:17] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:36:17] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:17] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:17] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:36:17] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:36:18] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:18] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:18] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-common&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 267
+[2019-01-04 10:36:18] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:36:18] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:18] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:18] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-config&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 414
+[2019-01-04 10:36:18] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:36:28] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:28] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:36:30] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:30] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:30] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:36:30] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:36:35] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:35] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:36:35] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:35] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:36] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:36:36] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:36:38] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:38] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:38] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-common&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 267
+[2019-01-04 10:36:38] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:36:40] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:40] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:36:40] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-common&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 267
+[2019-01-04 10:36:40] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:37:12] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:37:12] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:37:13] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:37:13] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:37:13] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:37:13] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:38:56] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:38:56] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:38:57] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:38:57] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:38:57] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:38:57] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:39:21] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:39:21] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:40:53] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:40:53] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:40:55] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:40:55] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:40:56] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:40:56] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:40:56] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:40:56] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:40:56] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:40:56] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:40:58] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:40:58] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:40:59] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:40:59] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:40:59] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:40:59] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:40:59] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:40:59] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:41:00] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:41:00] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:41:39] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:41:39] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:41:39] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:41:39] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:41:40] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:41:40] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:46:52] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:46:52] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:46:53] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:46:53] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:46:53] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-registry&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 428
+[2019-01-04 10:46:53] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:46:54] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:46:54] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:46:54] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-user&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:46:54] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:46:54] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:46:54] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:46:54] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-userInfo&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 694
+[2019-01-04 10:46:54] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:46:54] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:46:54] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:46:55] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:46:55] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:19] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:19] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:21] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:21] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:21] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:56:21] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:22] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:22] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:22] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:56:22] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:22] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:22] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:22] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:56:22] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:22] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:22] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:22] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:56:22] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:22] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:22] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:22] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:56:22] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:23] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:23] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:23] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:56:23] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:23] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:56:24] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:24] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:56:24] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:24] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:56:26] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:26] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:26] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:26] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:26] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:26] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:26] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:26] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:26] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:26] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:26] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:36] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:36] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:37] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:37] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:56:37] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:56:37] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-common&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 267
+[2019-01-04 10:59:09] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:59:09] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 10:59:11] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:59:11] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:59:12] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:59:12] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:59:12] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:59:12] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:59:13] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:59:13] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:59:13] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:59:13] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:59:13] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:59:13] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:59:13] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:59:13] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:59:13] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:59:13] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:59:13] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:59:13] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:59:14] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:59:14] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 10:59:14] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 10:59:14] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-common&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 267
+[2019-01-04 11:11:32] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:11:32] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:11:33] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:11:33] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?path=cty-auth&private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 239
+[2019-01-04 11:12:41] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:12:43] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:12:47] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:12:47] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:13:10] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:13:10] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:13:50] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:13:50] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:15:18] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:15:18] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:15:31] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:15:31] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:17:43] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:17:43] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:18:01] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:18:01] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:18:11] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:18:11] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:18:33] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:18:33] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:19:52] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:19:52] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:20:28] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:20:28] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:25:49] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:25:49] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:26:17] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:26:17] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:26:26] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:26:26] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:27:20] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:27:20] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:27:22] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:27:22] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:27:22] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:27:22] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:27:22] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:27:22] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:27:23] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:27:23] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:27:23] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:27:23] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:27:23] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:27:23] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:27:29] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:27:29] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:27:29] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:27:29] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:27:29] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:27:29] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:27:30] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:27:30] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:27:54] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:27:54] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:27:55] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:27:55] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:27:58] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:27:59] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:28:01] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:28:01] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:28:11] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:28:11] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:34:06] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:34:06] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:35:46] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:35:46] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:38:18] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:38:18] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:38:21] WARNING [log_response: log.py, 228] Not Found: /gov_cty/gitlab_commit/
+[2019-01-04 11:38:41] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:38:41] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:38:43] WARNING [log_response: log.py, 228] Not Found: /gitlab_commit/
+[2019-01-04 11:38:54] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:38:54] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:39:02] WARNING [log_response: log.py, 228] Not Found: /gov_cty/gitlab_commit/
+[2019-01-04 11:39:19] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:39:19] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:39:21] ERROR [log_response: log.py, 228] Internal Server Error: /gov_cty/aaa/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\devops\views.py", line 149, in aaa
+    url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=%s&private_token=%s&per_page=50' % (parent_dir,private_token)
+UnboundLocalError: local variable 'parent_dir' referenced before assignment
+[2019-01-04 11:39:54] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:39:54] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:39:57] WARNING [log_response: log.py, 228] Not Found: /gov_cty/aaa/
+[2019-01-04 11:40:01] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:40:01] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:40:03] WARNING [log_response: log.py, 228] Not Found: /gov_cty/aaa/
+[2019-01-04 11:40:30] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:40:30] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:40:32] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:40:32] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 11:40:32] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 11:40:42] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:40:45] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:40:46] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:40:46] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 11:41:50] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 11:41:50] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 13:48:22] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 13:48:22] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 13:48:25] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 13:48:26] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 13:48:29] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 13:48:29] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 13:48:30] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 13:48:30] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 13:53:58] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 13:53:58] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 13:53:59] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 13:53:59] WARNING [log_response: log.py, 228] Not Found: /favicon.ico
+[2019-01-04 13:53:59] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 13:54:04] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 13:54:04] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 13:54:06] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 13:54:06] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 13:55:34] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 13:55:34] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 13:55:50] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 13:55:50] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:00:06] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:00:06] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:00:37] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:00:38] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:00:42] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:00:42] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:00:42] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:00:44] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:00:44] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:03:15] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:03:15] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:03:19] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:03:19] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:03:19] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:04:18] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:04:18] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:04:24] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:04:24] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:04:24] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:06:24] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:06:24] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:06:57] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:06:57] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:07:08] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:07:08] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:10:42] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:10:42] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:10:43] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:10:43] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:10:51] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:10:51] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:11:11] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:11:11] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:11:13] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:11:13] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:11:42] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:11:42] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:11:59] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:11:59] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:14:18] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:14:18] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:14:19] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:14:19] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:14:29] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:14:29] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:15:00] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:15:00] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:15:06] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:15:07] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:15:16] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:15:16] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:15:16] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:15:16] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:15:16] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:15:16] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:15:16] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:15:16] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:15:16] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:15:19] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:15:28] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:15:28] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:15:55] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:15:55] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:15:55] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:15:56] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:23:34] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:23:34] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:23:35] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:23:35] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:23:51] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:23:51] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:24:29] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:24:29] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:25:53] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:25:54] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:26:17] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:26:17] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:26:29] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:26:29] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:34:44] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:34:44] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:34:46] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:34:46] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:35:15] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:35:15] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:35:54] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:35:54] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:35:58] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:35:58] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:35:58] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:38:08] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:38:08] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:38:09] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:38:10] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:38:10] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:38:10] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:38:10] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:38:10] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:38:10] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:38:10] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:38:14] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:38:14] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:38:14] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:39:46] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:39:46] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:39:49] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:39:49] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:39:49] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:43:36] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:43:36] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:46:06] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:46:07] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:46:07] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:46:10] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:46:11] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:46:11] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:46:11] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:46:11] ERROR [log_response: log.py, 228] Internal Server Error: /gov_cty/gitlab_commit/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\devops\views.py", line 89, in gitlab_commit
+    pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: '/data/projects'
+[2019-01-04 14:47:08] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:47:08] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:47:13] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:47:13] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:47:13] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:47:13] ERROR [log_response: log.py, 228] Internal Server Error: /gov_cty/gitlab_commit/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\devops\views.py", line 89, in gitlab_commit
+    pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: '/data/projects'
+[2019-01-04 14:47:36] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:47:36] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:47:39] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:47:39] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:47:39] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:47:39] ERROR [log_response: log.py, 228] Internal Server Error: /gov_cty/gitlab_commit/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\devops\views.py", line 89, in gitlab_commit
+    pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: '/data/projects'
+[2019-01-04 14:55:28] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:55:28] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:55:31] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:55:31] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:55:31] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:55:31] ERROR [log_response: log.py, 228] Internal Server Error: /gov_cty/gitlab_commit/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\devops\views.py", line 70, in gitlab_commit
+    project_name = request.path()
+TypeError: 'str' object is not callable
+[2019-01-04 14:56:23] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:56:23] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:56:26] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:56:26] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:56:27] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:56:27] ERROR [log_response: log.py, 228] Internal Server Error: /gov_cty/gitlab_commit/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\devops\views.py", line 84, in gitlab_commit
+    server_pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: '/data/projects'
+[2019-01-04 14:57:00] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:57:00] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:57:03] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:57:03] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:57:03] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:57:03] ERROR [log_response: log.py, 228] Internal Server Error: /gov_cty/gitlab_commit/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\devops\views.py", line 84, in gitlab_commit
+    server_pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: '/data/projects'
+[2019-01-04 14:59:44] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:59:44] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 14:59:47] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 14:59:47] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 14:59:47] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 14:59:48] ERROR [log_response: log.py, 228] Internal Server Error: /gov_cty/gitlab_commit/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\devops\views.py", line 85, in gitlab_commit
+    server_pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: '/data/projects'
+[2019-01-04 15:09:11] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 15:09:11] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 15:09:16] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 15:09:16] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 15:09:16] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 15:09:16] ERROR [log_response: log.py, 228] Internal Server Error: /gov_cty/gitlab_commit/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\devops\views.py", line 89, in gitlab_commit
+    server_pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: '/data/projects'
+[2019-01-04 15:20:00] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 15:20:00] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 15:20:02] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 15:20:02] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.027692728531463144
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.05712170256356189
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02641303176435426
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03513849579155223
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.531126722038831
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 15:20:03] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 15:20:03] ERROR [log_response: log.py, 228] Internal Server Error: /gov_cty/gitlab_commit/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\devops\views.py", line 90, in gitlab_commit
+    server_pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: '/data/projects'
+[2019-01-04 15:30:02] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 15:30:02] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455
+[2019-01-04 15:30:06] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 15:30:06] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/commits?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 None
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Russian confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] KOI8-R Russian confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Russian confidence = 0.0
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] MacCyrillic Russian confidence = 0.0285465536883465
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM866 Russian confidence = 0.06020971435572955
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] IBM855 Russian confidence = 0.02764939299866293
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-7 Greek confidence = 0.0
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1253 Greek confidence = 0.0
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-5 Bulgairan confidence = 0.0
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1251 Bulgarian confidence = 0.0
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] TIS-620 Thai confidence = 0.03592447117883709
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] ISO-8859-9 Turkish confidence = 0.5270681886919791
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] windows-1255 Hebrew confidence = 0.0
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] utf-8  confidence = 0.99
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] SHIFT_JIS Japanese confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-JP Japanese confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] GB2312 Chinese confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-KR Korean confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] CP949 Korean confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] Big5 Chinese confidence = 0.01
+[2019-01-04 15:30:06] DEBUG [get_confidence: charsetgroupprober.py, 100] EUC-TW Taiwan confidence = 0.01
+[2019-01-04 15:30:06] ERROR [log_response: log.py, 228] Internal Server Error: /gov_cty/gitlab_commit/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\devops\views.py", line 90, in gitlab_commit
+    server_pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: '/data/projects'
+[2019-01-04 15:33:01] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 223.75.53.43:8084
+[2019-01-04 15:33:01] DEBUG [_make_request: connectionpool.py, 393] http://223.75.53.43:8084 "GET /api/v4/projects/17/repository/tree/?private_token=x_aXP2ZJV89b2q3dWsRw&per_page=50 HTTP/1.1" 200 1455

@@ -59,30 +59,39 @@ def gitlab_commit(request):
     target = '/data/test'
     JAVA_HOME = '/opt/jdk1.8.0_171/bin/java'
     # os.system('cd /soft ； touch aaa.txt') # 切换到项目的目录，并且执行pull操作
-    pathDirs = request.path.split('/')  # 获取前台传入的不带参数的项目路径
-    tmp = [x for x in pathDirs if x != '']
-    if ''.join(tmp[-1]).lower() == 'test':
+    # 获取前台传递的数据
+    if request.is_ajax():
+        if 'button_text' in request.GET:
+            button_deploy = request.GET.get('button_text')
+            print("选中的按钮值",button_deploy)
+        if 'nodes_name' in request.GET:
+            nodes_name = request.GET.get('nodes_name')
+            print("选中要提交的目录",nodes_name)
+    project_names = request.path.split('/')
+    tmp = [x for x in project_names if x != '']
+    project_name = tmp[0]#实际中的项目名称
+
+    print("从path中获取project_name",project_name)
+    pathDirs = nodes_name.split(',')  # 获取前台传入的不带参数的项目路径
+    print("pathDirs",pathDirs)
+    # sub_projects = ['gov_cty/'+x for x in pathDirs]
+    sub_projects=pathDirs
+    if nodes_name[0] == project_name:  # 这里判断该项目是否有子项目，名称相同则表示没有子项目
+        sub_projects = []
+        sub_projects[0] = project_name
+    print("sub_projects",type(sub_projects),sub_projects)
+    if button_deploy == 'test':
         ips = ['192.168.77.154']
     elif ''.join(tmp[-1]).lower() == 'pro':
         ips = []
     elif ''.join(tmp[-1]).lower() == 'dev':
         ips = []
-    else:
-        status={'msg':"错误的命令，路径最后应该要指明需要提交的环境，当前最后一条命令是:%s"%''.join(tmp[-1])}
-        return render(request, 'index.html', {'status':status})
-        # return HttpResponse("错误的命令，路径最后应该要指明需要提交的环境:%s"%''.join(tmp[-1]))
-    project_name = ''
-    project_name = tmp[0]  # 获取前台传入的大的项目名称
-    if len(tmp) > 1:
-        sub_project_name = '/'.join(tmp[i] for i in range(1, len(tmp) - 1))  # 获取小的项目名称
-    else:
-        sub_project_name = project_name
-    print("project_name1111111", project_name)
-    print("sub_project_name", sub_project_name)
     cmds = ['git pull', 'scp', 'git clone']
-    pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
-    print("pathDir", pathDir)
-    if project_name in pathDir:
+    server_pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
+    print("pathDir", server_pathDir)
+    print("project_name",project_name)
+    sub_project_name=1
+    if project_name in server_pathDir:
         logging.info(str(project_name) + '已存在')
         cmd = cmds[0]
         project_src = os.path.join(src, project_name)
@@ -94,37 +103,36 @@ def gitlab_commit(request):
         logging.info("git clone:%s" % cmd)
         project_src = src
         pexpect_command(cmd, master_ip, username[1], password[1], project_name, project_src)
-    # 然后推送
-    project_src = os.path.join(src, project_name)  # 重新设置project_src的值
-    sub_project = os.path.join(project_src, sub_project_name)  # 获取小项目路径
-    if not os.path.isdir(sub_project):
-        status={'msg':"%s不存的项目路径，请检查后重试"%sub_project_name}
-        return render(request, 'index.html', {'status': status})
-    print("sub_proect path", sub_project)
-    # maven打包，然后推送打包sub项目
-    os.system('cd %s;mvn clean install -Dmaven.test.skip=true' % project_src)
-    os.system('cd %s;mvn clean package' % sub_project)  # 打包小项目
-    # mvn clean package[前台可以传{'project_name':'sss','mvn':'dssss']
-    if sub_project_name != '':
-        target_jar = os.path.join(sub_project, 'target/%s.jar' % ''.join(tmp[-2]))
-    else:
-        target_jar = os.path.join(sub_project, 'project_name/%s.jar' % project_name)
-    print("target_jar", target_jar)
-    for ip in ips:
-        # 要在对应的机器上先kill掉之前的进程，然后scp过去之后再启动
-        cmd = "ps -ef|grep %s.jar|grep -v grep|awk '{print $2}'|xargs -i kill {}" % ''.join(tmp[-2])
-        logging.info("杀掉进程:%s" % cmd)
-        python_ssh_command(ip, int(port), username[0], password[0], a='cd %s && %s' % (target, cmd))
-        cmd = 'scp -P %s -r %s %s@%s:%s' % (port, target_jar, username[0], ip, target)
-        logging.info("scp jar包:%s" % cmd)
-        pexpect_command(cmd, ip, username[0], password[0], project_name, project_src)
-        cmd = 'cd %s && nohup %s -jar %s.jar --spring.profiles.active=%s -Duser.timezone=GMT+08>/dev/null 1>&2 &' % \
-              (target, JAVA_HOME, ''.join(tmp[-2]), ''.join(tmp[-1]).lower())
-        logging.info("启动 jar包:%s" % cmd)
-        python_ssh_command(ip, int(port), username[0], password[0], args='%s' % cmd)
-    status={'sccuss':'提交成功'}
-    return render(request,'index.html', {'result':msg,'status':status})
-    # return HttpResponse(json.dumps(msg,ensure_ascii=False), content_type="application/json,charset=utf-8")
+        # 然后就逐个小项目去推送
+    for item in sub_projects:
+        print("item",item)
+        project_src = os.path.join(src, project_name)  # 重新设置project_src的值
+        sub_project = os.path.join(project_src, item)  # 获取小项目路径
+        if not os.path.isdir(sub_project):
+            status={"code":-1,'msg':"%s不存的项目路径，请检查后重试"%sub_project_name}
+            return render(request, 'test.html', {'status': status})
+        print("sub_proect path", sub_project)
+        # maven打包，然后推送打包sub项目
+        os.system('cd %s;mvn clean install -Dmaven.test.skip=true' % project_src)
+        os.system('cd %s;mvn clean package' % sub_project)  # 打包小项目
+        # mvn clean package[前台可以传{'project_name':'sss','mvn':'dssss']
+        target_jar = os.path.join(sub_project, 'target/%s.jar' % item)
+        print("target_jar", target_jar)
+        for ip in ips:
+            # 要在对应的机器上先kill掉之前的进程，然后scp过去之后再启动
+            cmd = "ps -ef|grep %s.jar|grep -v grep|awk '{print $2}'|xargs -i kill {}" % item
+            logging.info("杀掉进程:%s" % cmd)
+            python_ssh_command(ip, int(port), username[0], password[0], a='cd %s && %s' % (target, cmd))
+            cmd = 'scp -P %s -r %s %s@%s:%s' % (port, target_jar, username[0], ip, target)
+            logging.info("scp jar包:%s" % cmd)
+            pexpect_command(cmd, ip, username[0], password[0], project_name, project_src)
+            cmd = 'cd %s && nohup %s -jar %s.jar --spring.profiles.active=%s -Duser.timezone=GMT+08>/dev/null 1>&2 &' % \
+                  (target, JAVA_HOME, item, button_deploy)
+            logging.info("启动 jar包:%s" % cmd)
+            python_ssh_command(ip, int(port), username[0], password[0], args='%s' % cmd)
+        status={'sccuss':'提交成功'}
+        return render(request,'index.html', {'result':msg,'status':status})
+        # return HttpResponse(json.dumps(msg,ensure_ascii=False), content_type="application/json,charset=utf-8")
 
 def test1(request):
     status = {'sccuss': '提交成功'}

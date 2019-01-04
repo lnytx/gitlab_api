@@ -29,5 +29,5 @@ urlpatterns = [
 
     url(r'^gov_cty/$', cty_devops.test1,name='test1'),
     url(r'^gov_cty/ddd/$', cty_devops.ddd,name='ddd'),
-    url(r'^gov_cty/aaa/$', cty_devops.aaa,name='aaa'),
+    url(r'^gov_cty/gitlab_commit/$', cty_devops.gitlab_commit,name='gitlab_commit'),
 ]

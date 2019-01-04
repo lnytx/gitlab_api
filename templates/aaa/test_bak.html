@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<h1>bbb</h1>
+
+    <script src="/static/jquery3.3.1/jquery3.3.1.js" type="text/javascript"></script>
+    <script src="/static/jquery-ui-1.12.1/jquery-ui.js" type="text/javascript"></script>
+    <!-- Include Fancytree skin and library -->
+    <link href="/static/jstree/themes/default/style.min.css" rel="stylesheet" type="text/css">
+    <script src="/static/jstree/jstree.min.js" type="text/javascript"></script>
+    <!-- Initialize the tree when page is loaded -->
+<script type="text/javascript">
+  $(function () {
+$('#treeDemo').jstree({
+    // 引入插件
+    'plugins': ['checkbox','types','themes','contextmenu','search'],
+    "theme" : "apple",
+    'types': {
+        'default': {
+            'icon': true  // 删除默认图标
+        },
+    },
+    'checkbox': {  // 去除checkbox插件的默认效果
+        'tie_selection': false,
+        'keep_selected_style': false,
+        'whole_node': false
+    },
+    'core': {
+        'multiple' : true,  // 可否多选
+         'data' : function (obj, callback) {
+            $.get("ddd/", function(ret){
+            console.log(ret.length)
+            var jsonstr="[]";
+            var jsonarray = eval('('+jsonstr+')');
+			//动态添加select选项,从后台数据库获取
+            var arrays= ret;
+			for (var i = 0; i < ret.length; i++)
+				{
+		 			console.log(ret[i].name)
+                    if (arrays[i].type=='tree'){
+                        var arr = {
+                            "id": arrays[i].id,
+                            {#"parent":arrays[i].parentId=="root"?"#":arrays[i].parentId,#}
+                            "text": arrays[i].name
+                        }
+                        jsonarray.push(arr);
+                    }
+		 		}
+		 		callback.call(this, jsonarray);
+			})
+      },
+        "types" : {
+      "default" : {
+       "icon" : "glyphicon glyphicon-flash"
+      },
+      "file" : {
+        "icon" : "glyphicon glyphicon-ok"
+      }
+     },
+        'dblclick_toggle': true,   //允许tree的双击展开
+        "themes": {
+                "theme": "classic",
+                "dots": true,
+                "icons": false
+              },
+
+    },
+    'contextmenu': {    // 右键菜单
+        'items': {
+            'edit': {
+                'label': '编辑',
+                'action': function (data) {alert('aa')}
+            },
+            'delete': {
+                'label': '删除',
+                'action': function (data) {}
+            }
+        }
+    }
+}).bind("select_node.jstree", function (e, data) {
+
+            console.log("添加的父亲节点"+data.node.text);
+            console.log("添加的父亲节点"+data.node.id);
+            $.get("aaa/",{'text' : data.node.text}, function(d){})
+            {#$.get('aaa', { 'type' : data.node.type, 'id' : data.node.parent, 'text' : data.node.text })#}
+                .done(function (d) {
+                    var ref = $('#treeDemo').jstree(true)
+                    {#var ref = $('#treeDemo').jstree("get_node", data.node.id);#}
+                     console.log("选中的节点",typeof(ref),ref)
+                    for (var i = 0; i < d.length; i++) {
+                        console.log("子节点",d[i].name)
+                         $('#treeDemo').jstree().create_node( $(data.node.id), { "text":d[i].name, "id":d[i].id }, false, false);
+                        {#ref.create_node(data.node.id, {//addId父节点使用‘#’，其他使用ID值#}
+                        {#    "id": d[i].id,//节点ID#}
+                        {#    "text": d[i].name//节点文本#}
+                        {#    }), "last";//表示添加到末尾#}
+
+                        {#data.instance.set_id(d[i].name, d[i].id);#}
+                    }
+                    {#var tree = $('#treeDemo');#}
+    {#var ref = $('#treeDemo').jstree(true)#}
+    {#console.log("啊啊啊啊",ref)#}
+    {# var tree = $('#treeDemo').jstree(true);#}
+    {# tree.deselect_all();#}
+    {# tree.refresh("#" + data.node.id);#}
+    {#tree.jstree(true).refresh();#}
+                })
+                .fail(function () {
+                    {#data.instance.refresh();#}
+                });
+
+})
+.bind('create_node.jstree', function (e, data) {
+
+        })
+
+
+
+$('#treeDemo').bind("activate_node.jstree", function (obj, e) {
+    {#alert("currentNode",data.node.parent)#}
+    $.get("ddd/", function(ret){
+    })
+});
+
+
+$('button').on('click', function () {
+     refreshTreeFromIframe1('019d0a8a017d29f19d6d617df16efe85ab2f7c14','24d8c6e2c938fe3b1a65cfa0a2e41d9d68a35f99')
+    });
+
+
+  });
+  
+
+function refreshTreeFromIframe1(new_node_id, parentID) {
+           $jstree = $.jstree._focused();
+           $("#structureTree").unbind("refresh.jstree").bind("refresh.jstree", function () {
+               $jstree.deselect_all();
+               $jstree.save_selected();
+               $jstree.select_node("#" + parentID, true);
+           });
+           $jstree.refresh("#" + 'parentID');
+       }
+  {#第三个方法#}
+$('#treeDemo').on('ready.jstree', function (e, data) {
+	     createNode("#treeDemo", "cty-auth", "根节点2", "first");   //最前面插入
+	     createNode("#treeDemo", "cty-common", "子节点2", "last");   //在最后插入
+	});
+
+function createNode(parent_node, new_node_id, new_node_text, position) {
+		$('#treeDemo').jstree('create_node', $(parent_node), { "text":new_node_text, "id":new_node_id }, position, false, false);
+	}
+
+  </script>
+<!-- (Irrelevant source removed.) -->
+</head>
+
+<body>
+<div id="treeDemo"></div>
+
+<button>demo button</button>
+  <!-- (Irrelevant source removed.) -->
+</body>
+
+
+</html>
