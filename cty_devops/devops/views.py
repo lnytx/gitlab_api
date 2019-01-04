@@ -131,7 +131,7 @@ def gitlab_commit(request):
             logging.info("启动 jar包:%s" % cmd)
             python_ssh_command(ip, int(port), username[0], password[0], args='%s' % cmd)
         status={'sccuss':'提交成功'}
-        return render(request,'index.html', {'result':msg,'status':status})
+        return render(request,'aaa/test.html', {'result':msg,'status':status})
         # return HttpResponse(json.dumps(msg,ensure_ascii=False), content_type="application/json,charset=utf-8")
 
 def test1(request):
