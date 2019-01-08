@@ -190,7 +190,7 @@ def get_parents_nodes(request):
                     if item['type'] == 'tree':
                         temp['id'] = item['id']
                         temp['text'] = item['name']
-                        temp['icon'] = item['path']
+                        # temp['icon'] = item['path']
                         data.append(temp)
                 print("data", data)
                 return HttpResponse(json.dumps(data), content_type="application/json")
@@ -210,7 +210,7 @@ def get_parents_nodes(request):
                     if item['type'] == 'tree':
                         temp['id'] = item['id']
                         temp['text'] = item['name']
-                        temp['icon'] = item['path']
+                        # temp['icon'] = item['path']
                         data.append(temp)
                 print("data", data)
                 return HttpResponse(json.dumps(data), content_type="application/json")

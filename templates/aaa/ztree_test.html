@@ -25,8 +25,13 @@
 		$(function() {
 			$('#jstree_div').jstree({
                 "plugins": ["themes", "html_data", 'types', "ui", "checkbox"],
-                "theme" : "apple",
+                "themes" : {
+			"theme" : "default",
+		},
                 'types': {
+                    'default': {
+                        'icon': true  // 删除默认图标
+        },
             },
             'checkbox': {  // 去除checkbox插件的默认效果
                 'tie_selection': false,
@@ -52,6 +57,7 @@
 								}
 							});
 					},
+
                             "types" : {
       "default" : {
        "icon" : "glyphicon glyphicon-flash"
@@ -79,11 +85,13 @@
 
 			var temp = selectedNode.text;
 			var id = selectedNode.id;
-			var icon = selectedNode.icon;
+			var aaa = selectedNode.parent//获取父亲节点的id
+            alert(aaa)
+            {#alert(selectedNode.get_node("#"+aaa).text)#}
+			{#var icon = selectedNode.icon;#}
 			//inst.open_node(selectedNode);
 			{#alert(temp);#}
             console.log("temp",temp,id)
-            console.log("当前点击的路径是",icon)
 			$.ajax({
 				url : "get_parents_nodes/",
 				dataType : "json",
