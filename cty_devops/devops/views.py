@@ -1,5 +1,6 @@
 import logging
 import os
+import re
 from datetime import datetime, timedelta
 
 from django.http import HttpResponse
@@ -134,23 +135,94 @@ def gitlab_commit(request):
         return render(request,'index.html', {'result':msg,'status':status})
         # return HttpResponse(json.dumps(msg,ensure_ascii=False), content_type="application/json,charset=utf-8")
 
-def test1(request):
-    status = {'sccuss': '提交成功'}
-    return render(request, 'aaa/test.html', { 'status': status})
-def ddd(request):
+def get_parents_nodes(request):
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
-    #url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=cty-config&private_token=%s&per_page=50' % private_token
-    url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?private_token=%s&per_page=50' % private_token
-    r = requests.get(url3)
-    data = r.text
-    a = json.loads(data)
-    print("父节点",a)
-    return HttpResponse(json.dumps(a), content_type="application/json")
-
-def aaa(request):
     if request.is_ajax():
-        if 'text' in request.GET:
-            parent_dir = request.GET.get('text')
+        if 'project' in request.GET:#获取项目顶级目录
+            project_name = request.path
+            print("project_name", type(project_name), project_name)
+            parent_dir = project_name[1:project_name.index('/', 1)]
+            print("result", parent_dir)
+            url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % (private_token, parent_dir)  # 获取指定项目信息
+            r = requests.get(url)
+            data = r.text
+            a = json.loads(data)
+            project_id = a[0]['id']
+            project_name = a[0]['name']
+            print("项目id为", project_id)
+            print("父节点", type(a), len(a), a)
+            temp = {}
+            ret = []
+            temp['id'] = project_id
+            temp['text'] = project_name
+            ret.append(temp)
+            return HttpResponse(json.dumps(ret), content_type="application/json")
+        if 'parents_text' in request.GET:#获取项目次级目录
+            project_name = request.path
+            print("project_name", type(project_name), project_name)
+            temp = project_name[1:project_name.index('/', 1)]
+            print("result", temp)
+            url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % (
+            private_token, temp)  # 获取指定项目信息
+            r = requests.get(url)
+            data = r.text
+            a = json.loads(data)
+            project_id = a[0]['id']
+            temp = project_name[1:project_name.index('/', 1)]
+            print("项目名称", temp)
+            parent_dir = request.GET.get('parents_text')
+            print("父级目录",parent_dir)
+            print("project_name",project_name)
+            # url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=cty-config&private_token=%s&per_page=50' % private_token
+            if parent_dir == temp:  # 如果点击的是顶级目录
+                print("parent_dir",parent_dir)
+                url = 'http://223.75.53.43:8084/api/v4/projects/%s/repository/tree/?private_token=%s' % ( project_id, private_token)  # 获取所有项目二级目录(项目名为1级)
+                #url = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=%s&private_token=%s' % ( parent_dir, private_token)
+                #url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % (private_token, parent_dir)  # 获取指定项目信息
+                r = requests.get(url)
+                data = r.text
+                a = json.loads(data)
+                print("a", type(a), a)
+                data = []
+                for item in a:
+                    print("item", type(item), item)
+                    temp = {}
+                    if item['type'] == 'tree':
+                        temp['id'] = item['id']
+                        temp['text'] = item['name']
+                        temp['icon'] = item['path']
+                        data.append(temp)
+                print("data", data)
+                return HttpResponse(json.dumps(data), content_type="application/json")
+            else:#获取三级目录
+                parent_dir = request.GET.get('parents_text')
+                print("parent_dir三",parent_dir)
+                print("project_id三",project_id)
+                url = 'http://223.75.53.43:8084/api/v4/projects/%s/repository/tree/?path=%s&private_token=%s' % (project_id,parent_dir, private_token)
+                r = requests.get(url)
+                data = r.text
+                a = json.loads(data)
+                print("a", type(a), a)
+                data = []
+                for item in a:
+                    print("item", type(item), item)
+                    temp = {}
+                    if item['type'] == 'tree':
+                        temp['id'] = item['id']
+                        temp['text'] = item['name']
+                        temp['icon'] = item['path']
+                        data.append(temp)
+                print("data", data)
+                return HttpResponse(json.dumps(data), content_type="application/json")
+
+    #url = 'http://223.75.53.43:8084/api/v4/projects/%s/repository/tree/?private_token=%s' % ( project_id, private_token)  # 获取所有项目二级目录(项目名为1级)
+
+
+
+def get_child_nodes(request):
+    if request.is_ajax():
+        if 'parents_text' in request.GET:
+            parent_dir = request.GET.get('parents_text')
             print("父级目录",parent_dir)
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
     #url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=cty-config&private_token=%s&per_page=50' % private_token
@@ -158,6 +230,45 @@ def aaa(request):
     r = requests.get(url3)
     data = r.text
     a = json.loads(data)
-    print("子级目录", type(a), len(a),a)
-    print("子级目录",type(json.dumps(a)),json.dumps(a))
-    return HttpResponse(json.dumps(a), content_type="application/json")
+    data = []
+    for item in a:
+        print("item", type(item), item)
+        temp = {}
+        if item['type'] == 'tree':
+            temp['id'] = item['id']
+            temp['text'] = item['name']
+            data.append(temp)
+    print("get_child_nodes", data)
+    return HttpResponse(json.dumps(data), content_type="application/json")
+
+
+def test1(request):
+    project_name = request.path
+    print("project_name", type(project_name), project_name)
+    result = project_name[1:project_name.index('/', 1)]
+    print("result", result)
+
+    data = []
+    temp = {}
+    temp['id'] = '123123'
+    temp['text'] = result
+    data.append(temp)
+    print("data", data)
+    return render(request, 'aaa/ztree_test.html')
+    # return HttpResponse(json.dumps(data), content_type="application/json")
+
+def test2(request):
+    project_name = request.path
+    print("project_name", type(project_name), project_name)
+    result = project_name[1:project_name.index('/', 1)]
+    print("result", result)
+
+    data = []
+    temp = {}
+    temp['id'] = '123123'
+    temp['text'] = result
+    data.append(temp)
+    print("data", data)
+    return render(request, 'aaa/ztree_test.html')
+    # return HttpResponse(json.dumps(data), content_type="application/json")
+

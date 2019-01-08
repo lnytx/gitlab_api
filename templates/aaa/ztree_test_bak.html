@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<h1>发布</h1>
+
+    <script src="/static/jquery3.3.1/jquery3.3.1.js" type="text/javascript"></script>
+    <script src="/static/jquery-ui-1.12.1/jquery-ui.js" type="text/javascript"></script>
+    <!-- Include Fancytree skin and library -->
+    <link href="/static/jstree/themes/default/style.min.css" rel="stylesheet" type="text/css">
+<!--引用SweetAlert的css-->
+<link rel="stylesheet" href="/static/sweetalert/sweetalert.css" />
+	<link rel="stylesheet" href="/static/sweetalert/sweetalert.min.css" />
+<!--引用SweetAlert的js-->
+	<script src="/static/sweetalert/sweetalert.min.js"></script>
+	<script src="/static/sweetalert/sweetalert-dev.js"></script>
+
+    <script src="/static/jstree/jstree.min.js" type="text/javascript"></script>
+    <!-- Initialize the tree when page is loaded -->
+<body>
+	<div id="jstree_div"></div>
+	<script type="text/javascript">
+		$(function() {
+			$('#jstree_div').jstree({
+				'core' : {
+					'check_callback': true,
+					"data" : function (obj, callback){
+							$.ajax({
+								url : "project/",
+								dataType : "json",
+                                data:{'project':'project'},
+								type : "GET",
+								success : function(data) {
+									console.info(data);
+									if(data) {
+										callback.call(this, data);//data的格式在后台做修改如下[{'id': '36685434706b786de746886668db2d43407b8752', 'text': 'cty-item-query-entity'}]
+									}else{
+										$("#jstree_div").html("暂无数据！");
+									}
+								}
+							});
+					}
+				},
+				"plugins" : [ "sort" ]
+			}).bind("select_node.jstree", function(event, data) {
+				var inst = data.instance;
+				var selectedNode = inst.get_node(data.selected);
+				//console.info(selectedNode.aria-level);
+				var level = $("#"+selectedNode.id).attr("aria-level");
+				if(parseInt(level) <= 10){
+					loadConfig(inst, selectedNode);
+				}
+			});
+		});
+		function loadConfig(inst, selectedNode){
+
+			var temp = selectedNode.text;
+			var id = selectedNode.id;
+			//inst.open_node(selectedNode);
+			{#alert(temp);#}
+            console.log("temp",temp,id)
+			$.ajax({
+				url : "get_parents_nodes/",
+				dataType : "json",
+                data:{'parents_text':temp,'id':id},
+				type : "GET",
+				success : function(data) {
+					if(data) {
+					   selectedNode.children = [];
+					   $.each(data, function (i, item) {
+						   		var obj = {text:item};
+						   		//$('#jstree_div').jstree('create_node', selectedNode, obj, 'last');
+								inst.create_node(selectedNode,item,"last");
+				       });
+					   inst.open_node(selectedNode);
+					}else{
+						$("#jstree_div").html("暂无数据！");
+					}
+				}
+			});
+		}
+	</script>
+</body>
+
+
+
+</html>
