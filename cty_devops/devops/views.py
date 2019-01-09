@@ -141,9 +141,9 @@ def get_parents_nodes(request):
         if 'project' in request.GET:#获取项目顶级目录
             project_name = request.path
             print("project_name", type(project_name), project_name)
-            parent_dir = project_name[1:project_name.index('/', 1)]
-            print("result", parent_dir)
-            url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % (private_token, parent_dir)  # 获取指定项目信息
+            curent_dir = project_name[1:project_name.index('/', 1)]
+            print("result", curent_dir)
+            url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % (private_token, curent_dir)  # 获取指定项目信息
             r = requests.get(url)
             data = r.text
             a = json.loads(data)
@@ -157,7 +157,7 @@ def get_parents_nodes(request):
             temp['text'] = project_name
             ret.append(temp)
             return HttpResponse(json.dumps(ret), content_type="application/json")
-        if 'parents_text' in request.GET:#获取项目次级目录
+        if 'selectedNode_text' in request.GET:#获取项目次级目录
             project_name = request.path
             print("project_name", type(project_name), project_name)
             temp = project_name[1:project_name.index('/', 1)]
@@ -170,12 +170,12 @@ def get_parents_nodes(request):
             project_id = a[0]['id']
             temp = project_name[1:project_name.index('/', 1)]
             print("项目名称", temp)
-            parent_dir = request.GET.get('parents_text')
-            print("父级目录",parent_dir)
+            curent_dir = request.GET.get('selectedNode_text')
+            print("父级目录",curent_dir)
             print("project_name",project_name)
             # url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=cty-config&private_token=%s&per_page=50' % private_token
-            if parent_dir == temp:  # 如果点击的是顶级目录
-                print("parent_dir",parent_dir)
+            if curent_dir == temp:  # 如果点击的是顶级目录
+                print("parent_dir",curent_dir)
                 url = 'http://223.75.53.43:8084/api/v4/projects/%s/repository/tree/?private_token=%s' % ( project_id, private_token)  # 获取所有项目二级目录(项目名为1级)
                 #url = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=%s&private_token=%s' % ( parent_dir, private_token)
                 #url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % (private_token, parent_dir)  # 获取指定项目信息
@@ -187,18 +187,20 @@ def get_parents_nodes(request):
                 for item in a:
                     print("item", type(item), item)
                     temp = {}
-                    if item['type'] == 'tree':
-                        temp['id'] = item['id']
-                        temp['text'] = item['name']
-                        # temp['icon'] = item['path']
-                        data.append(temp)
+                    if item['type'] != 'tree':
+                        temp['icon'] = 'jstree-file'
+                    # if item['type'] == 'tree':
+                    temp['id'] = item['id']
+                    temp['text'] = item['path']
+                    data.append(temp)
                 print("data", data)
                 return HttpResponse(json.dumps(data), content_type="application/json")
             else:#获取三级目录
-                parent_dir = request.GET.get('parents_text')
-                print("parent_dir三",parent_dir)
+                curent_dir = request.GET.get('selectedNode_text')
+                parent_dir = request.GET.get('parent_text')#获取父级目录
+                print("parent_dir三",curent_dir)
                 print("project_id三",project_id)
-                url = 'http://223.75.53.43:8084/api/v4/projects/%s/repository/tree/?path=%s&private_token=%s' % (project_id,parent_dir, private_token)
+                url = 'http://223.75.53.43:8084/api/v4/projects/%s/repository/tree/?path=%s&private_token=%s' % (project_id,curent_dir, private_token)
                 r = requests.get(url)
                 data = r.text
                 a = json.loads(data)
@@ -207,11 +209,11 @@ def get_parents_nodes(request):
                 for item in a:
                     print("item", type(item), item)
                     temp = {}
-                    if item['type'] == 'tree':
-                        temp['id'] = item['id']
-                        temp['text'] = item['name']
-                        # temp['icon'] = item['path']
-                        data.append(temp)
+                    if item['type'] != 'tree':
+                        temp['icon'] = 'jstree-file'
+                    temp['id'] = item['id']
+                    temp['text'] = item['path']
+                    data.append(temp)
                 print("data", data)
                 return HttpResponse(json.dumps(data), content_type="application/json")
 

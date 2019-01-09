@@ -81,13 +81,29 @@
 			    alert("checknode")
             })
 		});
+
+
+		function getRightItem(item){
+		    if(item['text'].indexOf("\/") >= 0 ) {//包含了/的就要截取否则不变
+		        var data = {}
+                data['id'] = item['id']
+                data['text'] = item['text'].substr(item['text'].lastIndexOf("\/")+1);
+		        return data
+            }
+            else{
+                return item
+            }
+
+
+        }
 		function loadConfig(inst, selectedNode){
 
-			var temp = selectedNode.text;
+			var temp = selectedNode.text;//当前节点的text
 			var id = selectedNode.id;
-			var aaa = selectedNode.parent//获取父亲节点的id
-            alert(aaa)
-            {#alert(selectedNode.get_node("#"+aaa).text)#}
+			var parent_id = selectedNode.parent//获取父亲节点的id
+            var parent_text = $('#jstree_div').jstree("get_node", parent_id).text   //获取父亲节点的text
+			var level = $("#"+selectedNode.id).attr("aria-level");
+
 			{#var icon = selectedNode.icon;#}
 			//inst.open_node(selectedNode);
 			{#alert(temp);#}
@@ -95,13 +111,14 @@
 			$.ajax({
 				url : "get_parents_nodes/",
 				dataType : "json",
-                data:{'parents_text':temp,'id':id},
+                data:{'selectedNode_text':temp,'id':id,"parent_text":parent_text},
 				type : "GET",
 				success : function(data) {
 					if(data) {
 					   selectedNode.children = [];
 					   $.each(data, function (i, item) {
-						   		var obj = {text:item};
+					       console.log("adsf",item['text'])
+						   		{#var obj = {text:item};#}
 						   		//$('#jstree_div').jstree('create_node', selectedNode, obj, 'last');
 								inst.create_node(selectedNode,item,"last");
 				       });
