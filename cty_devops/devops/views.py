@@ -126,11 +126,15 @@ def gitlab_commit(request):
         os.system('cd %s;mvn clean install -Dmaven.test.skip=true' % project_src)
         os.system('cd %s;mvn clean package' % sub_project)  # 打包小项目
         # mvn clean package[前台可以传{'project_name':'sss','mvn':'dssss']
-        target_jar = os.path.join(sub_project, 'target/%s.jar' % item)
+        if '/' in item:
+            jar_name=item[item.rindex('/', 1)+1:]#获取jar包的名称
+        else:
+            jar_name=item
+        target_jar = os.path.join(sub_project, 'target/%s.jar' % jar_name)
         print("target_jar", target_jar)
         for ip in ips:
             # 要在对应的机器上先kill掉之前的进程，然后scp过去之后再启动
-            cmd = "ps -ef|grep %s.jar|grep -v grep|awk '{print $2}'|xargs -i kill {}" % item
+            cmd = "ps -ef|grep %s.jar|grep -v grep|awk '{print $2}'|xargs -i kill {}" % jar_name
             logging.info("杀掉进程:%s" % cmd)
             python_ssh_command(ip, int(port), username[0], password[0], a='cd %s && %s' % (target, cmd))
             cmd = 'scp -P %s -r %s %s@%s:%s' % (port, target_jar, username[0], ip, target)
