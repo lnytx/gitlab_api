@@ -83,7 +83,7 @@ def gitlab_commit(request):
     print("从path中获取project_name",project_name)
     pathDirs = nodes_name.split(',')  # 获取前台传入的不带参数的项目路径
     print("pathDirs",len(pathDirs),pathDirs[0],pathDirs)
-    sub_projects = [curent_project_name+x for x in pathDirs]
+    sub_projects = [curent_project_name+'/'+x for x in pathDirs]
     print("子项目",sub_projects)
     if len(pathDirs)==1 and pathDirs[0] == curent_project_name:  # 这里判断该项目是否有子项目，名称相同则表示没有子项目，相当是重置上面的子项目
         sub_projects = []
@@ -99,7 +99,6 @@ def gitlab_commit(request):
     server_pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
     print("pathDir", server_pathDir)
     print("project_name",curent_project_name)
-    sub_project_name=1
     if curent_project_name in server_pathDir:
         logging.info(str(curent_project_name) + '已存在')
         cmd = cmds[0]
