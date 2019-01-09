@@ -22,15 +22,13 @@ from devops import views as cty_devops
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^index/$', cty_devops.test,name='test'),
+    url(r'^index/$', cty_devops.index,name='index'),
     # url(r'^gitlab/$', cty_devops.gitlab_commit,name='gitlab_commit'),
     # url(r'^cty-gov/*', cty_devops.gitlab_commit,name='gitlab_commit'),
     # url(r'^test_gov/*', cty_devops.gitlab_commit,name='gitlab_commit'),
 
-    url(r'^cty-gov/$', cty_devops.test2,name='test2'),
-    url(r'^cty-gov/get_parents_nodes/$', cty_devops.get_parents_nodes,name='get_parents_nodes'),
-    url(r'^cty-gov/get_parents_nodes/$', cty_devops.get_parents_nodes,name='get_parents_nodes'),
-    url(r'^cty-gov/get_child_nodes/$', cty_devops.get_child_nodes,name='get_child_nodes'),
-    # url(r'^cty-gov/gitlab_commit/$', cty_devops.gitlab_commit,name='gitlab_commit'),
-    url(r'^cty-gov/project/$', cty_devops.get_parents_nodes,name='get_parents_nodes'),
+    url(r'^cty-gov/$', cty_devops.cty_gov,name='cty_gov'),
+    url(r'^cty-gov/get_nodes/$', cty_devops.get_nodes,name='get_nodes'),
+    url(r'^cty-gov/project/$', cty_devops.get_nodes,name='get_parents_nodes'),
+    url(r'^cty-gov/gitlab_commit/$', cty_devops.gitlab_commit,name='gitlab_commit'),
 ]

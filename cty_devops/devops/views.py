@@ -13,18 +13,28 @@ import json
 from python_hooks import python_ssh_command, pexpect_command
 
 
-def test(request):
-    return render(request, 'index.html')
+def index(request):
+    return render(request, 'test.html')
 
 def gitlab_commit(request):
     '''
     获取当前项目的提交信息
     '''
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
-    url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/commits?private_token=%s&per_page=50' % private_token
+    project_name = request.path
+    print("project_name", type(project_name), project_name)
+    curent_project_name = project_name[1:project_name.index('/', 1)]#获取request中的当前项目名称
+    print("curent_project_name",curent_project_name)
+    url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % ( private_token, curent_project_name)  # 获取指定项目信息，根据项目名称获取项目id
+    r = requests.get(url)
+    data = r.text
+    a = json.loads(data)
+    project_id = a[0]['id']#根据项目名称获取项目id
+    url3 = 'http://223.75.53.43:8084/api/v4/projects/%s/repository/commits?private_token=%s&per_page=10' % (project_id,private_token)
     r = requests.get(url3)
     data = r.text
     a = json.loads(data)
+    print("提交详情",type(a),a)
     my_project = []
     result={}
     msg = []
@@ -42,6 +52,7 @@ def gitlab_commit(request):
             result['committed_date'] = (datetime.strptime(item['committed_date'],"%Y-%m-%dT%H:%M:%S.%fZ")+timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
             result['message'] = item['message']
             msg.append(result)
+    print("msg",msg)
 
 
     #正式的推送功能
@@ -55,7 +66,7 @@ def gitlab_commit(request):
     port = '22'
     username = ['root', 'root']  # 0为主机用户，1为gitlab用户
     password = ['zwfw2wsx#EDC', 'rootroot']  # 0为主机密码，1为gitlab密码
-    src = '/data/projects'  # 项目所在路径，脚本文件放入此目录中
+    src = '/data/projects/projects2'  # 项目所在路径，脚本文件放入此目录中
     # target = '/data/robert/app'#要分发的目标机器路径,存放jar包的目录
     target = '/data/test'
     JAVA_HOME = '/opt/jdk1.8.0_171/bin/java'
@@ -68,47 +79,45 @@ def gitlab_commit(request):
         if 'nodes_name' in request.GET:
             nodes_name = request.GET.get('nodes_name')
             print("选中要提交的目录",nodes_name)
-    project_names = request.path.split('/')
-    tmp = [x for x in project_names if x != '']
-    project_name = tmp[0]#实际中的项目名称
 
     print("从path中获取project_name",project_name)
     pathDirs = nodes_name.split(',')  # 获取前台传入的不带参数的项目路径
-    print("pathDirs",pathDirs)
-    # sub_projects = ['gov_cty/'+x for x in pathDirs]
-    sub_projects=pathDirs
-    if nodes_name[0] == project_name:  # 这里判断该项目是否有子项目，名称相同则表示没有子项目
+    print("pathDirs",len(pathDirs),pathDirs[0],pathDirs)
+    sub_projects = [curent_project_name+x for x in pathDirs]
+    print("子项目",sub_projects)
+    if len(pathDirs)==1 and pathDirs[0] == curent_project_name:  # 这里判断该项目是否有子项目，名称相同则表示没有子项目，相当是重置上面的子项目
         sub_projects = []
-        sub_projects[0] = project_name
+        sub_projects = pathDirs
     print("sub_projects",type(sub_projects),sub_projects)
     if button_deploy == 'test':
-        ips = ['192.168.77.154']
-    elif ''.join(tmp[-1]).lower() == 'pro':
+        ips = ['192.168.77.155']
+    elif button_deploy == 'pro':
         ips = []
-    elif ''.join(tmp[-1]).lower() == 'dev':
+    elif button_deploy == 'dev':
         ips = []
     cmds = ['git pull', 'scp', 'git clone']
     server_pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
     print("pathDir", server_pathDir)
-    print("project_name",project_name)
+    print("project_name",curent_project_name)
     sub_project_name=1
-    if project_name in server_pathDir:
-        logging.info(str(project_name) + '已存在')
+    if curent_project_name in server_pathDir:
+        logging.info(str(curent_project_name) + '已存在')
         cmd = cmds[0]
-        project_src = os.path.join(src, project_name)
+        project_src = os.path.join(src, curent_project_name)
         # 有项目就先git pull
         pexpect_command(cmd, master_ip, username[1], password[1], project_name, project_src)
         logging.info("git pull:%s" % cmd)
     else:  # 无项目就clone
-        cmd = 'git clone http://192.168.77.151:8084/root/%s.git' % project_name
+        cmd = 'git clone http://192.168.77.151:8084/root/%s.git' % curent_project_name
         logging.info("git clone:%s" % cmd)
-        project_src = src
-        pexpect_command(cmd, master_ip, username[1], password[1], project_name, project_src)
+        project_src = src#没有对应的项目时src为项目初始路径
+        pexpect_command(cmd, master_ip, username[1], password[1], curent_project_name, project_src)
         # 然后就逐个小项目去推送
     for item in sub_projects:
         print("item",item)
-        project_src = os.path.join(src, project_name)  # 重新设置project_src的值
-        sub_project = os.path.join(project_src, item)  # 获取小项目路径
+        project_src = os.path.join(src, curent_project_name)  # 重新设置project_src的值,这里是大项目所在的路径
+        sub_project = os.path.join(src, item)  # 获取小项目路径
+        print("子项目的绝对路径",sub_project)
         if not os.path.isdir(sub_project):
             status={"code":-1,'msg':"%s不存的项目路径，请检查后重试"%sub_project_name}
             return render(request, 'test.html', {'status': status})
@@ -132,10 +141,10 @@ def gitlab_commit(request):
             logging.info("启动 jar包:%s" % cmd)
             python_ssh_command(ip, int(port), username[0], password[0], args='%s' % cmd)
         status={'sccuss':'提交成功'}
-        return render(request,'index.html', {'result':msg,'status':status})
+        return render(request,'aaa/ztree_test.html', {'result':msg,'status':status})
         # return HttpResponse(json.dumps(msg,ensure_ascii=False), content_type="application/json,charset=utf-8")
 
-def get_parents_nodes(request):
+def get_nodes(request):
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
     if request.is_ajax():
         if 'project' in request.GET:#获取项目顶级目录
@@ -189,6 +198,7 @@ def get_parents_nodes(request):
                     temp = {}
                     if item['type'] != 'tree':
                         temp['icon'] = 'jstree-file'
+                        temp["state"] = { "disabled": 'true' }
                     # if item['type'] == 'tree':
                     temp['id'] = item['id']
                     temp['text'] = item['path']
@@ -209,8 +219,9 @@ def get_parents_nodes(request):
                 for item in a:
                     print("item", type(item), item)
                     temp = {}
-                    if item['type'] != 'tree':
+                    if item['type'] != 'tree':#针对的是文件类型
                         temp['icon'] = 'jstree-file'
+                        temp["state"] = {"disabled": 'true'}
                     temp['id'] = item['id']
                     temp['text'] = item['path']
                     data.append(temp)
@@ -221,50 +232,12 @@ def get_parents_nodes(request):
 
 
 
-def get_child_nodes(request):
-    if request.is_ajax():
-        if 'parents_text' in request.GET:
-            parent_dir = request.GET.get('parents_text')
-            print("父级目录",parent_dir)
-    private_token = 'x_aXP2ZJV89b2q3dWsRw'
-    #url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=cty-config&private_token=%s&per_page=50' % private_token
-    url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=%s&private_token=%s&per_page=50' % (parent_dir,private_token)
-    r = requests.get(url3)
-    data = r.text
-    a = json.loads(data)
-    data = []
-    for item in a:
-        print("item", type(item), item)
-        temp = {}
-        if item['type'] == 'tree':
-            temp['id'] = item['id']
-            temp['text'] = item['name']
-            data.append(temp)
-    print("get_child_nodes", data)
-    return HttpResponse(json.dumps(data), content_type="application/json")
 
-
-def test1(request):
+def cty_gov(request):
     project_name = request.path
     print("project_name", type(project_name), project_name)
     result = project_name[1:project_name.index('/', 1)]
     print("result", result)
-
-    data = []
-    temp = {}
-    temp['id'] = '123123'
-    temp['text'] = result
-    data.append(temp)
-    print("data", data)
-    return render(request, 'aaa/ztree_test.html')
-    # return HttpResponse(json.dumps(data), content_type="application/json")
-
-def test2(request):
-    project_name = request.path
-    print("project_name", type(project_name), project_name)
-    result = project_name[1:project_name.index('/', 1)]
-    print("result", result)
-
     data = []
     temp = {}
     temp['id'] = '123123'
