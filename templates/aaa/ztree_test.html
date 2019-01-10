@@ -197,6 +197,17 @@ $(":button").on('click', function () {
 //
                         }
                     },
+                    complete:function(XMLHttpRequest,textStatus){
+				              // alert('远程调用成功，状态文本值：'+textStatus);
+				             $("#loading").empty();
+				           },
+                    error:function(XMLHttpRequest,textStatus,errorThrown){
+				              swal(
+				                    	      textStatus,
+				                    	     errorThrown,
+				                    	      'error'
+				                    )
+				          }
 
                 });
 
