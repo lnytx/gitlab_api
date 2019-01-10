@@ -138,6 +138,7 @@ def gitlab_commit(request):
 
 def get_nodes(request):
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
+    # master_ip = '223.75.53.43'
     master_ip = '192.168.77.151'
     if request.is_ajax():
         if 'project' in request.GET:#获取项目顶级目录
@@ -167,7 +168,7 @@ def get_nodes(request):
             curent_dir = request.GET.get('selectedNode_text')
             # url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=cty-config&private_token=%s&per_page=50' % private_token
             if curent_dir == temp:  # 如果点击的是顶级目录
-                url = 'http://master_ip:8084/api/v4/projects/%s/repository/tree/?private_token=%s' % ( master_ip,project_id, private_token)  # 获取所有项目二级目录(项目名为1级)
+                url = 'http://%s:8084/api/v4/projects/%s/repository/tree/?private_token=%s' % ( master_ip,project_id, private_token)  # 获取所有项目二级目录(项目名为1级)
                 #url = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=%s&private_token=%s' % ( parent_dir, private_token)
                 #url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % (private_token, parent_dir)  # 获取指定项目信息
                 r = requests.get(url)
