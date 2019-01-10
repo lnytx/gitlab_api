@@ -20,15 +20,16 @@ def gitlab_commit(request):
     '''
     获取当前项目的提交信息
     '''
+    master_ip = '192.168.77.151'#gitlab的内网IP
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
     project_name = request.path
     curent_project_name = project_name[1:project_name.index('/', 1)]#获取request中的当前项目名称
-    url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % ( private_token, curent_project_name)  # 获取指定项目信息，根据项目名称获取项目id
+    url = 'http://%s:8084/api/v4/projects?private_token=%s&search=%s' % ( master_ip,private_token, curent_project_name)  # 获取指定项目信息，根据项目名称获取项目id
     r = requests.get(url)
     data = r.text
     a = json.loads(data)
     project_id = a[0]['id']#根据项目名称获取项目id
-    url3 = 'http://223.75.53.43:8084/api/v4/projects/%s/repository/commits?private_token=%s&per_page=10' % (project_id,private_token)
+    url3 = 'http://%s:8084/api/v4/projects/%s/repository/commits?private_token=%s&per_page=10' % (master_ip,project_id,private_token)
     r = requests.get(url3)
     data = r.text
     a = json.loads(data)
@@ -57,7 +58,6 @@ def gitlab_commit(request):
                         format='[%(asctime)s] %(levelname)s [%(funcName)s: %(filename)s, %(lineno)d] %(message)s',
                         datefmt='%Y-%m-%d %H:%M:%S',
                         filemode='a')
-    master_ip = '192.168.77.151'
     port = '22'
     username = ['root', 'root']  # 0为主机用户，1为gitlab用户
     password = ['zwfw2wsx#EDC', 'rootroot']  # 0为主机密码，1为gitlab密码
@@ -108,6 +108,7 @@ def gitlab_commit(request):
         sub_project = os.path.join(src, item)  # 获取小项目路径
         if not os.path.isdir(sub_project):
             status={"code":-1,'msg':"%s不存的项目路径，请检查后重试"%sub_project}
+
             return render(request, 'test.html', {'status': status})
         # maven打包，然后推送打包sub项目
         os.system('cd %s;mvn clean install -Dmaven.test.skip=true' % project_src)
@@ -131,16 +132,18 @@ def gitlab_commit(request):
             logging.info("启动 jar包:%s" % cmd)
             python_ssh_command(ip, int(port), username[0], password[0], args='%s' % cmd)
     status = {"code": 1, 'msg': "项目已完成提交",'sccuss':'提交成功'}
+    # return HttpResponse(json.dumps(status), content_type="application/json")
     return render(request,'aaa/ztree_test.html', {'result':msg,'status':status})
         # return HttpResponse(json.dumps(msg,ensure_ascii=False), content_type="application/json,charset=utf-8")
 
 def get_nodes(request):
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
+    master_ip = '192.168.77.151'
     if request.is_ajax():
         if 'project' in request.GET:#获取项目顶级目录
             project_name = request.path
             curent_dir = project_name[1:project_name.index('/', 1)]
-            url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % (private_token, curent_dir)  # 获取指定项目信息
+            url = 'http://%s:8084/api/v4/projects?private_token=%s&search=%s' % (master_ip,private_token, curent_dir)  # 获取指定项目信息
             r = requests.get(url)
             data = r.text
             a = json.loads(data)
@@ -155,8 +158,7 @@ def get_nodes(request):
         if 'selectedNode_text' in request.GET:#获取项目次级目录
             project_name = request.path
             temp = project_name[1:project_name.index('/', 1)]
-            url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % (
-            private_token, temp)  # 获取指定项目信息
+            url = 'http://%s:8084/api/v4/projects?private_token=%s&search=%s' % ( master_ip,private_token, temp)  # 获取指定项目信息
             r = requests.get(url)
             data = r.text
             a = json.loads(data)
@@ -165,7 +167,7 @@ def get_nodes(request):
             curent_dir = request.GET.get('selectedNode_text')
             # url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=cty-config&private_token=%s&per_page=50' % private_token
             if curent_dir == temp:  # 如果点击的是顶级目录
-                url = 'http://223.75.53.43:8084/api/v4/projects/%s/repository/tree/?private_token=%s' % ( project_id, private_token)  # 获取所有项目二级目录(项目名为1级)
+                url = 'http://master_ip:8084/api/v4/projects/%s/repository/tree/?private_token=%s' % ( master_ip,project_id, private_token)  # 获取所有项目二级目录(项目名为1级)
                 #url = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=%s&private_token=%s' % ( parent_dir, private_token)
                 #url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % (private_token, parent_dir)  # 获取指定项目信息
                 r = requests.get(url)
@@ -185,7 +187,7 @@ def get_nodes(request):
             else:#获取三级目录
                 curent_dir = request.GET.get('selectedNode_text')
                 parent_dir = request.GET.get('parent_text')#获取父级目录
-                url = 'http://223.75.53.43:8084/api/v4/projects/%s/repository/tree/?path=%s&private_token=%s' % (project_id,curent_dir, private_token)
+                url = 'http://%s:8084/api/v4/projects/%s/repository/tree/?path=%s&private_token=%s' % (master_ip,project_id,curent_dir, private_token)
                 r = requests.get(url)
                 data = r.text
                 a = json.loads(data)
