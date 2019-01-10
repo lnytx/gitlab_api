@@ -173,7 +173,6 @@ def get_nodes(request):
                 a = json.loads(data)
                 data = []
                 for item in a:
-                    print("item", type(item), item)
                     temp = {}
                     if item['type'] != 'tree':
                         temp['icon'] = 'jstree-file'
