@@ -13,42 +13,36 @@
 <!--引用SweetAlert的js-->
 	<script src="/static/sweetalert/sweetalert.min.js"></script>
 	<script src="/static/sweetalert/sweetalert-dev.js"></script>
-
+<!--添加jstree树形结构-->
     <script src="/static/jstree/jstree.min.js" type="text/javascript"></script>
     <!-- Initialize the tree when page is loaded -->
+<!--添加multiple-select-master多选插件-->
+<link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css" />
+<link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css" />
+<script src="/static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+<link rel="stylesheet" href="/static/bootstrap-multiselect-0.9.13/dist/css/bootstrap-multiselect.css" />
+    <script src="/static/bootstrap-multiselect-0.9.13/dist/js/bootstrap-multiselect.js"></script>
+
 <body>
-	<div id="jstree_div"></div>
-    <button id="test" value="test">deplpoy test</button><br>
-    <button id="pro" value="pro">deplpoy pro</button><br>
-    <button id="dev" value="dev">deplpoy dev</button><br>
+	<div id="jstree_div"></div><br>
+{#    选择要执行的IP#}
+        <select id="select_ip_multiple"  multiple="multiple">
+        <option>192.168.77.152</option>
+        <option>192.168.77.153</option>
+        <option>192.168.77.154</option>
+        <option>192.168.77.155</option>
+        <option>192.168.77.156</option>
+        <option>192.168.77.157</option>
+        <option>192.168.77.158</option>
+    </select>
     <br>
-{% if status.msg %}
-{{ status.msg }}
-{% else %}
-    {{ status.sccuss }}
-<table class="table table-striped table-bordered table-hover" id="sample_2">
 
-									<thead id="t_thead">
+    <button id="test" value="test">deplpoy test</button><br>
+{#    <button id="pro" value="pro">deplpoy pro</button><br>#}
+{#    <button id="dev" value="dev">deplpoy dev</button><br>#}
+    <br>
 
-										<tr>
-											<th>提交时间</th>
-											<th>用户名</th>
-											<th>注释信息</th>
-										</tr>
-
-									</thead>
-
-									<tbody id='tbody'>
-									{% for row in result %}
-
-										<tr >
-                                            <td class="hidden-480"><a href="/service_manage/?ip={{row.committed_date}}">{{row.committed_date}}</a></td>
-											<td>{{row.committed_date}}</td>
-											<td>{{row.committer_name}}</td>
-                                        <tr/>
-                                    {% endfor %}
-</table>
-{% endif %}
 
                 <div id="result_html" class="portlet-body form">
 
@@ -126,7 +120,35 @@
 				var selectedNode = inst.get_node(data.selected);
             })
             //按钮提交
-$(":button").on('click', function () {
+
+var selected_ip = [];//定义一个全局变量来保存多选的ip
+        {#    多选插件初始化#}
+$('#select_ip_multiple').multiselect({
+            enableClickableOptGroups: true,
+            enableCollapsibleOptGroups: true,
+            includeSelectAllOption: true,
+            buttonWidth: '400px',
+            dropRight: false,
+            maxHeight: 150,
+            /*onChange: function(option, checked) {
+                $("#select_ip_multiple").each(function () {
+                selected_ip.push($(this).val());
+                });
+            },*/
+            nonSelectedText: '--请选择--',
+            numberDisplayed: 10,
+            enableFiltering: true,
+            allSelectedText:'全部',
+    });
+$("#test").on('click', function () {
+    //获取多选框中选择到的IP
+    var selected_ip = ''
+    $('#select_ip_multiple option:selected').each(function (i) {
+    selected_ip += $(this).val()+",";
+    });
+    selected_ip = selected_ip.substr(0, selected_ip.length - 1);
+    alert(selected_ip)
+    console.log("当前选中的IP",selected_ip)
         var button_text = $(this).val().trim().replace(/\s/g,"");
         console.log("当前选中的button为",button_text)
         nodes=$('#jstree_div').jstree().get_checked(true);//获取所有选择的项目
@@ -138,8 +160,8 @@ $(":button").on('click', function () {
     		}
              nodes_name += $(n).attr("text")+",";
 			});
-        if (nodes_name==null||nodes_name==undefined||nodes_name==""){
-            swal('提交失败','请选择要提交的项目', 'warning' )
+        if (nodes_name==null||nodes_name==undefined||nodes_name==""||selected_ip.length==0){
+            swal('提交失败','请选择要提交的项目或IP', 'warning' )
         }
         else {
             console.log("当前要提交的所有项目", nodes_name)
@@ -158,7 +180,7 @@ $(":button").on('click', function () {
                 $.ajax({
                     url: '/cty-gov/gitlab_commit/',
                     type: 'get',
-                    data: {'button_text': button_text, "nodes_name": nodes_name},
+                    data: {'button_text': button_text, "nodes_name": nodes_name,"selected_ip":selected_ip},
                     //timeout:15000,
                     beforeSend: function (XMLHttpRequest) {
                         //添加动画，显示正在处理中..
@@ -267,6 +289,7 @@ $(":button").on('click', function () {
 				}
 			});
 		}
+
 
 
 	</script>

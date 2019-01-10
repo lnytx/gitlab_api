@@ -21,34 +21,35 @@ def gitlab_commit(request):
     获取当前项目的提交信息
     '''
     master_ip = '192.168.77.151'#gitlab的内网IP
+    # master_ip = '223.75.53.43'
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
     project_name = request.path
     curent_project_name = project_name[1:project_name.index('/', 1)]#获取request中的当前项目名称
-    url = 'http://%s:8084/api/v4/projects?private_token=%s&search=%s' % ( master_ip,private_token, curent_project_name)  # 获取指定项目信息，根据项目名称获取项目id
-    r = requests.get(url)
-    data = r.text
-    a = json.loads(data)
-    project_id = a[0]['id']#根据项目名称获取项目id
-    url3 = 'http://%s:8084/api/v4/projects/%s/repository/commits?private_token=%s&per_page=10' % (master_ip,project_id,private_token)
-    r = requests.get(url3)
-    data = r.text
-    a = json.loads(data)
-    my_project = []
-    result={}
-    msg = []
-    if isinstance(a, dict):
-        for k, v in a.items():
-            print(k, v)
-            if 'test' == v:  # 按项目名称取自己的项目
-                my_project.append(v)
-                break
-    elif isinstance(a, list):
-        for item in a:
-            result={}
-            result['committer_name'] = item['committer_name']
-            result['committed_date'] = (datetime.strptime(item['committed_date'],"%Y-%m-%dT%H:%M:%S.%fZ")+timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
-            result['message'] = item['message']
-            msg.append(result)
+    # url = 'http://%s:8084/api/v4/projects?private_token=%s&search=%s' % ( master_ip,private_token, curent_project_name)  # 获取指定项目信息，根据项目名称获取项目id
+    # r = requests.get(url)
+    # data = r.text
+    # a = json.loads(data)
+    # project_id = a[0]['id']#根据项目名称获取项目id
+    # url3 = 'http://%s:8084/api/v4/projects/%s/repository/commits?private_token=%s&per_page=10' % (master_ip,project_id,private_token)
+    # r = requests.get(url3)
+    # data = r.text
+    # a = json.loads(data)
+    # my_project = []
+    # result={}
+    # msg = []
+    # if isinstance(a, dict):
+    #     for k, v in a.items():
+    #         print(k, v)
+    #         if 'test' == v:  # 按项目名称取自己的项目
+    #             my_project.append(v)
+    #             break
+    # elif isinstance(a, list):
+    #     for item in a:
+    #         result={}
+    #         result['committer_name'] = item['committer_name']
+    #         result['committed_date'] = (datetime.strptime(item['committed_date'],"%Y-%m-%dT%H:%M:%S.%fZ")+timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
+    #         result['message'] = item['message']
+    #         msg.append(result)
 
 
     #正式的推送功能
@@ -73,7 +74,8 @@ def gitlab_commit(request):
             button_deploy = request.GET.get('button_text')
         if 'nodes_name' in request.GET:
             nodes_name = request.GET.get('nodes_name')
-
+        if 'selected_ip' in request.GET:
+            selected_ip = request.GET.get('selected_ip').split(',')
     pathDirs = nodes_name.split(',')  # 获取前台传入的不带参数的项目路径
     print("pathDirs",len(pathDirs),pathDirs[0],pathDirs)
     sub_projects = [curent_project_name+'/'+x for x in pathDirs]
@@ -82,7 +84,7 @@ def gitlab_commit(request):
         sub_projects = pathDirs
     print("sub_projects",type(sub_projects),sub_projects)
     if button_deploy == 'test':
-        ips = ['192.168.77.155']
+        ips = selected_ip
     elif button_deploy == 'pro':
         ips = []
     elif button_deploy == 'dev':
@@ -97,7 +99,7 @@ def gitlab_commit(request):
         pexpect_command(cmd, master_ip, username[1], password[1], project_name, project_src)
         logging.info("git pull:%s" % cmd)
     else:  # 无项目就clone
-        cmd = 'git clone http://192.168.77.151:8084/%s/%s.git' % (project_owner,curent_project_name)
+        cmd = 'git clone http://%s:8084/%s/%s.git' % (master_ip,project_owner,curent_project_name)
         logging.info("git clone:%s" % cmd)
         project_src = src#没有对应的项目时src为项目初始路径
         pexpect_command(cmd, master_ip, username[1], password[1], curent_project_name, project_src)
@@ -133,13 +135,14 @@ def gitlab_commit(request):
             python_ssh_command(ip, int(port), username[0], password[0], args='%s' % cmd)
     status = {"code": 1, 'msg': "项目已完成提交",'sccuss':'提交成功'}
     # return HttpResponse(json.dumps(status), content_type="application/json")
-    return render(request,'aaa/ztree_test.html', {'result':msg,'status':status})
+    return render(request,'aaa/ztree_test.html', {'status':status})
         # return HttpResponse(json.dumps(msg,ensure_ascii=False), content_type="application/json,charset=utf-8")
 
 def get_nodes(request):
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
     # master_ip = '223.75.53.43'
     master_ip = '192.168.77.151'
+    # master_ip = '223.75.53.43'
     if request.is_ajax():
         if 'project' in request.GET:#获取项目顶级目录
             project_name = request.path
