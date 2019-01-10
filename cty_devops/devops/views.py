@@ -62,7 +62,7 @@ def gitlab_commit(request):
     port = '22'
     username = ['root', 'root']  # 0为主机用户，1为gitlab用户
     password = ['zwfw2wsx#EDC', 'rootroot']  # 0为主机密码，1为gitlab密码
-    src = '/data/projects/projects2'  # 项目所在路径，脚本文件放入此目录中
+    src = '/data/projects'  # 项目所在路径，脚本文件放入此目录中
     # target = '/data/robert/app'#要分发的目标机器路径,存放jar包的目录
     target = '/data/test'
     JAVA_HOME = '/opt/jdk1.8.0_171/bin/java'
