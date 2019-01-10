@@ -22,9 +22,7 @@ def gitlab_commit(request):
     '''
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
     project_name = request.path
-    print("project_name", type(project_name), project_name)
     curent_project_name = project_name[1:project_name.index('/', 1)]#获取request中的当前项目名称
-    print("curent_project_name",curent_project_name)
     url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % ( private_token, curent_project_name)  # 获取指定项目信息，根据项目名称获取项目id
     r = requests.get(url)
     data = r.text
@@ -34,7 +32,6 @@ def gitlab_commit(request):
     r = requests.get(url3)
     data = r.text
     a = json.loads(data)
-    print("提交详情",type(a),a)
     my_project = []
     result={}
     msg = []
@@ -43,7 +40,6 @@ def gitlab_commit(request):
             print(k, v)
             if 'test' == v:  # 按项目名称取自己的项目
                 my_project.append(v)
-                print("我自己的项目", my_project)
                 break
     elif isinstance(a, list):
         for item in a:
@@ -52,7 +48,6 @@ def gitlab_commit(request):
             result['committed_date'] = (datetime.strptime(item['committed_date'],"%Y-%m-%dT%H:%M:%S.%fZ")+timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
             result['message'] = item['message']
             msg.append(result)
-    print("msg",msg)
 
 
     #正式的推送功能
@@ -76,16 +71,12 @@ def gitlab_commit(request):
     if request.is_ajax():
         if 'button_text' in request.GET:
             button_deploy = request.GET.get('button_text')
-            print("选中的按钮值",button_deploy)
         if 'nodes_name' in request.GET:
             nodes_name = request.GET.get('nodes_name')
-            print("选中要提交的目录",nodes_name)
 
-    print("从path中获取project_name",project_name)
     pathDirs = nodes_name.split(',')  # 获取前台传入的不带参数的项目路径
     print("pathDirs",len(pathDirs),pathDirs[0],pathDirs)
     sub_projects = [curent_project_name+'/'+x for x in pathDirs]
-    print("子项目",sub_projects)
     if len(pathDirs)==1 and pathDirs[0] == curent_project_name:  # 这里判断该项目是否有子项目，名称相同则表示没有子项目，相当是重置上面的子项目
         sub_projects = []
         sub_projects = pathDirs
@@ -98,8 +89,6 @@ def gitlab_commit(request):
         ips = []
     cmds = ['git pull', 'scp', 'git clone']
     server_pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
-    print("pathDir", server_pathDir)
-    print("project_name",curent_project_name)
     if curent_project_name in server_pathDir:
         logging.info(str(curent_project_name) + '已存在')
         cmd = cmds[0]
@@ -117,11 +106,9 @@ def gitlab_commit(request):
         print("item",item)
         project_src = os.path.join(src, curent_project_name)  # 重新设置project_src的值,这里是大项目所在的路径
         sub_project = os.path.join(src, item)  # 获取小项目路径
-        print("子项目的绝对路径",sub_project)
         if not os.path.isdir(sub_project):
             status={"code":-1,'msg':"%s不存的项目路径，请检查后重试"%sub_project}
             return render(request, 'test.html', {'status': status})
-        print("sub_proect path", sub_project)
         # maven打包，然后推送打包sub项目
         os.system('cd %s;mvn clean install -Dmaven.test.skip=true' % project_src)
         os.system('cd %s;mvn clean package' % sub_project)  # 打包小项目
@@ -131,7 +118,6 @@ def gitlab_commit(request):
         else:
             jar_name=item
         target_jar = os.path.join(sub_project, 'target/%s.jar' % jar_name)
-        print("target_jar", target_jar)
         for ip in ips:
             # 要在对应的机器上先kill掉之前的进程，然后scp过去之后再启动
             cmd = "ps -ef|grep %s.jar|grep -v grep|awk '{print $2}'|xargs -i kill {}" % jar_name
@@ -153,17 +139,13 @@ def get_nodes(request):
     if request.is_ajax():
         if 'project' in request.GET:#获取项目顶级目录
             project_name = request.path
-            print("project_name", type(project_name), project_name)
             curent_dir = project_name[1:project_name.index('/', 1)]
-            print("result", curent_dir)
             url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % (private_token, curent_dir)  # 获取指定项目信息
             r = requests.get(url)
             data = r.text
             a = json.loads(data)
             project_id = a[0]['id']
             project_name = a[0]['name']
-            print("项目id为", project_id)
-            print("父节点", type(a), len(a), a)
             temp = {}
             ret = []
             temp['id'] = project_id
@@ -172,9 +154,7 @@ def get_nodes(request):
             return HttpResponse(json.dumps(ret), content_type="application/json")
         if 'selectedNode_text' in request.GET:#获取项目次级目录
             project_name = request.path
-            print("project_name", type(project_name), project_name)
             temp = project_name[1:project_name.index('/', 1)]
-            print("result", temp)
             url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % (
             private_token, temp)  # 获取指定项目信息
             r = requests.get(url)
@@ -182,20 +162,15 @@ def get_nodes(request):
             a = json.loads(data)
             project_id = a[0]['id']
             temp = project_name[1:project_name.index('/', 1)]
-            print("项目名称", temp)
             curent_dir = request.GET.get('selectedNode_text')
-            print("父级目录",curent_dir)
-            print("project_name",project_name)
             # url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=cty-config&private_token=%s&per_page=50' % private_token
             if curent_dir == temp:  # 如果点击的是顶级目录
-                print("parent_dir",curent_dir)
                 url = 'http://223.75.53.43:8084/api/v4/projects/%s/repository/tree/?private_token=%s' % ( project_id, private_token)  # 获取所有项目二级目录(项目名为1级)
                 #url = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=%s&private_token=%s' % ( parent_dir, private_token)
                 #url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % (private_token, parent_dir)  # 获取指定项目信息
                 r = requests.get(url)
                 data = r.text
                 a = json.loads(data)
-                print("a", type(a), a)
                 data = []
                 for item in a:
                     print("item", type(item), item)
@@ -207,21 +182,16 @@ def get_nodes(request):
                     temp['id'] = item['id']
                     temp['text'] = item['path']
                     data.append(temp)
-                print("data", data)
                 return HttpResponse(json.dumps(data), content_type="application/json")
             else:#获取三级目录
                 curent_dir = request.GET.get('selectedNode_text')
                 parent_dir = request.GET.get('parent_text')#获取父级目录
-                print("parent_dir三",curent_dir)
-                print("project_id三",project_id)
                 url = 'http://223.75.53.43:8084/api/v4/projects/%s/repository/tree/?path=%s&private_token=%s' % (project_id,curent_dir, private_token)
                 r = requests.get(url)
                 data = r.text
                 a = json.loads(data)
-                print("a", type(a), a)
                 data = []
                 for item in a:
-                    print("item", type(item), item)
                     temp = {}
                     if item['type'] != 'tree':#针对的是文件类型
                         temp['icon'] = 'jstree-file'
@@ -229,7 +199,6 @@ def get_nodes(request):
                     temp['id'] = item['id']
                     temp['text'] = item['path']
                     data.append(temp)
-                print("data", data)
                 return HttpResponse(json.dumps(data), content_type="application/json")
 
     #url = 'http://223.75.53.43:8084/api/v4/projects/%s/repository/tree/?private_token=%s' % ( project_id, private_token)  # 获取所有项目二级目录(项目名为1级)
