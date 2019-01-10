@@ -184,6 +184,7 @@ $(":button").on('click', function () {
                                         $("#failed_exec").append($html)
                                     }
                                     else {
+                                        swal('失败', ret.msg, "error");
                                         count_scuess++;
                                         $("#scuess_exec").css('display', 'block');
                                         console.log("item", item.innerHTML)

@@ -70,6 +70,7 @@ def gitlab_commit(request):
     # target = '/data/robert/app'#要分发的目标机器路径,存放jar包的目录
     target = '/data/test'
     JAVA_HOME = '/opt/jdk1.8.0_171/bin/java'
+    project_owner='dongwei'#gitlab上的项目拥有者
     # os.system('cd /soft ； touch aaa.txt') # 切换到项目的目录，并且执行pull操作
     # 获取前台传递的数据
     if request.is_ajax():
@@ -107,7 +108,7 @@ def gitlab_commit(request):
         pexpect_command(cmd, master_ip, username[1], password[1], project_name, project_src)
         logging.info("git pull:%s" % cmd)
     else:  # 无项目就clone
-        cmd = 'git clone http://192.168.77.151:8084/root/%s.git' % curent_project_name
+        cmd = 'git clone http://192.168.77.151:8084/%s/%s.git' % (project_owner,curent_project_name)
         logging.info("git clone:%s" % cmd)
         project_src = src#没有对应的项目时src为项目初始路径
         pexpect_command(cmd, master_ip, username[1], password[1], curent_project_name, project_src)
@@ -118,7 +119,7 @@ def gitlab_commit(request):
         sub_project = os.path.join(src, item)  # 获取小项目路径
         print("子项目的绝对路径",sub_project)
         if not os.path.isdir(sub_project):
-            status={"code":-1,'msg':"%s不存的项目路径，请检查后重试"%sub_project_name}
+            status={"code":-1,'msg':"%s不存的项目路径，请检查后重试"%sub_project}
             return render(request, 'test.html', {'status': status})
         print("sub_proect path", sub_project)
         # maven打包，然后推送打包sub项目
@@ -143,7 +144,7 @@ def gitlab_commit(request):
                   (target, JAVA_HOME, item, button_deploy)
             logging.info("启动 jar包:%s" % cmd)
             python_ssh_command(ip, int(port), username[0], password[0], args='%s' % cmd)
-        status={'sccuss':'提交成功'}
+        status = {"code": 1, 'msg': "项目已完成提交" % sub_project,'sccuss':'提交成功'}
         return render(request,'aaa/ztree_test.html', {'result':msg,'status':status})
         # return HttpResponse(json.dumps(msg,ensure_ascii=False), content_type="application/json,charset=utf-8")
 
