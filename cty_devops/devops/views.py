@@ -130,8 +130,8 @@ def gitlab_commit(request):
                   (target, JAVA_HOME, jar_name, button_deploy)
             logging.info("启动 jar包:%s" % cmd)
             python_ssh_command(ip, int(port), username[0], password[0], args='%s' % cmd)
-        status = {"code": 1, 'msg': "项目已完成提交",'sccuss':'提交成功'}
-        return render(request,'aaa/ztree_test.html', {'result':msg,'status':status})
+    status = {"code": 1, 'msg': "项目已完成提交",'sccuss':'提交成功'}
+    return render(request,'aaa/ztree_test.html', {'result':msg,'status':status})
         # return HttpResponse(json.dumps(msg,ensure_ascii=False), content_type="application/json,charset=utf-8")
 
 def get_nodes(request):
