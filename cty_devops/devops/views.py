@@ -141,7 +141,7 @@ def gitlab_commit(request):
             logging.info("scp jar包:%s" % cmd)
             pexpect_command(cmd, ip, username[0], password[0], project_name, project_src)
             cmd = 'cd %s && nohup %s -jar %s.jar --spring.profiles.active=%s -Duser.timezone=GMT+08>/dev/null 1>&2 &' % \
-                  (target, JAVA_HOME, item, button_deploy)
+                  (target, JAVA_HOME, jar_name, button_deploy)
             logging.info("启动 jar包:%s" % cmd)
             python_ssh_command(ip, int(port), username[0], password[0], args='%s' % cmd)
         status = {"code": 1, 'msg': "项目已完成提交",'sccuss':'提交成功'}

@@ -170,6 +170,7 @@ $(":button").on('click', function () {
                         });
                     },
                     success: function (ret, textStatus) {
+                        console.log("返回结果",ret)
                         //alert('开始回调，状态文本值：'+textStatus+' 返回数据：'+data.msg);
                         if (ret.code == 0) {
                             swal('成功', ret.msg, "success");
