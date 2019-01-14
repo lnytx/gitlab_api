@@ -65,7 +65,7 @@ def gitlab_commit(request):
     src = '/data/projects'  # 项目所在路径，脚本文件放入此目录中
     # target = '/data/robert/app'#要分发的目标机器路径,存放jar包的目录
     target = '/data/test'
-    JAVA_HOME = '/opt/jdk1.8.0_171/bin/java'
+    JAVA_HOME = '`which java`'#这样写有问题，要改`which java`
     project_owner='dongwei'#gitlab上的项目拥有者
     # os.system('cd /soft ； touch aaa.txt') # 切换到项目的目录，并且执行pull操作
     # 获取前台传递的数据
@@ -135,7 +135,7 @@ def gitlab_commit(request):
             python_ssh_command(ip, int(port), username[0], password[0], args='%s' % cmd)
     status = {"code": 1, 'msg': "项目已完成提交",'sccuss':'提交成功'}
     # return HttpResponse(json.dumps(status), content_type="application/json")
-    return render(request,'aaa/ztree_test.html', {'status':status})
+    return render(request,'jstree_deploy.html', {'status':status})
         # return HttpResponse(json.dumps(msg,ensure_ascii=False), content_type="application/json,charset=utf-8")
 
 def get_nodes(request):
@@ -222,6 +222,6 @@ def cty_gov(request):
     temp['text'] = result
     data.append(temp)
     print("data", data)
-    return render(request, 'aaa/ztree_test.html')
+    return render(request, 'jstree_deploy.html')
     # return HttpResponse(json.dumps(data), content_type="application/json")
 

@@ -23,10 +23,10 @@ def aaa():
         for item in a:
             pass
 if __name__=='__main__':
-    b='cty-govcty-elasticsearch/cty-elasticsearch-item/cty-elasticsearch-item-api'
-    # b = 'cty-elasticsearch-item-api'
-    if '/' in b:
-        aaa = b[b.rindex('/', 1)+1:]
-    else:
-        aaa=b
-    print("aaa", aaa)
+    target='ss'
+    JAVA_HOME='`which java`'
+    jar_name='a.jar'
+    button_deploy='test'
+    cmd = 'cd %s && nohup %s -jar %s.jar --spring.profiles.active=%s -Duser.timezone=GMT+08>/dev/null 1>&2 &' % \
+          (target, JAVA_HOME, jar_name, button_deploy)
+    print("cmd",cmd)
