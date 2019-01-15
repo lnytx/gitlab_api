@@ -10,9 +10,8 @@ import requests
 import json
 
 # Create your views here.
-from python_hooks import python_ssh_command, pexpect_command
+from python_hooks import python_ssh_command, pexpect_command,get_java
 
-from tools.python_hooks import get_java
 
 
 def index(request):
