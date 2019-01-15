@@ -126,6 +126,9 @@ def gitlab_commit(request):
             #获取对应的java_home环境变量
             cmd = "whereis java|awk -F':' '{print $2}'"
             JAVA_HOME = get_java(ip,username[0], password[0],cmd)  # 这样写有问题，要改`which java
+            print("JAVA_HOME",JAVA_HOME)
+            logging.info("获取的java_home:%s" % JAVA_HOME)
+
             # 要在对应的机器上先kill掉之前的进程，然后scp过去之后再启动
             cmd = "ps -ef|grep %s.jar|grep -v grep|awk '{print $2}'|xargs -i kill {}" % jar_name
             logging.info("杀掉进程:%s" % cmd)
