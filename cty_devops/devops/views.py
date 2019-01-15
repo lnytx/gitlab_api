@@ -61,7 +61,7 @@ def gitlab_commit(request):
                         datefmt='%Y-%m-%d %H:%M:%S',
                         filemode='a')
     port = '22'
-    JAVA_HOME=''#定义java环境变量路径
+    JAVA_HOME='/opt/jdk1.8.0_191/bin/java'#定义java环境变量路径
     username = ['root', 'root']  # 0为主机用户，1为gitlab用户
     password = ['zwfw2wsx#EDC', 'rootroot']  # 0为主机密码，1为gitlab密码
     src = '/data/projects'  # 项目所在路径，脚本文件放入此目录中
@@ -124,10 +124,10 @@ def gitlab_commit(request):
         target_jar = os.path.join(sub_project, 'target/%s.jar' % jar_name)
         for ip in ips:
             #获取对应的java_home环境变量
-            cmd = "whereis java|awk -F':' '{print $2}'"
-            JAVA_HOME = get_java(ip,username[0], password[0],cmd)  # 这样写有问题，要改`which java
-            print("JAVA_HOME",JAVA_HOME)
-            logging.info("获取的java_home:%s" % JAVA_HOME)
+            # cmd = "whereis java|awk -F':' '{print $2}'"
+            # JAVA_HOME = get_java(ip,username[0], password[0],cmd)  # 这样写有问题，要改`which java
+            # print("JAVA_HOME",JAVA_HOME)
+            # logging.info("获取的java_home:%s" % JAVA_HOME)
 
             # 要在对应的机器上先kill掉之前的进程，然后scp过去之后再启动
             cmd = "ps -ef|grep %s.jar|grep -v grep|awk '{print $2}'|xargs -i kill {}" % jar_name
