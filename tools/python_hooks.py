@@ -33,7 +33,7 @@ def get_java(ip, user, passwd, cmd):#获取java环境变量路径
         r = ssh.read()
         ssh.expect(pexpect.EOF)
         ssh.close()
-    return r.decode()
+    return (r.decode().lstrip()).rstrip()
 
 #自动交互
 def pexpect_command(cmd,ip,username,password,project_name,project_src):
