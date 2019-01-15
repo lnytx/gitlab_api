@@ -29,11 +29,13 @@ def get_java(ip, user, passwd, cmd):#获取java环境变量路径
             ssh.sendline('yes')
     except pexpect.EOF:
         ssh.close()
+        print("获取java_home失败" % cmd)
+        logging.info('获取java_home失败%s' % ssh.after)
     else:
         r = ssh.read()
         ssh.expect(pexpect.EOF)
         ssh.close()
-    print("获取java环境变量结果",(r.decode().lstrip()).rstrip())
+        print("获取java环境变量结果",(r.decode().lstrip()).rstrip())
     return (r.decode().lstrip()).rstrip()
 
 #自动交互
