@@ -60,12 +60,12 @@ def gitlab_commit(request):
                         datefmt='%Y-%m-%d %H:%M:%S',
                         filemode='a')
     port = '22'
+    JAVA_HOME=''#定义java环境变量路径
     username = ['root', 'root']  # 0为主机用户，1为gitlab用户
     password = ['zwfw2wsx#EDC', 'rootroot']  # 0为主机密码，1为gitlab密码
     src = '/data/projects'  # 项目所在路径，脚本文件放入此目录中
     # target = '/data/robert/app'#要分发的目标机器路径,存放jar包的目录
     target = '/data/test'
-    JAVA_HOME = '`which java`'#这样写有问题，要改`which java`
     project_owner='dongwei'#gitlab上的项目拥有者
     # os.system('cd /soft ； touch aaa.txt') # 切换到项目的目录，并且执行pull操作
     # 获取前台传递的数据
@@ -122,6 +122,9 @@ def gitlab_commit(request):
             jar_name=item
         target_jar = os.path.join(sub_project, 'target/%s.jar' % jar_name)
         for ip in ips:
+            #获取对应的java_home环境变量
+            cmd = "whereis java|awk -F':' '{print $2}'"
+            JAVA_HOME = get_java(ip,username[0], password[0],cmd)  # 这样写有问题，要改`which java
             # 要在对应的机器上先kill掉之前的进程，然后scp过去之后再启动
             cmd = "ps -ef|grep %s.jar|grep -v grep|awk '{print $2}'|xargs -i kill {}" % jar_name
             logging.info("杀掉进程:%s" % cmd)

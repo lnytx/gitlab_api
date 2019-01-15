@@ -18,6 +18,22 @@ logging.basicConfig(filename=log_file, level=logging.DEBUG,
                     datefmt='%Y-%m-%d %H:%M:%S',
                     filemode='a')
 
+def get_java(ip, user, passwd, cmd):#获取java环境变量路径
+    ssh = pexpect.spawn('ssh %s@%s "%s"' % (user, ip, cmd))
+    r = ''
+    try:
+        i = ssh.expect(['password: ', 'continue connecting (yes/no)?'])
+        if i == 0 :
+            ssh.sendline(passwd)
+        elif i == 1:
+            ssh.sendline('yes')
+    except pexpect.EOF:
+        ssh.close()
+    else:
+        r = ssh.read()
+        ssh.expect(pexpect.EOF)
+        ssh.close()
+    return r.decode()
 
 #自动交互
 def pexpect_command(cmd,ip,username,password,project_name,project_src):
