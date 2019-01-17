@@ -32,7 +32,7 @@ runner.get_result()
 
 import threading
 import multiprocessing
-import queue
+import Queue
 
 
 class AnsibleProcess(object):
@@ -238,7 +238,8 @@ def main():
     AnsibleApi.start()
 
     sources=[{"hostname": "192.168.77.154", "ansible_port":22, "ansible_user":"root", "ansible_ssh_pass":"zwfw2wsx#EDC"}]
-    AnsibleApi.run_task(sources, 'copy', 'src=/root/liyunjiang/ansible/sample/god.py dest=/root/')
+    # AnsibleApi.run_task(sources, 'copy', 'src=/root/liyunjiang/ansible/sample/god.py dest=/root/')
+    AnsibleApi.run_task(sources, 'shell', 'ls /data/test')
 
     while True:
         if AnsibleApi.is_task_complete():
@@ -250,7 +251,7 @@ def main():
 
     AnsibleApi.clear_complete_tasks()
 
-    AnsibleApi.run_task(sources, "file", "name=/root/god.py state=absent")
+    AnsibleApi.run_task(sources, "command", "ping")
 
     while True:
         if AnsibleApi.is_task_complete():
