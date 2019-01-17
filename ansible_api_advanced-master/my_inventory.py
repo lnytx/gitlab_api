@@ -51,7 +51,7 @@ class MyInventory(InventoryManager):
         if groupvars:
             my_group = self.inventory.groups().get(groupname, None)
             if my_group is None:
-                break
+                pass
 
             for key, value in groupvars.iteritems():
                 my_group.set_variable(key, value)
