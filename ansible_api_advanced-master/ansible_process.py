@@ -32,7 +32,7 @@ runner.get_result()
 
 import threading
 import multiprocessing
-import Queue
+import queue
 
 
 class AnsibleProcess(object):
@@ -237,9 +237,7 @@ class AnsibleApi(object):
 def main():
     AnsibleApi.start()
 
-    sources=[{"hostname": "192.168.3.193", "ansible_port":22, "ansible_user":"root", "ansible_ssh_pass":"1234"},
-             {"hostname": "192.168.3.199", "ansible_port":22, "ansible_user":"root", "ansible_ssh_pass":"123456"},
-             {"hostname": "192.168.3.190", "ansible_port":22, "ansible_user":"root", "ansible_ssh_pass":"1234"}]
+    sources=[{"hostname": "192.168.77.154", "ansible_port":22, "ansible_user":"root", "ansible_ssh_pass":"zwfw2wsx#EDC"}]
     AnsibleApi.run_task(sources, 'copy', 'src=/root/liyunjiang/ansible/sample/god.py dest=/root/')
 
     while True:
@@ -266,5 +264,6 @@ def main():
     AnsibleApi.stop()
 
 
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    print("开始")
+    main()
