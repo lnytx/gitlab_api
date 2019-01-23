@@ -32,7 +32,7 @@ runner.get_result()
 
 import threading
 import multiprocessing
-import Queue
+import queue
 
 
 class AnsibleProcess(object):
@@ -226,7 +226,7 @@ class AnsibleApi(object):
                 AnsibleApi._complete_tasks.append(compare_task)
                 AnsibleApi._mutex_complete.release()
 
-            except Queue.Empty:
+            except queue.Empty:
                 pass
             except:
                 print('Exception|%s' % traceback.format_exc())

@@ -23,10 +23,8 @@ def aaa():
         for item in a:
             pass
 if __name__=='__main__':
-    target='ss'
-    JAVA_HOME='`which java`'
-    jar_name='a.jar'
-    button_deploy='test'
-    cmd = 'cd %s && nohup %s -jar %s.jar --spring.profiles.active=%s -Duser.timezone=GMT+08>/dev/null 1>&2 &' % \
-          (target, JAVA_HOME, jar_name, button_deploy)
-    print("cmd",cmd)
+    x = 3
+    y = 8
+    a=++x*y
+    print("a",a)
+    print(++x*y)
