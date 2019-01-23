@@ -268,4 +268,10 @@ def main():
 
 if __name__ == '__main__':
     print("开始")
-    main()
+    # main()
+    sources=[{"hostname": "192.168.77.154", "ansible_port":22, "ansible_user":"root", "ansible_ssh_pass":"zwfw2wsx#EDC"}]
+    # AnsibleApi.run_task(sources, 'copy', 'src=/root/liyunjiang/ansible/sample/god.py dest=/root/')
+    AnsibleApi.run_task(sources, 'shell', 'ls /data/test')
+    result = AnsibleApi.get_result()
+    pretty_dict = json.dumps(result, indent=1)
+    print("Ansible Result:%s" % pretty_dict)

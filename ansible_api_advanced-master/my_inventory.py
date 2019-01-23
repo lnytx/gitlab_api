@@ -1,5 +1,6 @@
-#!/usr/bin/evn python
+
 # -*- coding: UTF-8 -*-
+#!/usr/bin/evn python
 
 import os
 #from ansible.inventory import Inventory
