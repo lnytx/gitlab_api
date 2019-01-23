@@ -57,8 +57,7 @@ class AnsibleProcess(object):
             try:
                 #task = AnsibleProcess._queue_recv.get(True, 1)
                 task = AnsibleProcess._queue_recv.get(True)
-                if 'task_id' not in task or 'resource' not in task or 'mdl_nm' not in task or 'mdl_args' not in task:
-                #if not task.has_key('task_id') or not task.has_key('resource') or not task.has_key('mdl_nm') or not task.has_key('mdl_args'):
+                if not task.has_key('task_id') or not task.has_key('resource') or not task.has_key('mdl_nm') or not task.has_key('mdl_args'):
                     print("Invalid task:%s" % task)
                     continue
 
