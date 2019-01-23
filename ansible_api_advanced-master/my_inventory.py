@@ -58,8 +58,9 @@ class MyInventory(InventoryManager):
 
         # add hosts to group  
         for host in hosts:
-            # set connection variables 
-            if not host.has_key("hostname"):
+            # set connection variables
+            if 'hostname' not in host:
+            #if not host.has_key("hostname"):
                 continue
 
             hostname = host.get("hostname")
