@@ -68,7 +68,7 @@ class MyInventory(InventoryManager):
 
             my_host = self.inventory.get_host(hostname)
             # set other variables  
-            for key, value in host.iteritems():
+            for key, value in host.items():
                 if key not in ["hostname"]:
                     my_host.set_variable(key, value)
 

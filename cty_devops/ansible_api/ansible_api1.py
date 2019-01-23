@@ -149,7 +149,7 @@ class MyInventory(Inventory):
             my_host.set_variable('ansible_ssh_private_key_file', ssh_key)
 
             # set other variables
-            for key, value in host.iteritems():
+            for key, value in host.items():
                 if key not in ["hostname", "port", "username", "password"]:
                     my_host.set_variable(key, value)
                     # add to group
