@@ -18,13 +18,34 @@ class ResultCallback(CallbackBase):
     the end of the execution, look into utilizing the ``json`` callback plugin
     or writing your own custom callback plugin
     """
-    def v2_runner_on_ok(self, result, **kwargs):
-        """Print a json representation of the result
 
-        This method could store the result in an instance attribute for retrieval later
-        """
-        host = result._host
-        print(json.dumps({host.name: result._result}, indent=4))
+    def __init__(self, *args, **kwargs):
+        super(ResultsCallback, self).__init__(*args, **kwargs)
+        self.task_ok = {}
+        self.task_unreachable = {}
+        self.task_failed = {}
+        self.task_skipped = {}
+        self.task_stats = {}
+        # self.host_ok = {}
+        # self.host_unreachable = {}
+        # self.host_failed = {}
+
+    def v2_runner_on_unreachable(self, result):
+        self.task_unreachable[result._host.get_name()] = result
+
+    def v2_runner_on_ok(self, result, *args, **kwargs):
+        self.task_ok[result._host.get_name()] = result
+
+    def v2_runner_on_failed(self, result, *args, **kwargs):
+        self.task_failed[result._host.get_name()] = result
+
+    def v2_runner_on_skipped(self, result, *args, **kwargs):
+        self.task_skipped[result._host.get_name()] = result
+
+    def v2_runner_on_stats(self, result, *args, **kwargs):
+        self.task_stats[result._host.get_name()] = result
+
+
 
 # since API is constructed for CLI it expects certain options to always be set, named tuple 'fakes' the args parsing options object
 Options = namedtuple('Options', ['connection', 'module_path', 'forks', 'become', 'become_method', 'become_user', 'check', 'diff'])
@@ -38,7 +59,7 @@ passwords = dict(vault_pass='zwfw2wsx#EDC')
 results_callback = ResultCallback()
 
 # create inventory, use path to host config file as source or hosts in a comma separated string
-inventory = InventoryManager(loader=loader, sources='/etc/ansible/hosts,')
+inventory = InventoryManager(loader=loader, sources=['192.168.77.154'])
 
 # variable manager takes care of merging all the different sources to give you a unifed view of variables available in each context
 variable_manager = VariableManager(loader=loader, inventory=inventory)
@@ -46,11 +67,11 @@ variable_manager = VariableManager(loader=loader, inventory=inventory)
 # create datastructure that represents our play, including tasks, this is basically what our YAML loader does internally.
 play_source =  dict(
         name = "Ansible Play",
-        hosts = '192.168.77.154',
+        hosts = 'localhost',
         gather_facts = 'no',
         tasks = [
-            dict(action=dict(module='shell', args='ls /data'), register='shell_out'),
-            # dict(action=dict(module='debug', args=dict(msg='{{shell_out.stdout}}')))
+            dict(action=dict(module='shell', args='ls /root'), register='shell_out'),
+            dict(action=dict(module='debug', args=dict(msg='{{shell_out.stdout}}')))
          ]
     )
 
@@ -70,7 +91,6 @@ try:
               stdout_callback=results_callback,  # Use our custom callback instead of the ``default`` callback plugin, which prints to stdout
           )
     result = tqm.run(play) # most interesting data for a play is actually sent to the callback's methods
-    print("result",result)
 finally:
     # we always need to cleanup child procs and the structres we use to communicate with them
     if tqm is not None:
@@ -79,5 +99,5 @@ finally:
     # Remove ansible tmpdir
     shutil.rmtree(C.DEFAULT_LOCAL_TMP, True)
 
-if '__name__'=='__main__':
+if __name__=='__main__':
     rc = ResultCallback()

@@ -59,7 +59,7 @@ class MyRunner(object):
                 'scp_extra_args', 'become', 'become_method', 'become_user', 'ask_value_pass', 'verbosity',  
                 'check', 'listhosts', 'listtasks', 'listtags', 'syntax', 'diff'])
         self.options = Options(connection='smart', module_path='/usr/share/ansible', forks=100, timeout=10,  
-                remote_user='root', ask_pass=False, private_key_file=None, ssh_common_args=None, ssh_extra_args=None,  
+                remote_user='root', ask_pass=True, private_key_file=None, ssh_common_args=None, ssh_extra_args=None,
                 sftp_extra_args=None, scp_extra_args=None, become=None, become_method=None,  
                 become_user='root', ask_value_pass=False, verbosity=None, check=False, listhosts=False,  
                 listtasks=False, listtags=False, syntax=False, diff=False)
