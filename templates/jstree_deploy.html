@@ -61,6 +61,7 @@
 
 
 	<script type="text/javascript">
+
 		$(function() {
 			$('#jstree_div').jstree({
                 "plugins": ["themes", "html_data", 'types', "ui", "checkbox"],
@@ -123,6 +124,16 @@
             //按钮提交
 
 var selected_ip = [];//定义一个全局变量来保存多选的ip
+
+        //获取项目url中获取到的项目名称
+var url_text = window.location.href;//获取url,提取项目名称
+console.log(url_text);
+// var position_first_character = url_text.substr(url_text.substr(url_text.indexOf('/')+2).indexOf('/'));
+var str = url_text.substr(url_text.indexOf('/')+2);//去掉http://
+var project_name = str.substr(str.indexOf('/'))
+
+console.log(str);
+console.log(project_name.replace('/','').replace('/',''));
         {#    多选插件初始化#}
 $('#select_ip_multiple').multiselect({
             enableClickableOptGroups: true,
@@ -178,7 +189,7 @@ $("#test").on('click', function () {
 
             }, function () {
                 $.ajax({
-                    url: '/cty-gov/gitlab_commit/',
+                    url: '/project_name/gitlab_commit/',
                     type: 'get',
                     data: {'button_text': button_text, "nodes_name": nodes_name,"selected_ip":selected_ip},
                     //timeout:15000,

@@ -21,11 +21,13 @@ def gitlab_commit(request):
     '''
     获取当前项目的提交信息
     '''
-    master_ip = '192.168.77.151'#gitlab的内网IP
-    # master_ip = '223.75.53.43'
+    # master_ip = '192.168.77.151'#gitlab的内网IP
+    master_ip = '223.75.53.43'
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
     project_name = request.path
+    print("项目名称为%s",project_name)
     curent_project_name = project_name[1:project_name.index('/', 1)]#获取request中的当前项目名称
+    print("当前项目名称为%s", curent_project_name)
     # url = 'http://%s:8084/api/v4/projects?private_token=%s&search=%s' % ( master_ip,private_token, curent_project_name)  # 获取指定项目信息，根据项目名称获取项目id
     # r = requests.get(url)
     # data = r.text
@@ -80,6 +82,7 @@ def gitlab_commit(request):
     pathDirs = nodes_name.split(',')  # 获取前台传入的不带参数的项目路径
     print("pathDirs",len(pathDirs),pathDirs[0],pathDirs)
     sub_projects = [curent_project_name+'/'+x for x in pathDirs]
+    print("子项目名称为%s", sub_projects)
     if len(pathDirs)==1 and pathDirs[0] == curent_project_name:  # 这里判断该项目是否有子项目，名称相同则表示没有子项目，相当是重置上面的子项目
         sub_projects = []
         sub_projects = pathDirs
@@ -147,8 +150,8 @@ def gitlab_commit(request):
 
 def get_nodes(request):
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
-    master_ip = '192.168.77.151'
-    # master_ip = '223.75.53.43'
+    # master_ip = '192.168.77.151'
+    master_ip = '223.75.53.43'
     if request.is_ajax():
         if 'project' in request.GET:#获取项目顶级目录
             project_name = request.path
