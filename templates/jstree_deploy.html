@@ -189,7 +189,7 @@ $("#test").on('click', function () {
 
             }, function () {
                 $.ajax({
-                    url: '/project_name/gitlab_commit/',
+                    url: '/'+project_name+'/gitlab_commit/',
                     type: 'get',
                     data: {'button_text': button_text, "nodes_name": nodes_name,"selected_ip":selected_ip},
                     //timeout:15000,
