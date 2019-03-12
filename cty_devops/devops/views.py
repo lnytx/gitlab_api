@@ -21,8 +21,8 @@ def gitlab_commit(request):
     '''
     获取当前项目的提交信息
     '''
-    master_ip = '192.168.77.151'#gitlab的内网IP
-    # master_ip = '223.75.53.43'
+    # master_ip = '192.168.77.151'#gitlab的内网IP
+    master_ip = '223.75.53.43'
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
     project_name = request.path
     print("项目名称为%s",project_name)
@@ -150,8 +150,8 @@ def gitlab_commit(request):
 
 def get_nodes(request):
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
-    master_ip = '192.168.77.151'
-    # master_ip = '223.75.53.43'
+    # master_ip = '192.168.77.151'
+    master_ip = '223.75.53.43'
     if request.is_ajax():
         if 'project' in request.GET:#获取项目顶级目录
             project_name = request.path

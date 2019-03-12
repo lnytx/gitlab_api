@@ -130,10 +130,11 @@ var url_text = window.location.href;//获取url,提取项目名称
 console.log(url_text);
 // var position_first_character = url_text.substr(url_text.substr(url_text.indexOf('/')+2).indexOf('/'));
 var str = url_text.substr(url_text.indexOf('/')+2);//去掉http://
-var project_name = str.substr(str.indexOf('/'))
+var project_name = str.substr(str.indexOf('/')).replace('/','').replace('/','')
+            // url='/'+project_name+'/gitlab_commit/',
+                console.log("ajax的name",project_name)
 
-console.log(str);
-console.log(project_name.replace('/','').replace('/',''));
+
         {#    多选插件初始化#}
 $('#select_ip_multiple').multiselect({
             enableClickableOptGroups: true,
@@ -155,6 +156,8 @@ $('#select_ip_multiple').multiselect({
 $("#test").on('click', function () {
     //获取多选框中选择到的IP
     var selected_ip = ''
+    //拼接提交时的url路径
+    commit_url = '/'+project_name+'/gitlab_commit/'
     $('#select_ip_multiple option:selected').each(function (i) {
     selected_ip += $(this).val()+",";
     });
@@ -189,7 +192,7 @@ $("#test").on('click', function () {
 
             }, function () {
                 $.ajax({
-                    url: '/'+project_name+'/gitlab_commit/',
+                    url: commit_url,
                     type: 'get',
                     data: {'button_text': button_text, "nodes_name": nodes_name,"selected_ip":selected_ip},
                     //timeout:15000,
