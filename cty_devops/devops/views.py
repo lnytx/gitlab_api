@@ -154,7 +154,7 @@ def gitlab_commit_notmvn(request):
     username = ['root', 'root']  # 0为主机用户，1为gitlab用户
     password = ['zwfw2wsx#EDC', 'rootroot']  # 0为主机密码，1为gitlab密码
     src = '/data/projects'  # 项目所在路径，脚本文件放入此目录中
-    target = '/data/test'
+    target = '/data'
     if button_deploy == 'test':
         ips = selected_ip
     elif button_deploy == 'pro':
