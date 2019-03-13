@@ -38,10 +38,12 @@
         <option>192.168.77.159</option>
     </select>
     <br>
-
-    <button id="test" value="test">deplpoy test</button><br>
-{#    <button id="pro" value="pro">deplpoy pro</button><br>#}
-{#    <button id="dev" value="dev">deplpoy dev</button><br>#}
+    <div>
+         <input type="text" name="lname" value="输入验证码" /><br/>
+    <button id="test" class="commit" value="test">deplpoy test</button>
+    <button id="pro" class="commit" value="pro">deplpoy pro</button>
+    <button id="dev" class="commit" value="dev">deplpoy dev</button>
+        </div>
     <br>
 
 
@@ -153,11 +155,17 @@ $('#select_ip_multiple').multiselect({
             enableFiltering: true,
             allSelectedText:'全部',
     });
-$("#test").on('click', function () {
+$(".commit").on('click', function () {
     //获取多选框中选择到的IP
     var selected_ip = ''
+
     //拼接提交时的url路径
     commit_url = '/'+project_name+'/gitlab_commit/'
+    if (project_name=='cty-flagshipStore'.toLowerCase()) {
+        project_name='cty-flagshipStore'
+        commit_url = '/'+project_name+'/gitlab_commit_notmvn/'
+    }
+    console.log("请求的url",commit_url)
     $('#select_ip_multiple option:selected').each(function (i) {
     selected_ip += $(this).val()+",";
     });
@@ -206,7 +214,7 @@ $("#test").on('click', function () {
                         });
                     },
                     success: function (ret, textStatus) {
-                        console.log("返回结果",ret)
+                        // console.log("返回结果",ret)
                         //alert('开始回调，状态文本值：'+textStatus+' 返回数据：'+data.msg);
                         if (ret.code == 0) {
                             swal('成功', ret.msg, "success");

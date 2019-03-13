@@ -21,40 +21,13 @@ def gitlab_commit(request):
     '''
     获取当前项目的提交信息
     '''
-    # master_ip = '192.168.77.151'#gitlab的内网IP
-    master_ip = '223.75.53.43'
+    master_ip = '192.168.77.151'#gitlab的内网IP
+    # master_ip = '223.75.53.43'
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
     project_name = request.path
     print("项目名称为%s",project_name)
     curent_project_name = project_name[1:project_name.index('/', 1)]#获取request中的当前项目名称
     print("当前项目名称为%s", curent_project_name)
-    # url = 'http://%s:8084/api/v4/projects?private_token=%s&search=%s' % ( master_ip,private_token, curent_project_name)  # 获取指定项目信息，根据项目名称获取项目id
-    # r = requests.get(url)
-    # data = r.text
-    # a = json.loads(data)
-    # project_id = a[0]['id']#根据项目名称获取项目id
-    # url3 = 'http://%s:8084/api/v4/projects/%s/repository/commits?private_token=%s&per_page=10' % (master_ip,project_id,private_token)
-    # r = requests.get(url3)
-    # data = r.text
-    # a = json.loads(data)
-    # my_project = []
-    # result={}
-    # msg = []
-    # if isinstance(a, dict):
-    #     for k, v in a.items():
-    #         print(k, v)
-    #         if 'test' == v:  # 按项目名称取自己的项目
-    #             my_project.append(v)
-    #             break
-    # elif isinstance(a, list):
-    #     for item in a:
-    #         result={}
-    #         result['committer_name'] = item['committer_name']
-    #         result['committed_date'] = (datetime.strptime(item['committed_date'],"%Y-%m-%dT%H:%M:%S.%fZ")+timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
-    #         result['message'] = item['message']
-    #         msg.append(result)
-
-
     #正式的推送功能
     log_file = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),'logs\command.log')
     print("logfile",log_file)
@@ -148,10 +121,76 @@ def gitlab_commit(request):
     return render(request,'jstree_deploy.html', {'status':status})
         # return HttpResponse(json.dumps(msg,ensure_ascii=False), content_type="application/json,charset=utf-8")
 
+def gitlab_commit_notmvn(request):
+    project_owner='hujun'
+    '''
+        获取当前项目的提交信息
+        '''
+    master_ip = '192.168.77.151'#gitlab的内网IP
+    # master_ip = '223.75.53.43'
+    private_token = 'x_aXP2ZJV89b2q3dWsRw'
+    project_name = request.path
+    print("项目名称为", project_name)
+    curent_project_name = project_name[1:project_name.index('/', 1)]  # 获取request中的当前项目名称
+    print("当前项目名称为", curent_project_name)
+    if request.is_ajax():
+        if 'button_text' in request.GET:
+            button_deploy = request.GET.get('button_text')
+            if 'nodes_name' in request.GET:
+                nodes_name = request.GET.get('nodes_name')
+                print('nodes_name',nodes_name)
+        if 'selected_ip' in request.GET:
+            selected_ip = request.GET.get('selected_ip').split(',')
+            print("selected_ip",selected_ip)
+    # 正式的推送功能
+    log_file = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+                            'logs\command.log')
+    print("logfile", log_file)
+    logging.basicConfig(filename=log_file, level=logging.DEBUG,
+                        format='[%(asctime)s] %(levelname)s [%(funcName)s: %(filename)s, %(lineno)d] %(message)s',
+                        datefmt='%Y-%m-%d %H:%M:%S',
+                        filemode='a')
+    port = '22'
+    username = ['root', 'root']  # 0为主机用户，1为gitlab用户
+    password = ['zwfw2wsx#EDC', 'rootroot']  # 0为主机密码，1为gitlab密码
+    src = '/data/projects'  # 项目所在路径，脚本文件放入此目录中
+    target = '/data/test'
+    if button_deploy == 'test':
+        ips = selected_ip
+    elif button_deploy == 'pro':
+        ips = ['192.168.77.151']
+    elif button_deploy == 'dev':
+        ips = []
+    cmds = ['git pull', 'scp', 'git clone']
+    server_pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
+    if curent_project_name in server_pathDir:
+        logging.info(str(curent_project_name) + '已存在')
+        cmd = cmds[0]
+        project_src = os.path.join(src, curent_project_name)
+        # 有项目就先git pull
+        pexpect_command(cmd, master_ip, username[1], password[1], project_name, project_src)
+        logging.info("git pull:%s" % cmd)
+    else:  # 无项目就clone
+        cmd = 'git clone http://%s:8084/%s/%s.git' % (master_ip,project_owner,curent_project_name)
+        logging.info("git clone:%s" % cmd)
+        project_src = src#没有对应的项目时src为项目初始路径
+        pexpect_command(cmd, master_ip, username[1], password[1], curent_project_name, project_src)
+    #分发到各个IP
+    for ip in ips:
+        target_dir = os.path.join(src, curent_project_name)
+        cmd = 'scp -P %s -r %s %s@%s:%s' % (port, target_dir, username[0], ip, target)
+        logging.info("scp 项目文件:%s" % cmd)
+        pexpect_command(cmd, ip, username[0], password[0], project_name, project_src)
+    status = {"code": 1, 'msg': "项目已完成提交", 'sccuss': '提交成功'}
+    # return HttpResponse(json.dumps(status), content_type="application/json")
+    return render(request, 'jstree_deploy.html', {'status': status})
+
+
+
 def get_nodes(request):
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
-    # master_ip = '192.168.77.151'
-    master_ip = '223.75.53.43'
+    master_ip = '192.168.77.151'
+    # master_ip = '223.75.53.43'
     if request.is_ajax():
         if 'project' in request.GET:#获取项目顶级目录
             project_name = request.path
@@ -179,7 +218,7 @@ def get_nodes(request):
             temp = project_name[1:project_name.index('/', 1)]
             curent_dir = request.GET.get('selectedNode_text')
             # url3 = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=cty-config&private_token=%s&per_page=50' % private_token
-            if curent_dir == temp:  # 如果点击的是顶级目录
+            if curent_dir.lower() == temp.lower():  # 如果点击的是顶级目录
                 url = 'http://%s:8084/api/v4/projects/%s/repository/tree/?private_token=%s' % ( master_ip,project_id, private_token)  # 获取所有项目二级目录(项目名为1级)
                 #url = 'http://223.75.53.43:8084/api/v4/projects/17/repository/tree/?path=%s&private_token=%s' % ( parent_dir, private_token)
                 #url = 'http://223.75.53.43:8084/api/v4/projects?private_token=%s&search=%s' % (private_token, parent_dir)  # 获取指定项目信息
@@ -222,9 +261,7 @@ def get_nodes(request):
 
 def cty_gov(request):
     project_name = request.path
-    print("project_name", type(project_name), project_name)
     result = project_name[1:project_name.index('/', 1)]
-    print("result", result)
     data = []
     temp = {}
     temp['id'] = '123123'
