@@ -15,7 +15,7 @@ from python_hooks import python_ssh_command, pexpect_command,get_java
 
 #公共变量
 master_ip = '192.168.77.151'#gitlab的内网IP
-from pycharm_django.tools.validate_num import validate_commit
+from validate_num import validate_commit
 
 # master_ip = '223.75.53.43'
 private_token = 'x_aXP2ZJV89b2q3dWsRw'
