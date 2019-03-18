@@ -41,7 +41,7 @@
     </select>
     <br>
     <div>
-         <input type="text" name="lname" value="输入验证码" /><br/>
+         输入验证码:<input id='text_in' type="text" name="lname" /><br/>
     <button id="test" class="commit" value="test">deplpoy test</button>
     <button id="pro" class="commit" value="pro">deplpoy pro</button>
     <button id="dev" class="commit" value="dev">deplpoy dev</button>
@@ -129,14 +129,6 @@
 
 var selected_ip = [];//定义一个全局变量来保存多选的ip
 
-        //获取项目url中获取到的项目名称
-var url_text = window.location.href;//获取url,提取项目名称
-console.log(url_text);
-// var position_first_character = url_text.substr(url_text.substr(url_text.indexOf('/')+2).indexOf('/'));
-var str = url_text.substr(url_text.indexOf('/')+2);//去掉http://
-var project_name = str.substr(str.indexOf('/')).replace('/','').replace('/','')
-            // url='/'+project_name+'/gitlab_commit/',
-                console.log("ajax的name",project_name)
 
 
         {#    多选插件初始化#}
@@ -158,9 +150,20 @@ $('#select_ip_multiple').multiselect({
             allSelectedText:'全部',
     });
 $(".commit").on('click', function () {
-    //获取多选框中选择到的IP
-    var selected_ip = ''
 
+            //获取项目url中获取到的项目名称
+var url_text = window.location.href;//获取url,提取项目名称
+console.log(url_text);
+// var position_first_character = url_text.substr(url_text.substr(url_text.indexOf('/')+2).indexOf('/'));
+var str = url_text.substr(url_text.indexOf('/')+2);//去掉http://
+var project_name = str.substr(str.indexOf('/')).replace('/','').replace('/','')
+            // url='/'+project_name+'/gitlab_commit/',
+                console.log("ajax的name",project_name)
+            //获取输出框的数字
+    //获取多选框中选择到的IP
+    var selected_ip = '';
+    var phone_num = $('#text_in').val().replace(/\s+/g,"");
+    console.log("输出验证码",phone_num)
     //拼接提交时的url路径
     commit_url = '/'+project_name+'/gitlab_commit/'
     if (project_name=='cty-flagshipStore'.toLowerCase()) {
@@ -204,7 +207,7 @@ $(".commit").on('click', function () {
                 $.ajax({
                     url: commit_url,
                     type: 'get',
-                    data: {'button_text': button_text, "nodes_name": nodes_name,"selected_ip":selected_ip},
+                    data: {'button_text': button_text, "nodes_name": nodes_name,"selected_ip":selected_ip,"phone_num":phone_num},
                     //timeout:15000,
                     beforeSend: function (XMLHttpRequest) {
                         //添加动画，显示正在处理中..

@@ -28,10 +28,10 @@ urlpatterns = [
     # url(r'^test_gov/*', cty_devops.gitlab_commit,name='gitlab_commit'),
 
 
-    url(r'^cty-[a-zA-Z]{3,18}/$', cty_devops.cty_gov,name='cty_gov'),
-    url(r'^cty-[a-zA-Z]{3,18}/get_nodes/$', cty_devops.get_nodes,name='get_nodes'),
-    url(r'^cty-[a-zA-Z]{3,18}/project/$', cty_devops.get_nodes,name='get_parents_nodes'),
-    url(r'^cty-[a-zA-Z]{3,6}/gitlab_commit/$', cty_devops.gitlab_commit,name='gitlab_commit'),
+    url(r'^cty-[-zC-Z]{3,18}/$', cty_devops.cty_gov,name='cty_gov'),
+    url(r'^cty-[a-zC-Z]{3,18}/get_nodes/$', cty_devops.get_nodes,name='get_nodes'),
+    url(r'^cty-[a-zC-Z]{3,18}/project/$', cty_devops.get_nodes,name='get_parents_nodes'),
+    url(r'^cty-[a-zC-Z]{3,6}/gitlab_commit/$', cty_devops.gitlab_commit,name='gitlab_commit'),
     # 非maven项目提交
     url(r'^cty-flagshipStore/gitlab_commit_notmvn/$', cty_devops.gitlab_commit_notmvn, name='gitlab_commit_notmvn'),
 

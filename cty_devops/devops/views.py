@@ -13,6 +13,12 @@ import json
 from python_hooks import python_ssh_command, pexpect_command,get_java
 
 
+#公共变量
+# master_ip = '192.168.77.151'#gitlab的内网IP
+from pycharm_django.tools.validate_num import validate_commit
+
+master_ip = '223.75.53.43'
+private_token = 'x_aXP2ZJV89b2q3dWsRw'
 
 def index(request):
     return render(request, 'test.html')
@@ -21,9 +27,8 @@ def gitlab_commit(request):
     '''
     获取当前项目的提交信息
     '''
-    master_ip = '192.168.77.151'#gitlab的内网IP
-    # master_ip = '223.75.53.43'
-    private_token = 'x_aXP2ZJV89b2q3dWsRw'
+    # private_token = 'x_aXP2ZJV89b2q3dWsRw'
+    commit_flag=''#设置是否能提交的标签，验证通过才可以提交
     project_name = request.path
     print("项目名称为%s",project_name)
     curent_project_name = project_name[1:project_name.index('/', 1)]#获取request中的当前项目名称
@@ -64,10 +69,13 @@ def gitlab_commit(request):
         ips = selected_ip
     elif button_deploy == 'pro':
         ips = []
+        phone_num = request.GET.get('phone_num')
+        commit_flag = validate_commit(str(phone_num))#获取发布正式库里电话号码凭证
     elif button_deploy == 'dev':
         ips = []
     cmds = ['git pull', 'scp', 'git clone']
     server_pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
+
     if curent_project_name in server_pathDir:
         logging.info(str(curent_project_name) + '已存在')
         cmd = cmds[0]
@@ -128,9 +136,9 @@ def gitlab_commit_notmvn(request):
     '''
         获取当前项目的提交信息
         '''
-    master_ip = '192.168.77.151'#gitlab的内网IP
-    # master_ip = '223.75.53.43'
-    private_token = 'x_aXP2ZJV89b2q3dWsRw'
+    # master_ip = '192.168.77.151'#gitlab的内网IP
+    # # master_ip = '223.75.53.43'
+    # private_token = 'x_aXP2ZJV89b2q3dWsRw'
     project_name = request.path
     print("项目名称为", project_name)
     curent_project_name = project_name[1:project_name.index('/', 1)]  # 获取request中的当前项目名称
@@ -190,9 +198,9 @@ def gitlab_commit_notmvn(request):
 
 
 def get_nodes(request):
-    private_token = 'x_aXP2ZJV89b2q3dWsRw'
-    master_ip = '192.168.77.151'
-    # master_ip = '223.75.53.43'
+    # private_token = 'x_aXP2ZJV89b2q3dWsRw'
+    # master_ip = '192.168.77.151'
+    # # master_ip = '223.75.53.43'
     if request.is_ajax():
         if 'project' in request.GET:#获取项目顶级目录
             project_name = request.path
