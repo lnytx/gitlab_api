@@ -241,17 +241,13 @@ def gitlab_commit_npm(request):#后台的nmp打包的项目,非mvn,非静态的
         pexpect_command(cmd, master_ip, username[1], password[1], curent_project_name, project_src)
     # 分发到各个IP,分发前先使用npm打包
     project_src = os.path.join(src, nodes_name).replace('\\', '/')#重置项目路径project_src为clone或pull之后的路径，在这里面打包
-    cmd = 'npm config set registry http://registry.npm.taobao.org'#设置使用–registry参数指定镜像服务器地址，为了避免每次安装都需要--registry参数
-    logging.info("npm install下载依赖:%s" % cmd)
-    pexpect_command(cmd, master_ip, username[1], password[1], curent_project_name, project_src)
-    #打包该项目
-    cmd = 'npm config set registry http://registry.npm.taobao.org && npm install'
-    logging.info("安装依赖并生成:%s" % cmd)
-    pexpect_command(cmd, master_ip, username[1], password[1], curent_project_name, project_src)
+    #cmd = 'npm config set registry http://registry.npm.taobao.org'#设置使用–registry参数指定镜像服务器地址，为了避免每次安装都需要--registry参数
+    # 打包该项目
+    logging.info("npm run build下载依赖")
+    os.system('cd %s && npm config set registry http://registry.npm.taobao.org && npm install'% project_src)
     #编译
-    cmd = 'npm run build'
-    logging.info("编译:%s" % cmd)
-    pexpect_command(cmd, master_ip, username[1], password[1], curent_project_name, project_src)
+    os.system('cd %s && npm run build' % project_src)
+    logging.info("npm run build下载依赖")
     for ip in ips:
         cmd = 'scp -P -r %s -r %s %s@%s:%s' % (port, project_src, username[0], ip, target)
         logging.info("scp 项目文件:%s" % cmd)
