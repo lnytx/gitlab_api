@@ -243,7 +243,12 @@ def gitlab_commit_npm(request):#后台的nmp打包的项目,非mvn,非静态的
     project_src = os.path.join(src, nodes_name).replace('\\', '/')#重置项目路径project_src为clone或pull之后的路径，在这里面打包
     #cmd = 'npm config set registry http://registry.npm.taobao.org'#设置使用–registry参数指定镜像服务器地址，为了避免每次安装都需要--registry参数
     # 打包该项目
-    os.system("cd %s && rm -rf 'dist' && npm config set registry http://registry.npm.taobao.org && npm install"% project_src)
+
+    if 'dist' in server_pathDir:
+        #如果之前有dist编译后的目录，则删除
+        os.system("cd %s && rm -rf 'dist'"% project_src)
+        logging.info("删除之前的dist包")
+    os.system('cd %s && npm config set registry http://registry.npm.taobao.org && npm install'% project_src)
     logging.info("npm run build下载依赖")
     #编译
     os.system('cd %s && npm run build' % project_src)
