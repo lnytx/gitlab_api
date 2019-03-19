@@ -255,7 +255,7 @@ def gitlab_commit_npm(request):#后台的nmp打包的项目,非mvn,非静态的
     logging.info("npm run build编译执行")
     dist_name = os.path.join(project_src, 'dist').replace('\\', '/')
     for ip in ips:
-        cmd = 'scp -P %s -r %s %s@%s:%s' % (port, project_src, username[0], ip, target)
+        cmd = 'scp -P %s -r %s %s@%s:%s' % (port, dist_name, username[0], ip, target)
         logging.info("scp 项目文件:%s" % cmd)
         pexpect_command(cmd, ip, username[0], password[0], project_name, project_src)
     status = {"code": 1, 'msg': "项目已完成提交", 'sccuss': '提交成功'}
