@@ -14,10 +14,10 @@ from python_hooks import python_ssh_command, pexpect_command,get_java
 
 
 #公共变量
-# master_ip = '192.168.77.151'#gitlab的内网IP
+master_ip = '192.168.77.151'#gitlab的内网IP
 from validate_num import validate_commit
 
-master_ip = '223.75.53.43'
+# master_ip = '223.75.53.43'
 private_token = 'x_aXP2ZJV89b2q3dWsRw'
 
 def index(request):
