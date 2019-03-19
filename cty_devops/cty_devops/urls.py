@@ -27,13 +27,25 @@ urlpatterns = [
     # url(r'^cty-gov/*', cty_devops.gitlab_commit,name='gitlab_commit'),
     # url(r'^test_gov/*', cty_devops.gitlab_commit,name='gitlab_commit'),
 
+    # url(r'^cty-storeBackstage/$', cty_devops.storeBackstage, name='storeBackstage'),
 
-    url(r'^cty-[-zC-Z]{3,18}/$', cty_devops.cty_gov,name='cty_gov'),
-    url(r'^cty-[a-zC-Z]{3,18}/get_nodes/$', cty_devops.get_nodes,name='get_nodes'),
-    url(r'^cty-[a-zC-Z]{3,18}/project/$', cty_devops.get_nodes,name='get_parents_nodes'),
-    url(r'^cty-[a-zC-Z]{3,6}/gitlab_commit/$', cty_devops.gitlab_commit,name='gitlab_commit'),
+    # url(r'^cty-store/$', cty_devops.cty_gov, name='cty_gov'),
+    # url(r'^cty-store/get_nodes/$', cty_devops.get_nodes, name='get_nodes'),
+    # url(r'cty-store/project/', cty_devops.get_nodes, name='get_parents_nodes'),
+    # url(r'cty-store/gitlab_commit/', cty_devops.gitlab_commit, name='gitlab_commit'),
+
+    url(r'cty-[a-zA-Z]{3,16}/$', cty_devops.cty_gov,name='cty_gov'),
+    url(r'cty-[a-zA-Z]{3,16}/get_nodes/$', cty_devops.get_nodes,name='get_nodes'),
+    url(r'cty-[a-zA-Z]{3,16}/project/$', cty_devops.get_nodes,name='get_parents_nodes'),
+    url(r'cty-[a-zA-Z]{3,6}/gitlab_commit/$', cty_devops.gitlab_commit,name='gitlab_commit'),
     # 非maven项目提交
     url(r'^cty-flagshipStore/gitlab_commit_notmvn/$', cty_devops.gitlab_commit_notmvn, name='gitlab_commit_notmvn'),
+
+    #需要使用npm项目打包的
+url(r'^cty-storeBackstage/gitlab_commit_npm/$', cty_devops.gitlab_commit_notmvn, name='gitlab_commit_notmvn'),
+
+
+
 
 
 

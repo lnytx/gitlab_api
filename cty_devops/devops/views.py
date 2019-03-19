@@ -14,10 +14,10 @@ from python_hooks import python_ssh_command, pexpect_command,get_java
 
 
 #公共变量
-master_ip = '192.168.77.151'#gitlab的内网IP
+# master_ip = '192.168.77.151'#gitlab的内网IP
 from validate_num import validate_commit
 
-# master_ip = '223.75.53.43'
+master_ip = '223.75.53.43'
 private_token = 'x_aXP2ZJV89b2q3dWsRw'
 
 def index(request):
@@ -30,9 +30,7 @@ def gitlab_commit(request):
     # private_token = 'x_aXP2ZJV89b2q3dWsRw'
     commit_flag=''#设置是否能提交的标签，验证通过才可以提交
     project_name = request.path
-    print("项目名称为%s",project_name)
     curent_project_name = project_name[1:project_name.index('/', 1)]#获取request中的当前项目名称
-    print("当前项目名称为%s", curent_project_name)
     #正式的推送功能
     log_file = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),'logs\command.log')
     print("logfile",log_file)
@@ -58,9 +56,7 @@ def gitlab_commit(request):
         if 'selected_ip' in request.GET:
             selected_ip = request.GET.get('selected_ip').split(',')
     pathDirs = nodes_name.split(',')  # 获取前台传入的不带参数的项目路径
-    print("pathDirs",len(pathDirs),pathDirs[0],pathDirs)
     sub_projects = [curent_project_name+'/'+x for x in pathDirs]
-    print("子项目名称为%s", sub_projects)
     if len(pathDirs)==1 and pathDirs[0] == curent_project_name:  # 这里判断该项目是否有子项目，名称相同则表示没有子项目，相当是重置上面的子项目
         sub_projects = []
         sub_projects = pathDirs
@@ -90,7 +86,6 @@ def gitlab_commit(request):
         pexpect_command(cmd, master_ip, username[1], password[1], curent_project_name, project_src)
         # 然后就逐个小项目去推送
     for item in sub_projects:
-        print("item",item)
         project_src = os.path.join(src, curent_project_name)  # 重新设置project_src的值,这里是大项目所在的路径
         sub_project = os.path.join(src, item)  # 获取小项目路径
         if not os.path.isdir(sub_project):
@@ -140,18 +135,14 @@ def gitlab_commit_notmvn(request):
     # # master_ip = '223.75.53.43'
     # private_token = 'x_aXP2ZJV89b2q3dWsRw'
     project_name = request.path
-    print("项目名称为", project_name)
     curent_project_name = project_name[1:project_name.index('/', 1)]  # 获取request中的当前项目名称
-    print("当前项目名称为", curent_project_name)
     if request.is_ajax():
         if 'button_text' in request.GET:
             button_deploy = request.GET.get('button_text')
             if 'nodes_name' in request.GET:
                 nodes_name = request.GET.get('nodes_name')
-                print('nodes_name',nodes_name)
         if 'selected_ip' in request.GET:
             selected_ip = request.GET.get('selected_ip').split(',')
-            print("selected_ip",selected_ip)
     # 正式的推送功能
     log_file = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
                             'logs\command.log')
@@ -186,6 +177,7 @@ def gitlab_commit_notmvn(request):
         project_src = src#没有对应的项目时src为项目初始路径
         pexpect_command(cmd, master_ip, username[1], password[1], curent_project_name, project_src)
     #分发到各个IP
+    os.system('cd %s;mvn clean install -Dmaven.test.skip=true' % project_src)#使用npm打包整个项目
     for ip in ips:
         target_dir = os.path.join(src, curent_project_name)
         cmd = 'scp -P %s -r %s %s@%s:%s' % (port, target_dir, username[0], ip, target)
@@ -195,6 +187,78 @@ def gitlab_commit_notmvn(request):
     # return HttpResponse(json.dumps(status), content_type="application/json")
     return render(request, 'jstree_deploy.html', {'status': status})
 
+
+
+def gitlab_commit_npm(request):#后台的nmp打包的项目,非mvn,非静态的
+    project_owner = 'hujun'
+    '''
+        获取当前项目的提交信息
+        '''
+    # master_ip = '192.168.77.151'#gitlab的内网IP
+    # # master_ip = '223.75.53.43'
+    # private_token = 'x_aXP2ZJV89b2q3dWsRw'
+    project_name = request.path
+    curent_project_name = project_name[1:project_name.index('/', 1)]  # 获取request中的当前项目名称
+    if request.is_ajax():
+        if 'button_text' in request.GET:
+            button_deploy = request.GET.get('button_text')
+            if 'nodes_name' in request.GET:
+                nodes_name = request.GET.get('nodes_name')
+        if 'selected_ip' in request.GET:
+            selected_ip = request.GET.get('selected_ip').split(',')
+    # 正式的推送功能
+    log_file = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+                            'logs\command.log')
+    print("logfile", log_file)
+    logging.basicConfig(filename=log_file, level=logging.DEBUG,
+                        format='[%(asctime)s] %(levelname)s [%(funcName)s: %(filename)s, %(lineno)d] %(message)s',
+                        datefmt='%Y-%m-%d %H:%M:%S',
+                        filemode='a')
+    port = '22'
+    username = ['root', 'root']  # 0为主机用户，1为gitlab用户
+    password = ['zwfw2wsx#EDC', 'rootroot']  # 0为主机密码，1为gitlab密码
+    src = '/data/projects'  # 项目所在路径，脚本文件放入此目录中
+    target = '/data'
+    if button_deploy == 'test':
+        ips = selected_ip
+    elif button_deploy == 'pro':
+        ips = ['192.168.77.151']
+    elif button_deploy == 'dev':
+        ips = []
+    cmds = ['git pull', 'scp', 'git clone']
+    server_pathDir = os.listdir(src)  # 先检查当前目录是否存在项目，
+    if curent_project_name in server_pathDir:
+        logging.info(str(curent_project_name) + '已存在')
+        cmd = cmds[0]
+        project_src = os.path.join(src, curent_project_name)
+        # 有项目就先git pull
+        pexpect_command(cmd, master_ip, username[1], password[1], project_name, project_src)
+        logging.info("git pull:%s" % cmd)
+    else:  # 无项目就clone
+        cmd = 'git clone http://%s:8084/%s/%s.git' % (master_ip, project_owner, curent_project_name)
+        logging.info("git clone:%s" % cmd)
+        project_src = src  # 没有对应的项目时src为项目初始路径
+        pexpect_command(cmd, master_ip, username[1], password[1], curent_project_name, project_src)
+    # 分发到各个IP,分发前先使用npm打包
+    project_src = os.path.join(src, nodes_name).replace('\\', '/')#重置项目路径project_src为clone或pull之后的路径，在这里面打包
+    cmd = 'npm config set registry http://registry.npm.taobao.org'#设置使用–registry参数指定镜像服务器地址，为了避免每次安装都需要--registry参数
+    logging.info("npm install下载依赖:%s" % cmd)
+    pexpect_command(cmd, master_ip, username[1], password[1], curent_project_name, project_src)
+    #打包该项目
+    cmd = 'npm config set registry http://registry.npm.taobao.org && npm install'
+    logging.info("安装依赖并生成:%s" % cmd)
+    pexpect_command(cmd, master_ip, username[1], password[1], curent_project_name, project_src)
+    #编译
+    cmd = 'npm run build'
+    logging.info("编译:%s" % cmd)
+    pexpect_command(cmd, master_ip, username[1], password[1], curent_project_name, project_src)
+    for ip in ips:
+        cmd = 'scp -P -r %s -r %s %s@%s:%s' % (port, project_src, username[0], ip, target)
+        logging.info("scp 项目文件:%s" % cmd)
+        pexpect_command(cmd, ip, username[0], password[0], project_name, project_src)
+    status = {"code": 1, 'msg': "项目已完成提交", 'sccuss': '提交成功'}
+    # return HttpResponse(json.dumps(status), content_type="application/json")
+    return render(request, 'jstree_deploy.html', {'status': status})
 
 
 def get_nodes(request):
@@ -208,7 +272,11 @@ def get_nodes(request):
             url = 'http://%s:8084/api/v4/projects?private_token=%s&search=%s' % (master_ip,private_token, curent_dir)  # 获取指定项目信息
             r = requests.get(url)
             data = r.text
-            a = json.loads(data)
+            temp = json.loads(data)
+            a = []#如果两个项目都有store的前缀(一个为store一个为storeAAA)，那么上面的url中查出两条记录，类型为list,我们要根据其中的url名称中的项目名，进行过滤
+            for i in temp:
+                if i['name'].lower() == curent_dir.lower():
+                    a.append(i)
             project_id = a[0]['id']
             project_name = a[0]['name']
             temp = {}
@@ -221,9 +289,13 @@ def get_nodes(request):
             project_name = request.path
             temp = project_name[1:project_name.index('/', 1)]
             url = 'http://%s:8084/api/v4/projects?private_token=%s&search=%s' % ( master_ip,private_token, temp)  # 获取指定项目信息
-            r = requests.get(url)
+            r = requests.get(url)#这条url与上面一样，两个前缀一个为store 一个为store-a的都会查出来，需要过滤
             data = r.text
-            a = json.loads(data)
+            b = json.loads(data)
+            a = []#装载过滤后的正确项目
+            for i in b:
+                if i['name'].lower() == temp.lower():
+                    a.append(i)
             project_id = a[0]['id']
             temp = project_name[1:project_name.index('/', 1)]
             curent_dir = request.GET.get('selectedNode_text')

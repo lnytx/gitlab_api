@@ -1,6 +1,7 @@
 #-*- codeing=utf8 -*-
 #!/usr/bin/env python
 import json
+import os
 
 import requests
 
@@ -27,9 +28,11 @@ def test2():
     private_token = 'x_aXP2ZJV89b2q3dWsRw'
     master_ip = '223.75.53.43'
     project_id = 24
+    curent_dir = 'cty-store'
+    url = 'http://%s:8084/api/v4/projects?private_token=%s&search=%s' % (master_ip, private_token, curent_dir)  # 获取指定项目信息
     #url = 'http://%s:8084/api/v4/projects?private_token=%s&search=%s' % (master_ip, private_token, project_id)  # 获取指定项目信息
-    url = 'http://%s:8084/api/v4/projects/%s/repository/tree/?private_token=%s' % (
-    master_ip, project_id, private_token)  # 获取所有项目二级目录(项目名为1级)
+    #url = 'http://%s:8084/api/v4/projects/%s/repository/tree/?private_token=%s' % (
+    #master_ip, project_id, private_token)  # 获取所有项目二级目录(项目名为1级)
     r = requests.get(url)
     data = r.text
     a = json.loads(data)
@@ -44,4 +47,7 @@ def test2():
     print (temp)
 if __name__=='__main__':
     # rc = test()
-    rc = test2()
+    a='/data/projects'
+    b='asf'
+    print(os.path.join(a,b).replace('\\','/'))
+    # rc = test2()
