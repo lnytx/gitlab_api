@@ -166,9 +166,13 @@ var project_name = str.substr(str.indexOf('/')).replace('/','').replace('/','')
     console.log("输出验证码",phone_num)
     //拼接提交时的url路径
     commit_url = '/'+project_name+'/gitlab_commit/'
-    if (project_name=='cty-flagshipStore'.toLowerCase()) {
+    if (project_name=='cty-flagshipStore'.toLowerCase()||project_name=='cty-flagshipStore') {
         project_name='cty-flagshipStore'
         commit_url = '/'+project_name+'/gitlab_commit_notmvn/'
+    }
+    if (project_name=='cty-storeBackstage'.toLowerCase()||project_name=='cty-storeBackstage') {
+    project_name='cty-flagshipStore'
+    commit_url = '/'+project_name+'/gitlab_commit_npm/'
     }
     console.log("请求的url",commit_url)
     $('#select_ip_multiple option:selected').each(function (i) {

@@ -42,7 +42,7 @@ urlpatterns = [
     url(r'^cty-flagshipStore/gitlab_commit_notmvn/$', cty_devops.gitlab_commit_notmvn, name='gitlab_commit_notmvn'),
 
     #需要使用npm项目打包的
-url(r'^cty-storeBackstage/gitlab_commit_npm/$', cty_devops.gitlab_commit_notmvn, name='gitlab_commit_notmvn'),
+    url(r'^cty-storeBackstage/gitlab_commit_npm/$', cty_devops.gitlab_commit_notmvn, name='gitlab_commit_notmvn'),
 
 
 
