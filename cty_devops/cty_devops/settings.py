@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'devops',
     'ansible_api',
+    'interface_data',
 ]
 
 MIDDLEWARE = [

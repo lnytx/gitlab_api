@@ -117,7 +117,7 @@ def gitlab_commit(request):
             pexpect_command(cmd, ip, username[0], password[0], project_name, project_src)
             #如果出现了java.sql.SQLRecoverableException IO Error Connection reset异常就添加下面的-Djava.security.egd=file:///dev/urandom参数
             #java -Djava.security.egd=file:///dev/urandom -jar cty-store-manage.jar --spring.profiles.active=test
-            cmd = 'cd %s && nohup %s -jar %s.jar --spring.profiles.active=%s -Duser.timezone=GMT+08>/dev/null 1>&2 &' % \
+            cmd = 'cd %s && nohup %s -Djava.security.egd=file:///dev/urandom -jar %s.jar --spring.profiles.active=%s -Duser.timezone=GMT+08>/dev/null 1>&2 &' % \
                   (target, JAVA_HOME, jar_name, button_deploy)
             logging.info("启动 jar包:%s" % cmd)
             python_ssh_command(ip, int(port), username[0], password[0], args='%s' % cmd)
