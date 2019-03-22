@@ -248,7 +248,7 @@ def gitlab_commit_npm(request):#后台的nmp打包的项目,非mvn,非静态的
         #如果之前有dist编译后的目录，则删除
         os.system("cd %s && rm -rf 'dist'"% project_src)
         logging.info("删除之前的dist包")
-    os.system('cd %s && npm config set registry http://registry.npm.taobao.org && cnpm install'% project_src)
+    os.system('cd %s && npm config set registry http://registry.npm.taobao.org && npm rebuild node-sass --save-dev && cnpm install'% project_src)
     logging.info("npm run build下载依赖")
     #编译
     os.system('cd %s && npm run build' % project_src)
