@@ -54,7 +54,7 @@ from apscheduler.scheduler import  Scheduler
 from conn_db import get_system_data,midware_data
 sched = Scheduler()
 #minutes=5
-@sched.interval_schedule(minutes=5)
+@sched.interval_schedule(minutes=3)
 def my_task():
     get_system_data()
     midware_data()
