@@ -251,3 +251,623 @@ AttributeError: 'function' object has no attribute 'testFuncton'
 [2019-03-27 12:41:03] INFO [_run_job: scheduler.py, 509] Running job "my_task (trigger: interval[0:00:03], next run at: 2019-03-27 12:41:06.145262)" (scheduled at 2019-03-27 12:41:03.145262)
 [2019-03-27 12:41:03] INFO [_run_job: scheduler.py, 527] Job "my_task (trigger: interval[0:00:03], next run at: 2019-03-27 12:41:06.145262)" executed successfully
 [2019-03-27 12:41:04] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:02:58] INFO [__init__: threadpool.py, 52] Started thread pool with 0 core threads and 20 maximum threads
+[2019-03-27 17:02:58] INFO [add_job: scheduler.py, 287] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2019-03-27 17:02:58] INFO [_real_add_job: scheduler.py, 262] Added job "my_task (trigger: interval[0:05:00], next run at: 2019-03-27 17:07:58.847905)" to job store "default"
+[2019-03-27 17:02:58] INFO [_main_loop: scheduler.py, 574] Scheduler started
+[2019-03-27 17:02:58] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:02:58] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:07:58.847905 (in 299.999002 seconds)
+[2019-03-27 17:03:07] INFO [shutdown: threadpool.py, 111] Shutting down thread pool
+[2019-03-27 17:03:09] INFO [__init__: threadpool.py, 52] Started thread pool with 0 core threads and 20 maximum threads
+[2019-03-27 17:03:09] INFO [add_job: scheduler.py, 287] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2019-03-27 17:03:09] INFO [_real_add_job: scheduler.py, 262] Added job "my_task (trigger: interval[0:05:00], next run at: 2019-03-27 17:08:09.581361)" to job store "default"
+[2019-03-27 17:03:09] INFO [_main_loop: scheduler.py, 574] Scheduler started
+[2019-03-27 17:03:09] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:03:09] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:08:09.581361 (in 299.995014 seconds)
+[2019-03-27 17:03:20] INFO [shutdown: threadpool.py, 111] Shutting down thread pool
+[2019-03-27 17:03:21] INFO [__init__: threadpool.py, 52] Started thread pool with 0 core threads and 20 maximum threads
+[2019-03-27 17:03:21] INFO [add_job: scheduler.py, 287] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2019-03-27 17:03:21] INFO [_real_add_job: scheduler.py, 262] Added job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:03:26.717268)" to job store "default"
+[2019-03-27 17:03:21] INFO [_main_loop: scheduler.py, 574] Scheduler started
+[2019-03-27 17:03:21] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:03:21] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:03:26.717268 (in 4.997007 seconds)
+[2019-03-27 17:03:26] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:03:26] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:03:26] INFO [_run_job: scheduler.py, 509] Running job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:03:26.717268)" (scheduled at 2019-03-27 17:03:26.717268)
+[2019-03-27 17:03:26] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:03:31.717268 (in 4.998435 seconds)
+[2019-03-27 17:03:26] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 192.168.77.21:8084
+[2019-03-27 17:03:31] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:03:31] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:03:31] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:03:36.717268 (in 4.998258 seconds)
+[2019-03-27 17:03:31] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:03:36.717268)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:03:32] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:03:36] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:03:36] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:03:36] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:03:41.717268 (in 4.998589 seconds)
+[2019-03-27 17:03:36] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:03:41.717268)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:03:36] INFO [shutdown: threadpool.py, 111] Shutting down thread pool
+[2019-03-27 17:03:36] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:03:41] INFO [__init__: threadpool.py, 52] Started thread pool with 0 core threads and 20 maximum threads
+[2019-03-27 17:03:41] INFO [add_job: scheduler.py, 287] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2019-03-27 17:03:41] INFO [_real_add_job: scheduler.py, 262] Added job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:03:46.029127)" to job store "default"
+[2019-03-27 17:03:41] INFO [_main_loop: scheduler.py, 574] Scheduler started
+[2019-03-27 17:03:41] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:03:41] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:03:46.029127 (in 4.998004 seconds)
+[2019-03-27 17:03:46] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:03:46] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:03:46] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:03:51.029127 (in 4.997905 seconds)
+[2019-03-27 17:03:46] INFO [_run_job: scheduler.py, 509] Running job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:03:51.029127)" (scheduled at 2019-03-27 17:03:46.029127)
+[2019-03-27 17:03:46] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 192.168.77.21:8084
+[2019-03-27 17:03:51] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:03:51] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:03:51] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:03:56.029127 (in 4.999662 seconds)
+[2019-03-27 17:03:51] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:03:56.029127)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:03:52] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:03:56] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:03:56] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:03:56] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:04:01.029127 (in 4.996997 seconds)
+[2019-03-27 17:03:56] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:04:01.029127)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:03:57] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:04:01] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:04:01] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:04:01] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:04:01.029127)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:04:01] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:04:06.029127 (in 4.996020 seconds)
+[2019-03-27 17:04:02] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:04:04] INFO [shutdown: threadpool.py, 111] Shutting down thread pool
+[2019-03-27 17:04:06] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:04:07] ERROR [_run_job: scheduler.py, 520] Job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:04:06.029127)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 79, in create_connection
+    raise err
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 69, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 196, in connect
+    conn = self._new_conn()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000028C8A718E10>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 445, in send
+    timeout=timeout
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.77.21', port=8084): Max retries exceeded with url: /big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028C8A718E10>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\apscheduler\scheduler.py", line 512, in _run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\cty_devops\urls.py", line 59, in my_task
+    get_system_data()
+  File "E:\VM\Python_Workspace\pycharm_django\tools\conn_db.py", line 105, in get_system_data
+    ri_pv = requests.get(url2)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.77.21', port=8084): Max retries exceeded with url: /big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028C8A718E10>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+[2019-03-27 17:04:07] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:04:08] INFO [__init__: threadpool.py, 52] Started thread pool with 0 core threads and 20 maximum threads
+[2019-03-27 17:04:08] INFO [add_job: scheduler.py, 287] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2019-03-27 17:04:08] INFO [_real_add_job: scheduler.py, 262] Added job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:04:13.709925)" to job store "default"
+[2019-03-27 17:04:08] INFO [_main_loop: scheduler.py, 574] Scheduler started
+[2019-03-27 17:04:08] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:04:08] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:04:13.709925 (in 5.000000 seconds)
+[2019-03-27 17:04:13] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:04:13] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:04:13] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:04:18.709925 (in 4.998646 seconds)
+[2019-03-27 17:04:13] INFO [_run_job: scheduler.py, 509] Running job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:04:18.709925)" (scheduled at 2019-03-27 17:04:13.709925)
+[2019-03-27 17:04:13] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 192.168.77.21:8084
+[2019-03-27 17:04:18] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:04:18] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:04:18] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:04:23.709925 (in 4.999520 seconds)
+[2019-03-27 17:04:18] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:04:23.709925)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:04:19] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:04:23] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:04:23] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:04:23] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:04:28.709925 (in 4.998946 seconds)
+[2019-03-27 17:04:23] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:04:28.709925)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:04:24] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:05:06] INFO [__init__: threadpool.py, 52] Started thread pool with 0 core threads and 20 maximum threads
+[2019-03-27 17:05:06] INFO [add_job: scheduler.py, 287] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2019-03-27 17:05:06] INFO [_real_add_job: scheduler.py, 262] Added job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:05:11.267629)" to job store "default"
+[2019-03-27 17:05:06] INFO [_main_loop: scheduler.py, 574] Scheduler started
+[2019-03-27 17:05:06] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:05:06] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:05:11.267629 (in 4.997012 seconds)
+[2019-03-27 17:05:11] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:05:11] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:05:11] INFO [_run_job: scheduler.py, 509] Running job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:05:11.267629)" (scheduled at 2019-03-27 17:05:11.267629)
+[2019-03-27 17:05:11] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:05:16.267629 (in 4.997658 seconds)
+[2019-03-27 17:05:11] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 192.168.77.21:8084
+[2019-03-27 17:05:16] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:05:16] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:05:16] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:05:21.267629 (in 4.998236 seconds)
+[2019-03-27 17:05:16] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:05:21.267629)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:05:17] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:05:21] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:05:21] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:05:21] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:05:26.267629 (in 4.980055 seconds)
+[2019-03-27 17:05:21] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:05:26.267629)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:05:22] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:05:26] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:05:26] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:05:26] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:05:31.267629 (in 4.994642 seconds)
+[2019-03-27 17:05:26] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:05:31.267629)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:05:27] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:05:31] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:05:31] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:05:31] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:05:36.267629 (in 4.985350 seconds)
+[2019-03-27 17:05:31] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:05:36.267629)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:05:31] INFO [shutdown: threadpool.py, 111] Shutting down thread pool
+[2019-03-27 17:05:31] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:05:32] ERROR [_run_job: scheduler.py, 520] Job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:05:36.267629)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 79, in create_connection
+    raise err
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 69, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 196, in connect
+    conn = self._new_conn()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001E541462B38>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 445, in send
+    timeout=timeout
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.77.21', port=8084): Max retries exceeded with url: /big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E541462B38>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\apscheduler\scheduler.py", line 512, in _run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\cty_devops\urls.py", line 59, in my_task
+    get_system_data()
+  File "E:\VM\Python_Workspace\pycharm_django\tools\conn_db.py", line 105, in get_system_data
+    url3 = 'http://zwfw.hubei.gov.cn/'#政务服务网域名
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.77.21', port=8084): Max retries exceeded with url: /big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E541462B38>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+[2019-03-27 17:05:32] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:05:37] INFO [__init__: threadpool.py, 52] Started thread pool with 0 core threads and 20 maximum threads
+[2019-03-27 17:05:37] INFO [add_job: scheduler.py, 287] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2019-03-27 17:05:37] INFO [_real_add_job: scheduler.py, 262] Added job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:05:42.179995)" to job store "default"
+[2019-03-27 17:05:37] INFO [_main_loop: scheduler.py, 574] Scheduler started
+[2019-03-27 17:05:37] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:05:37] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:05:42.179995 (in 4.998010 seconds)
+[2019-03-27 17:05:42] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:05:42] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:05:42] INFO [_run_job: scheduler.py, 509] Running job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:05:42.179995)" (scheduled at 2019-03-27 17:05:42.179995)
+[2019-03-27 17:05:42] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:05:47.179995 (in 4.997313 seconds)
+[2019-03-27 17:05:42] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 192.168.77.21:8084
+[2019-03-27 17:05:47] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:05:47] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:05:47] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:05:52.179995 (in 4.996398 seconds)
+[2019-03-27 17:05:47] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:05:52.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:05:48] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:05:52] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:05:52] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:05:52] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:05:52.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:05:52] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:05:57.179995 (in 4.997892 seconds)
+[2019-03-27 17:05:53] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:05:57] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:05:57] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:05:57] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:05:57.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:05:57] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:06:02.179995 (in 4.998268 seconds)
+[2019-03-27 17:05:58] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:06:02] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:06:02] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:06:02] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:06:07.179995 (in 4.997423 seconds)
+[2019-03-27 17:06:02] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:06:07.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:06:03] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:06:03] ERROR [_run_job: scheduler.py, 520] Job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:06:07.179995)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 79, in create_connection
+    raise err
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 69, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 196, in connect
+    conn = self._new_conn()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000022238057F60>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 445, in send
+    timeout=timeout
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.77.21', port=8084): Max retries exceeded with url: /big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022238057F60>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\apscheduler\scheduler.py", line 512, in _run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\cty_devops\urls.py", line 59, in my_task
+    get_system_data()
+  File "E:\VM\Python_Workspace\pycharm_django\tools\conn_db.py", line 106, in get_system_data
+    ri_pv = requests.get(url2)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.77.21', port=8084): Max retries exceeded with url: /big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022238057F60>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+[2019-03-27 17:06:04] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:06:07] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:06:07] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:06:07] INFO [_run_job: scheduler.py, 509] Running job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:06:07.179995)" (scheduled at 2019-03-27 17:06:07.179995)
+[2019-03-27 17:06:07] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:06:12.179995 (in 4.998033 seconds)
+[2019-03-27 17:06:07] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 192.168.77.21:8084
+[2019-03-27 17:06:12] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:06:12] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:06:12] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:06:12.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:06:12] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:06:17.179995 (in 4.998409 seconds)
+[2019-03-27 17:06:13] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:06:17] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:06:17] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:06:17] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:06:17.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:06:17] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:06:22.179995 (in 4.998276 seconds)
+[2019-03-27 17:06:18] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:06:22] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:06:22] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:06:22] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:06:27.179995 (in 4.997719 seconds)
+[2019-03-27 17:06:22] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:06:27.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:06:23] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:06:27] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:06:27] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:06:27] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:06:27.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:06:27] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:06:32.179995 (in 4.999511 seconds)
+[2019-03-27 17:06:28] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:06:28] ERROR [_run_job: scheduler.py, 520] Job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:06:32.179995)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 79, in create_connection
+    raise err
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 69, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 196, in connect
+    conn = self._new_conn()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000022238D49748>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 445, in send
+    timeout=timeout
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.77.21', port=8084): Max retries exceeded with url: /big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022238D49748>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\apscheduler\scheduler.py", line 512, in _run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\cty_devops\urls.py", line 59, in my_task
+    get_system_data()
+  File "E:\VM\Python_Workspace\pycharm_django\tools\conn_db.py", line 106, in get_system_data
+    ri_pv = requests.get(url2)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.77.21', port=8084): Max retries exceeded with url: /big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022238D49748>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+[2019-03-27 17:06:29] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:06:32] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:06:32] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:06:32] INFO [_run_job: scheduler.py, 509] Running job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:06:32.179995)" (scheduled at 2019-03-27 17:06:32.179995)
+[2019-03-27 17:06:32] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:06:37.179995 (in 4.998118 seconds)
+[2019-03-27 17:06:32] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 192.168.77.21:8084
+[2019-03-27 17:06:37] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:06:37] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:06:37] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:06:42.179995 (in 4.997041 seconds)
+[2019-03-27 17:06:37] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:06:42.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:06:38] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:06:42] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:06:42] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:06:42] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:06:47.179995 (in 4.998911 seconds)
+[2019-03-27 17:06:42] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:06:47.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:06:43] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:06:47] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:06:47] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:06:47] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:06:52.179995 (in 4.998840 seconds)
+[2019-03-27 17:06:47] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:06:52.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:06:48] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:06:52] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:06:52] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:06:52] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:06:52.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:06:52] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:06:57.179995 (in 4.996239 seconds)
+[2019-03-27 17:06:53] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:06:53] ERROR [_run_job: scheduler.py, 520] Job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:06:57.179995)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 79, in create_connection
+    raise err
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 69, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 196, in connect
+    conn = self._new_conn()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000022238057390>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 445, in send
+    timeout=timeout
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.77.21', port=8084): Max retries exceeded with url: /big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022238057390>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\apscheduler\scheduler.py", line 512, in _run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\cty_devops\urls.py", line 59, in my_task
+    get_system_data()
+  File "E:\VM\Python_Workspace\pycharm_django\tools\conn_db.py", line 106, in get_system_data
+    ri_pv = requests.get(url2)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.77.21', port=8084): Max retries exceeded with url: /big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022238057390>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+[2019-03-27 17:06:54] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:06:57] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:06:57] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:06:57] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:07:02.179995 (in 4.997555 seconds)
+[2019-03-27 17:06:57] INFO [_run_job: scheduler.py, 509] Running job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:07:02.179995)" (scheduled at 2019-03-27 17:06:57.179995)
+[2019-03-27 17:06:57] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 192.168.77.21:8084
+[2019-03-27 17:07:02] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:07:02] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:07:02] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:07:02.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:07:02] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:07:07.179995 (in 4.998712 seconds)
+[2019-03-27 17:07:03] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:07:07] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:07:07] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:07:07] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:07:12.179995 (in 4.999053 seconds)
+[2019-03-27 17:07:07] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:07:12.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:07:08] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:07:12] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:07:12] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:07:12] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:07:17.179995 (in 4.996645 seconds)
+[2019-03-27 17:07:12] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:07:17.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:07:13] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:07:17] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:07:17] DEBUG [_run_jobs: threadpool.py, 69] Started worker thread
+[2019-03-27 17:07:17] WARNING [_run_job: scheduler.py, 505] Execution of job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:07:17.179995)" skipped: maximum number of running instances reached (1)
+[2019-03-27 17:07:17] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:07:22.179995 (in 4.998765 seconds)
+[2019-03-27 17:07:18] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:07:18] ERROR [_run_job: scheduler.py, 520] Job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:07:22.179995)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 79, in create_connection
+    raise err
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 69, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 196, in connect
+    conn = self._new_conn()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000022238D493C8>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 445, in send
+    timeout=timeout
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.77.21', port=8084): Max retries exceeded with url: /big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022238D493C8>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\apscheduler\scheduler.py", line 512, in _run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "E:\VM\Python_Workspace\pycharm_django\cty_devops\cty_devops\urls.py", line 59, in my_task
+    get_system_data()
+  File "E:\VM\Python_Workspace\pycharm_django\tools\conn_db.py", line 106, in get_system_data
+    ri_pv = requests.get(url2)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.77.21', port=8084): Max retries exceeded with url: /big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022238D493C8>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+[2019-03-27 17:07:19] DEBUG [_run_jobs: threadpool.py, 94] Exiting worker thread
+[2019-03-27 17:07:19] INFO [shutdown: threadpool.py, 111] Shutting down thread pool
+[2019-03-27 17:07:21] INFO [__init__: threadpool.py, 52] Started thread pool with 0 core threads and 20 maximum threads
+[2019-03-27 17:07:21] INFO [add_job: scheduler.py, 287] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2019-03-27 17:07:21] INFO [_real_add_job: scheduler.py, 262] Added job "my_task (trigger: interval[0:00:05], next run at: 2019-03-27 17:07:26.410764)" to job store "default"
+[2019-03-27 17:07:21] INFO [_main_loop: scheduler.py, 574] Scheduler started
+[2019-03-27 17:07:21] DEBUG [_main_loop: scheduler.py, 579] Looking for jobs to run
+[2019-03-27 17:07:21] DEBUG [_main_loop: scheduler.py, 588] Next wakeup is due at 2019-03-27 17:07:26.410764 (in 4.997972 seconds)

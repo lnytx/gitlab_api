@@ -43,8 +43,8 @@ logging.basicConfig(filename=log_file, level=logging.DEBUG,
 def oracle_connect():
     import cx_Oracle
     # connection = cx_Oracle.connect("user", "password", "TNS")
-    # host = '192.168.77.151'#内网IP
-    host = '223.75.53.43'  # 外网IP
+    host = '192.168.77.151'#内网IP
+    # host = '223.75.53.43'  # 外网IP
     port = 8089
     service_name = 'XE'
     try:
@@ -95,6 +95,7 @@ def execute(sql, data, table_name):  # 执行sql语句，主要是在mysql中执
     logging.info("插入表%s共耗时%s秒" % (table_name, end - start))
 
 def get_system_data():
+    print("执行get_system_data")
     system_data={}
     # url1 = 'http://59.208.149.24:8084/big/zwfw/onlineman.jspx'#获取当前在线人数
     # url2 = 'http://59.208.149.24:8084/big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578'#获取日访问量
@@ -212,6 +213,7 @@ def python_ssh_command(ip, port, username, password,**shell):
         print("ssh_commad have exception",str(e),logging.error(str(e)))
         return result
 def midware_data():
+    print("执行定时任务")
     data = []
     midware_ips = ['192.168.77.1', '192.168.77.2', '192.168.77.6', '192.168.77.20', '192.168.77.24', '192.168.77.26',
                    '192.168.77.27', '192.168.77.32', '192.168.77.33', '192.168.77.16', '192.168.77.17', '192.168.77.18',
