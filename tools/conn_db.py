@@ -152,9 +152,8 @@ def get_system_data():
         d.append(system_data['reponse_avg_time'])
         d.append(system_data['url'])
         d.append(system_data['seqid'])
-        d.append(system_data['url'])
         d.append(system_data['weburl'])
-        sql_system = "insert into SERVICE_SYSTEM(CURUV,CURPV,RESPONSETIME,STATUSCODE,MAXTIME,MINITIME,AVGTIME,INTERFACEURL,SEQID) values (:1,:2,:3,:4,:5,:6,:7,:8,:9)"
+        sql_system = "insert into SERVICE_SYSTEM(CURUV,CURPV,RESPONSETIME,STATUSCODE,MAXTIME,MINITIME,AVGTIME,INTERFACEURL,SEQID,WEBURL) values (:1,:2,:3,:4,:5,:6,:7,:8,:9,:10)"
         orcl_cursor.execute(sql_system, d)
     except Exception as e:
         logging.error('插入数据库SERVICE_SYSTEM报错error:%s' % str(e))
