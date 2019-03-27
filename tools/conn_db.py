@@ -157,7 +157,7 @@ def get_system_data():
         sql_system = "insert into SERVICE_SYSTEM(CURUV,CURPV,RESPONSETIME,STATUSCODE,MAXTIME,MINITIME,AVGTIME,INTERFACEURL,SEQID) values (:1,:2,:3,:4,:5,:6,:7,:8,:9)"
         orcl_cursor.execute(sql_system, d)
     except Exception as e:
-        print("插入数据库报错error", str(e))
+        logging.error('插入数据库SERVICE_SYSTEM报错error:%s' % str(e))
     # orcl_cursor.execute("insert into MID_DB_DATA(STATUS,MAXCONNS,CURCONNS,MIDDLEWARE_JVM,ID,SEQID) values " \
     # "('false','200','100','10%','3',SEQ_ID.NEXTVAL)")
     orcl_conn.commit()
@@ -355,6 +355,7 @@ def midware_data():
             orcl_cursor.execute(sql_mid,b)
     except Exception as e:
         print("插入数据库报错error", str(e))
+        logging.error('插入数据库MID_DB_DATA报错error:%s'%str(e))
     # orcl_cursor.execute("insert into MID_DB_DATA(STATUS,MAXCONNS,CURCONNS,MIDDLEWARE_JVM,ID,SEQID) values " \
     # "('false','200','100','10%','3',SEQ_ID.NEXTVAL)")
     orcl_conn.commit()
