@@ -4,6 +4,8 @@ Created on 2017年8月4日
 
 @author: admin
 连接oracle数据库处理数据
+
+alter sequence seq_id increment by 1;#重置seq
 '''
 
 import datetime
