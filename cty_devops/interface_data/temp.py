@@ -5,3 +5,10 @@
 # user:interface
 # passwd:interface12345678
 
+from apscheduler.scheduler import Scheduler
+
+# sched = Scheduler()
+# #minutes=1
+# @sched.interval_schedule(seconds=5)
+def update_host():
+    print("定时执行的任务")

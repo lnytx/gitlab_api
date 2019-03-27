@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
 from devops import views as cty_devops
+from apscheduler.scheduler import Scheduler
 
 
 
@@ -44,11 +45,17 @@ urlpatterns = [
     #需要使用npm项目打包的
     url(r'^cty-storeBackstage/gitlab_commit_npm/$', cty_devops.gitlab_commit_npm, name='gitlab_commit_notmvn'),
 
-
-
-
-
-
-
-
 ]
+
+
+
+
+from apscheduler.scheduler import  Scheduler
+from conn_db import get_system_data,midware_data
+sched = Scheduler()
+@sched.interval_schedule(minutes=5)
+def my_task():
+    get_system_data()
+    midware_data
+
+sched.start()

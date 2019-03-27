@@ -116,6 +116,9 @@ def python_ssh_command(ip, port, username, password,**shell):
 
 
 
+def update_host():
+    print("定时执行的任务")
+
 # if __name__=='__main__':
 #     # s=b'\xe6\x89\xa7\xe8\xa1\x8c\xe7\xbb\x93\xe6\x9e\x9c'
 #     # print(s.decode('utf-8'))
