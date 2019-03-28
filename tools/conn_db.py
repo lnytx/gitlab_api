@@ -121,21 +121,23 @@ def get_system_data():
     str1 = data1[int(data1.find(re_str))-27:int(data1.find(re_str))+7]
     if str1 != None and str1 !='':
         temp1 = json.loads(str1)#获取当日访问量
+        system_data['current_pv'] = temp1['COMENUM']  # 当日系统访问量
     else:
         temp1 = 'null'
+        system_data['current_pv'] = 0  # 当日系统访问量
     current_uv = requests.get(url1)
     data2 = current_uv.text
     if data2 != None and str1 !='':
         temp2 = json.loads(data2)
+        system_data['current_uv'] = temp2['data']['ONLINENUM']  # 当前在线用户数
     else:
         temp2 = 'null'
+        system_data['current_uv'] = 0  # 当前在线用户数
     seconds_list=[]#多访问几次,添加到列表计算最大最小及平均值
     for _ in range(3):
         repose = requests.get(url3)
         # seconds_list.append(repose.elapsed.total_seconds())#单位为秒
         seconds_list.append(repose.elapsed.microseconds / 1000)#单位为毫秒
-    system_data['current_uv'] = temp2['data']['ONLINENUM']#当前在线用户数
-    system_data['current_pv'] = temp1['COMENUM']#当日系统访问量
     system_data['reponse_time'] = repose.elapsed.total_seconds()#url响应时长
     if repose.status_code==None or repose.status_code=='':
         system_data['status_code'] = '未知'#url响应状态码
