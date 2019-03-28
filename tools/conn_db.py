@@ -113,10 +113,16 @@ def get_system_data():
     print("localtime",localtime)
     re_str = str(0)+str(localtime.tm_mon)+'-'+str(localtime.tm_mday)
     str1 = data1[int(data1.find(re_str))-27:int(data1.find(re_str))+7]
-    temp1 = json.loads(str1)#获取当日访问量
+    if str1 != None and str1 !='':
+        temp1 = json.loads(str1)#获取当日访问量
+    else:
+        temp1 = 'null'
     current_uv = requests.get(url1)
     data2 = current_uv.text
-    temp2 = json.loads(data2)
+    if data2 != None and str1 !='':
+        temp2 = json.loads(data2)
+    else:
+        temp2 = 'null'
     seconds_list=[]#多访问几次,添加到列表计算最大最小及平均值
     for _ in range(3):
         repose = requests.get(url3)
