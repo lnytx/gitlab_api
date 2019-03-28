@@ -118,16 +118,22 @@ def get_system_data():
     localtime = time.localtime(time.time())
     print("localtime",localtime)
     re_str = str(0)+str(localtime.tm_mon)+'-'+str(localtime.tm_mday)
-    str1 = data1[int(data1.find(re_str))-27:int(data1.find(re_str))+7]
-    if str1 != None and str1 !='':
-        temp1 = json.loads(str1)#获取当日访问量
-        system_data['current_pv'] = temp1['COMENUM']  # 当日系统访问量
+    if data1 != None and data1 !='':
+        a = json.loads(data1[9:].strip('(').strip(')'))
+        print("日访问量",a['ridata'])
+        for i in a['ridata']:
+            for k,v in i.items():
+                if str(v) == re_str:
+                    print("当天的访问量",i)
+                    system_data['current_pv'] = i['COMENUM']
+                    break
+          # 当日系统访问量
     else:
-        temp1 = 'null'
         system_data['current_pv'] = 0  # 当日系统访问量
     current_uv = requests.get(url1)
     data2 = current_uv.text
-    if data2 != None and str1 !='':
+    print("data2",data2)
+    if data2 != None and data2 !='':
         temp2 = json.loads(data2)
         system_data['current_uv'] = temp2['data']['ONLINENUM']  # 当前在线用户数
     else:
