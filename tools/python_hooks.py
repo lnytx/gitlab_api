@@ -6,12 +6,21 @@ import pexpect
 import logging
 import sys
 import paramiko
+import  time
+import datetime
 '''
 代码需要从互联网提交，但是内网机器无法直接连互联网的IP，jenkins也无法绕过跳板机，只能通过在内网建立一个简单的web服务
 通过互联网访问来触发代码提交
 curl 192.168.77.151:8099/cty-gov/cty-userInfo/cty-dict/test
 前面的IP换成外网访问，后面的test表示test环境(有多个环境，对应不同的IP)，前面则代表的是项目路径
 '''
+
+def beijing(sec, what):
+    beijing_time = datetime.datetime.now() + datetime.timedelta(hours=8)
+    return beijing_time.timetuple()
+
+logging.Formatter.converter = beijing
+
 log_file = 'command.log'
 logging.basicConfig(filename=log_file, level=logging.DEBUG,
                     format='[%(asctime)s] %(levelname)s [%(funcName)s: %(filename)s, %(lineno)d] %(message)s',

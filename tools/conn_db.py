@@ -34,7 +34,13 @@ end;
 
 # os.environ['NLS_LANG'] = 'SIMPLIFIED CHINESE_CHINA.UTF8'
 
-# 处理多个参数时，计算应该有几个%s的方法
+# 将logging的日志时间修改成北京时间
+def beijing(sec, what):
+    beijing_time = datetime.datetime.now() + datetime.timedelta(hours=8)
+    return beijing_time.timetuple()
+
+logging.Formatter.converter = beijing
+
 log_file = 'conn_data.log'
 logging.basicConfig(filename=log_file, level=logging.DEBUG,
                     format='[%(asctime)s] %(levelname)s [%(funcName)s: %(filename)s, %(lineno)d] %(message)s',
