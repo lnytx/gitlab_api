@@ -45,8 +45,8 @@ logging.basicConfig(filename=log_file, level=logging.DEBUG,
 def oracle_connect():
     import cx_Oracle
     # connection = cx_Oracle.connect("user", "password", "TNS")
-    # host = '192.168.77.151'#内网IP
-    host = '223.75.53.43'  # 外网IP
+    host = '192.168.77.151'#内网IP
+    # host = '223.75.53.43'  # 外网IP
     port = 8089
     service_name = 'XE'
     try:
