@@ -27,7 +27,8 @@ def get_system_data():
     # {"COMENUM": 124260, "DTIME": "03-21"}]
     #拼接当前日期
     localtime = time.localtime(time.time())
-    re_str = str(0)+str(localtime.tm_mon)+'-'+str(localtime.tm_mday)
+    re_str = str(0)+str(localtime.tm_mon)+'-0'+str(localtime.tm_mday)
+    print("localtime",re_str)
 
     if data1 != None and data1 !='':
         a = json.loads(data1[9:].strip('(').strip(')'))

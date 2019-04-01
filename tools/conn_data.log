@@ -39,3 +39,7 @@
 [2019-03-27 14:48:10] INFO [oracle_connect: conn_db.py, 52] oracle conn is success!
 [2019-03-27 14:48:16] INFO [oracle_connect: conn_db.py, 52] oracle conn is success!
 [2019-03-27 14:48:54] INFO [oracle_connect: conn_db.py, 52] oracle conn is success!
+[2019-03-29 00:22:07] INFO [oracle_connect: conn_db.py, 60] oracle conn is success!
+[2019-03-29 00:22:07] INFO [search_table: conn_db.py, 87] 当表插入service_system表，共124条记录
+[2019-03-29 18:43:11] INFO [oracle_connect: conn_db.py, 60] oracle conn is success!
+[2019-03-29 18:43:11] INFO [search_table: conn_db.py, 87] 当表插入service_system表，共234条记录

@@ -23,13 +23,7 @@ import requests
 from apscheduler.scheduler import Scheduler
 
 '''
-数据库建表时需要新增seq并且为每个表的seqid设置触发器
-CREATE OR REPLACE TRIGGER service_system_seq
-BEFORE INSERT ON service_system
-FOR EACH ROW WHEN (new.seqid is null)
-begin
-select SEQ_ID.nextval into:new.seqid from dual;
-end;
+
 '''
 
 # os.environ['NLS_LANG'] = 'SIMPLIFIED CHINESE_CHINA.UTF8'
@@ -41,7 +35,7 @@ def beijing(sec, what):
 
 logging.Formatter.converter = beijing
 
-log_file = 'conn_data.log'
+log_file = 'conn_app.log'
 logging.basicConfig(filename=log_file, level=logging.DEBUG,
                     format='[%(asctime)s] %(levelname)s [%(funcName)s: %(filename)s, %(lineno)d] %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S',
@@ -68,80 +62,35 @@ def get_seq():
     start = time.time()
     try:
         # 处理业务系统数据
-        orcl_cursor.execute('select seq_id.nextval from dual')
+        orcl_cursor.execute('select seq_app.nextval from dual')
         seq_id = orcl_cursor.fetchall()
         return re.sub("\D", "", str(seq_id))
     except Exception as e:
         print("获取seq失败，error", str(e))
-    # orcl_cursor.execute("insert into MID_DB_DATA(STATUS,MAXCONNS,CURCONNS,MIDDLEWARE_JVM,ID,SEQID) values " \
-    # "('false','200','100','10%','3',SEQ_ID.NEXTVAL)")
+
     orcl_conn.commit()
     end = time.time()
     orcl_cursor.close()
     orcl_conn.close()
-def search_table(table_name):
-    orcl_conn = oracle_connect()
-    orcl_cursor = orcl_conn.cursor()
-    orcl_cursor.execute('select * from %s' % table_name)
-    result = orcl_cursor.fetchall()  # 获取到了数据结果是个list[(),()]
-    logging.info("当表插入%s表，共%s条记录" % (table_name, len(result)))
-    orcl_cursor.close()
-    orcl_conn.close()
-    return result
 
-
-def execute(sql, data, table_name):  # 执行sql语句，主要是在mysql中执行插入操作
-    orcl_conn = oracle_connect()
-    orcl_cursor = orcl_conn.cursor()
-    logging.info("执行插入表:%s" % table_name)
-    start = time.time()
-    orcl_cursor.execute(sql, data)
-    orcl_conn.commit()
-    end = time.time()
-    orcl_cursor.close()
-    orcl_conn.close()
-    logging.info("插入表%s共耗时%s秒" % (table_name, end - start))
 
 def get_system_data():
     print("执行get_system_data")
     system_data={}
-    # url1 = 'http://59.208.149.24:8084/big/zwfw/onlineman.jspx'#获取当前在线人数
-    # url2 = 'http://59.208.149.24:8084/big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578'#获取日访问量
-    # url3 = 'http://zwfw.hubei.gov.cn/'#政务服务网域名
-    url1 = 'http://192.168.77.21:8084/big/zwfw/onlineman.jspx'#获取当前在线人数
-    url2 = 'http://192.168.77.21:8084/big/zwfw/rizhouyue/fangwenl.jspx?callback=callback4&_=1553068413578'#获取日访问量
-    url3 = 'http://zwfw.hubei.gov.cn/'#政务服务网域名
-    ri_pv = requests.get(url2)
-    data1 = ri_pv.text
+    url_app = 'http://dev-pass.ehbapp.hubei.gov.cn:8050/hbzwAppServer/app/app/ok'#政务服务网域名
+    data_text = requests.get(url_app)
+    data1 = data_text.text
     # {"COMENUM": 124260, "DTIME": "03-21"}]
     #拼接当前日期
     localtime = time.localtime(time.time())
     print("localtime",localtime)
-    re_str = str(0)+str(localtime.tm_mon)+'-0'+str(localtime.tm_mday)
-    if data1 != None and data1 !='':
-        a = json.loads(data1[9:].strip('(').strip(')'))
-        print("日访问量",a['ridata'])
-        for i in a['ridata']:
-            for k,v in i.items():
-                if str(v) == re_str:
-                    print("当天的访问量",i)
-                    system_data['current_pv'] = i['COMENUM']
-                    break
-          # 当日系统访问量
-    else:
-        system_data['current_pv'] = 0  # 当日系统访问量
-    current_uv = requests.get(url1)
-    data2 = current_uv.text
-    print("data2",data2)
-    if data2 != None and data2 !='':
-        temp2 = json.loads(data2)
-        system_data['current_uv'] = temp2['data']['ONLINENUM']  # 当前在线用户数
-    else:
-        temp2 = 'null'
-        system_data['current_uv'] = 0  # 当前在线用户数
+    re_str = str(0)+str(localtime.tm_mon)+'-'+str(localtime.tm_mday)
     seconds_list=[]#多访问几次,添加到列表计算最大最小及平均值
+
+    system_data['current_pv'] = 0#app暂时无法取数据为0
+    system_data['current_uv'] = 0#app暂时无法取数据为0
     for _ in range(3):
-        repose = requests.get(url3)
+        repose = requests.get(url_app)
         # seconds_list.append(repose.elapsed.total_seconds())#单位为秒
         seconds_list.append(repose.elapsed.microseconds / 1000)#单位为毫秒
     system_data['reponse_time'] = repose.elapsed.total_seconds()#url响应时长
@@ -153,8 +102,8 @@ def get_system_data():
     system_data['reponse_min_time'] = min(seconds_list)
     system_data['reponse_avg_time'] = sum(seconds_list)/3
     system_data['seqid'] = get_seq()
-    system_data['url'] = url3
-    system_data['weburl'] = 'weburl'
+    system_data['url'] = url_app
+    system_data['weburl'] = 'appburl'
 
     # 插入数据库中
 
@@ -176,7 +125,7 @@ def get_system_data():
         d.append(system_data['seqid'])
         d.append(system_data['weburl'])
         sql_system = "insert into SERVICE_SYSTEM(CURUV,CURPV,RESPONSETIME,STATUSCODE,MAXTIME,MINITIME,AVGTIME,INTERFACEURL,SEQID,WEBURL) values (:1,:2,:3,:4,:5,:6,:7,:8,:9,:10)"
-        orcl_cursor.execute(sql_system, d)
+        orcl_cursor.execute(sql_system, d)#执行sql语句
     except Exception as e:
         logging.error('插入数据库SERVICE_SYSTEM报错error:%s' % str(e))
     # orcl_cursor.execute("insert into MID_DB_DATA(STATUS,MAXCONNS,CURCONNS,MIDDLEWARE_JVM,ID,SEQID) values " \
@@ -353,7 +302,7 @@ def midware_data():
 
     orcl_conn = oracle_connect()
     orcl_cursor = orcl_conn.cursor()
-    logging.info("执行插入表:%s" % 'MIDWARE_DB_DATA')
+    logging.info("执行插入表:%s" % 'SERVICE_SYSTEM')
     start = time.time()
     try:
         # 处理业务系统数据
@@ -377,7 +326,8 @@ def midware_data():
     except Exception as e:
         print("插入数据库报错error", str(e))
         logging.error('插入数据库MID_DB_DATA报错error:%s'%str(e))
-
+    # orcl_cursor.execute("insert into MID_DB_DATA(STATUS,MAXCONNS,CURCONNS,MIDDLEWARE_JVM,ID,SEQID) values " \
+    # "('false','200','100','10%','3',SEQ_ID.NEXTVAL)")
     orcl_conn.commit()
     end = time.time()
     orcl_cursor.close()
@@ -386,54 +336,5 @@ def midware_data():
     # return data
 if __name__ == '__main__':
     # #资源内部id,业务系统1，接口2，中间件3，数据库4
-    # tables = ['MID_DB_DATA', 'SERVICE_INTERFACE', 'SERVICE_SYSTEM', 'DATA_DICT']
-    # #数据库数据
-    # sql_db = "insert into MID_DB_DATA(STATUS,MAXCONNS,CURCONNS,DBNULLSELECTTIME,ID,SEQID) values " \
-    #          "('true','1200','500','10','4',SEQ_ID.NEXTVAL)"
-    # #中间件数据
-    # sql_mid = "insert into MID_DB_DATA(STATUS,MAXCONNS,CURCONNS,MIDDLEWARE_JVM,ID,SEQID) values " \
-    #           "('false','200','100','10%','3',SEQ_ID.NEXTVAL)"
-    # # 业务系统
-    # sql_system = "insert into SERVICE_SYSTEM(CURUV,CURPV,RESPONSETIME,STATUSCODE,MAXTIME,MINITIME,AVGTIME,BUSINESSNUMBER,INTERFACEURL,SEQID) values " \
-    # #业务接口
-    # sql_interface = "insert into SERVICE_INTERFACE(MAXTIME,MINITIME,AVGTIME,INTERFACEURL,URLVV,SEQID) values " \
-    #           "('0.5','0.2','0.5','http://zwfw.hubei.gov.cn/','1000',SEQ_ID.NEXTVAL)"
 
-    # 资源内部id,业务系统1，接口2，中间件3，数据库4
-    tables = ['MID_DB_DATA', 'SERVICE_INTERFACE', 'SERVICE_SYSTEM', 'DATA_DICT']
-    #处理业务系统数据
-    # system_data = get_system_data()
-    # sql_system = '''insert into SERVICE_SYSTEM(CURUV,CURPV,RESPONSETIME,STATUSCODE,MAXTIME,MINITIME,AVGTIME,INTERFACEURL,SEQID)
-    #              values (str(system_data['current_uv']),str(system_data['current_pv']),system_data['reponse_time'],system_data['status_code'],
-    #              stem_data['reponse_max_time'],stem_data['reponse_min_time'],stem_data['reponse_avg_time'],'http://zwfw.hubei.gov.cn/',SEQ_ID.NEXTVAL)'''
-    # # execute(sql_system, system_data, 'SERVICE_SYSTEM')
-    #
-    # orcl_conn = oracle_connect()
-    # orcl_cursor = orcl_conn.cursor()
-    # logging.info("执行插入表:%s" % 'SERVICE_SYSTEM')
-    # start = time.time()
-    # try:
-    #     # 处理业务系统数据
-    #     orcl_cursor.execute('insert into SERVICE_SYSTEM(CURUV, CURPV, RESPONSETIME, STATUSCODE, MAXTIME, MINITIME, AVGTIME, INTERFACEURL) values(:1,:2,:3,:4,:5,:6,:7,:8)', \
-    #                     (str(system_data['current_uv']),str(system_data['current_pv']),system_data['reponse_time'],system_data['status_code'],system_data['reponse_max_time'], \
-    #                      system_data['reponse_min_time'],system_data['reponse_avg_time'],'http://zwfw.hubei.gov.cn/'))
-    #
-    # except Exception as e:
-    #     print("error",str(e))
-    # # orcl_cursor.execute("insert into MID_DB_DATA(STATUS,MAXCONNS,CURCONNS,MIDDLEWARE_JVM,ID,SEQID) values " \
-    # # "('false','200','100','10%','3',SEQ_ID.NEXTVAL)")
-    # orcl_conn.commit()
-    # end = time.time()
-    # orcl_cursor.close()
-    # orcl_conn.close()
-    # logging.info("插入表%s共耗时%s秒" % ('SERVICE_SYSTEM', end - start))
-#执行命令
-    print(search_table('service_system'))
-    # c = midware_data()
-    # b = get_seq()
-    # c= tuple(list(b))
-    # # d = " ".join(tuple(b))
-    # print("b", type(b),b)
-    # c = " ".join(b)
-    # print("b",type(b),c)
-
+    get_system_data()
