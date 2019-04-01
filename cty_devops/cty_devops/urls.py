@@ -52,6 +52,7 @@ urlpatterns = [
 
 from apscheduler.scheduler import  Scheduler
 from conn_db import get_system_data,midware_data
+from data_app import get_system_data_app,midware_data_app
 sched = Scheduler()
 #minutes=5
 @sched.interval_schedule(minutes=10)
