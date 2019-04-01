@@ -59,5 +59,8 @@ sched = Scheduler()
 def my_task():
     get_system_data()
     midware_data()
+    #app信息
+    get_system_data_app()
+    midware_data_app()
 
 sched.start()

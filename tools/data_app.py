@@ -74,10 +74,10 @@ def get_seq():
     orcl_conn.close()
 
 
-def get_system_data():
+def get_system_data_app():
     print("执行get_system_data")
     system_data={}
-    url_app = 'http://dev-pass.ehbapp.hubei.gov.cn:8050/hbzwAppServer/app/app/ok'#政务服务网域名
+    # url_app = 'http://dev-pass.ehbapp.hubei.gov.cn:8050/hbzwAppServer/app/app/ok'#政务服务网域名
     url_app = 'http://192.168.77.160:8080/hbzwAppServer/app/app/ok'#内网IP
     data_text = requests.get(url_app)
     data1 = data_text.text
@@ -85,7 +85,7 @@ def get_system_data():
     #拼接当前日期
     localtime = time.localtime(time.time())
     print("localtime",localtime)
-    re_str = str(0)+str(localtime.tm_mon)+'-'+str(localtime.tm_mday)
+    # re_str = str(0)+str(localtime.tm_mon)+'-'+str(localtime.tm_mday)
     seconds_list=[]#多访问几次,添加到列表计算最大最小及平均值
 
     system_data['current_pv'] = 0#app暂时无法取数据为0
@@ -183,44 +183,30 @@ def python_ssh_command(ip, port, username, password,**shell):
     except Exception as e:
         print("ssh_commad have exception",str(e),logging.error(str(e)))
         return result
-def midware_data():
+def midware_data_app():
     print("执行定时任务")
     data = []
-    midware_ips = ['192.168.77.1', '192.168.77.2', '192.168.77.6', '192.168.77.20', '192.168.77.24', '192.168.77.26',
-                   '192.168.77.27', '192.168.77.32', '192.168.77.33', '192.168.77.16', '192.168.77.17', '192.168.77.18',
-                   '192.168.77.19']
+    midware_ips = ['192.168.77.160','192.168.77.161','192.168.77.162','192.168.77.163','192.168.77.164','192.168.77.165','192.168.77.166'
+        ,'192.168.77.167','192.168.77.168','192.168.77.169','192.168.77.170','192.168.77.171','192.168.77.172','192.168.77.173'
+        ,'192.168.77.174','192.168.77.175','192.168.77.176','192.168.77.177','192.168.77.178','192.168.77.179'
+        ,'192.168.77.112','192.168.77.113','192.168.77.114','192.168.77.210','192.168.77.211','192.168.77.212'
+        ,'192.168.77.213','214']
 
     username = 'root'
     password = '1qaz@WSX'
     port = '22'
     for ip in midware_ips:
         midware_data = {}
-        if ip == '192.168.77.1' or ip == '192.168.77.2':  # 这是httpd中间件
+        if ip == '192.168.77.112' or ip == '192.168.77.113' or ip == '192.168.77.114':  # 这里是fastdis,默认256个连接管理中间件
+            username = 'root'
+            password = 'zwfw2wsx#EDC'
+            port = '22'
             midware_data['IP'] = ip
             result = python_ssh_command(ip, int(port), username, password,
-                                        status='ps -ef|grep -v grep|grep httpd |wc -l', curr='ps -ef|grep httpd|wc -l')
+                                        status='ps -ef|grep -v grep|grep fdfs |wc -l',
+                                        curr='netstat -ant| grep 22122|grep EST|wc -l')
             midware_data['ID'] = '3'  # 3为中间件，4为数据库
-            midware_data['MAXCONNS'] = '2000'
-            if len(result)>=1 and (result[0] != 0 or  result[0]!=[]):  # 不为0则连通状态为正常
-                midware_data['STATUS'] = '1'
-            else:
-                midware_data['STATUS'] = '0'
-            if len(result)>=2 and result[1]!=[]:#当前连接数
-                midware_data['CURCONNS'] = result[1]
-            else:
-                midware_data['CURCONNS'] = '0'
-            midware_data['MIDDLEWARE_JVM'] = 'no jvm'
-            midware_data['DBNULLSELECTTIME'] = 'null'
-            midware_data['MIDDLEWARE_NAME'] = 'apache'
-            midware_data['SEQID'] = get_seq()
-            data.append(midware_data)
-        if ip == '192.168.77.26' or ip == '192.168.77.27':  # 这里是ftp中间件
-            midware_data['IP'] = ip
-            result = python_ssh_command(ip, int(port), username, password,
-                                        status='ps -ef|grep -v grep|grep vsftpd |wc -l',
-                                        curr='netstat -a | grep ftp|grep EST|wc -l')
-            midware_data['ID'] = '3'  # 3为中间件，4为数据库
-            midware_data['MAXCONNS'] = '300'
+            midware_data['MAXCONNS'] = '256'
             if len(result)>=1 and (result[0] != 0 or  result[0]!=[]):  # 不为0则连通状态为正常
                 midware_data['STATUS'] = '1'
             else:
@@ -231,16 +217,42 @@ def midware_data():
                 midware_data['CURCONNS'] = str(0)
             midware_data['MIDDLEWARE_JVM'] = 'no jvm'
             midware_data['DBNULLSELECTTIME'] = 'null'
-            midware_data['MIDDLEWARE_NAME'] = 'vsftp'
+            midware_data['MIDDLEWARE_NAME'] = 'fastdfs'
             midware_data['SEQID'] = get_seq()
             data.append(midware_data)
-        if ip == '192.168.77.24' or ip == '192.168.77.20' or ip == '192.168.77.6':  # 这里是redis中间件
+        if ip == '192.168.77.210' or ip == '192.168.77.211' or ip == '192.168.77.212' or ip == '192.168.77.213':  # 这里是fastdis,默认256个连接管理中间件
+            username = 'root'
+            password = 'zwfw2wsx#EDC'
+            port = '22'
             midware_data['IP'] = ip
             result = python_ssh_command(ip, int(port), username, password,
-                                        status='ps -ef|grep -v grep|grep redis |wc -l',
-                                        curr="cd /usr/local/redis && ./redis-cli info clients|grep connected_clients|awk -F':' '{print $2}'")
+                                        status='ps -ef|grep -v grep|grep fdfs |wc -l',
+                                        curr='netstat -ant| grep 23000|grep EST|wc -l')
             midware_data['ID'] = '3'  # 3为中间件，4为数据库
-            midware_data['MAXCONNS'] = '1000'
+            midware_data['MAXCONNS'] = '256'
+            if len(result)>=1 and (result[0] != 0 or  result[0]!=[]):  # 不为0则连通状态为正常
+                midware_data['STATUS'] = '1'
+            else:
+                midware_data['STATUS'] = '0'
+            if len(result)>=2 and result[1]!=[]:#当前连接数
+                midware_data['CURCONNS'] = result[1]
+            else:
+                midware_data['CURCONNS'] = str(0)
+            midware_data['MIDDLEWARE_JVM'] = 'no jvm'
+            midware_data['DBNULLSELECTTIME'] = 'null'
+            midware_data['MIDDLEWARE_NAME'] = 'fastdfs'
+            midware_data['SEQID'] = get_seq()
+            data.append(midware_data)
+        if ip == '192.168.77.80' or ip == '192.168.77.81':  # 这里是nginx中间件
+            username = 'root'
+            password = 'yzw5tgb^YHN'
+            port = '22'
+            midware_data['IP'] = ip
+            result = python_ssh_command(ip, int(port), username, password,
+                                        status='ps -ef|grep -v grep|grep oracle |wc -l',
+                                        curr="netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a,S[a]}'|grep EST|awk '{print $2}'")
+            midware_data['ID'] = '3'  # 3为中间件，4为数据库
+            midware_data['MAXCONNS'] = '1500'
             if len(result)>=1 and (result[0] != 0 or  result[0]!=[]):  # 不为0则连通状态为正常
                 midware_data['STATUS'] = '1'
             else:
@@ -251,14 +263,15 @@ def midware_data():
                 midware_data['CURCONNS'] = '0'
             midware_data['MIDDLEWARE_JVM'] = 'no jvm'
             midware_data['DBNULLSELECTTIME'] = 'null'
-            midware_data['MIDDLEWARE_NAME'] = 'redis'
+            midware_data['MIDDLEWARE_NAME'] = 'nginx'
             midware_data['SEQID'] = get_seq()
             data.append(midware_data)
-        if ip == '192.168.77.32' or ip == '192.168.77.33':  # 这里是数据库中间件
+        if ip == '192.168.77.247' or ip == '192.168.77.248':  # 这里是nginx中间件
+
             midware_data['IP'] = ip
             result = python_ssh_command(ip, int(port), username, password,
                                         status='ps -ef|grep -v grep|grep oracle |wc -l',
-                                        curr='ps -ef|grep -v grep|grep oracle |wc -l')
+                                        curr="netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a,S[a]}'|grep EST|awk '{print $2}'")
             midware_data['ID'] = '4'  # 3为中间件，4为数据库
             midware_data['MAXCONNS'] = '1500'
             if len(result)>=1 and (result[0] != 0 or  result[0]!=[]):  # 不为0则连通状态为正常
@@ -271,17 +284,24 @@ def midware_data():
                 midware_data['CURCONNS'] = '0'
             midware_data['MIDDLEWARE_JVM'] = 'no jvm'
             midware_data['DBNULLSELECTTIME'] = 'null'
-            midware_data['MIDDLEWARE_NAME'] = 'oracle'
+            midware_data['MIDDLEWARE_NAME'] = 'nginx'
             midware_data['SEQID'] = get_seq()
             data.append(midware_data)
-        if ip == '192.168.77.16' or ip == '192.168.77.17' or ip == '192.168.77.18' or ip == '192.168.77.19':  # 有jvm的，是tomcat中间件
+        if ip == '192.168.77.160' or ip == '192.168.77.161' or ip == '192.168.77.162' or ip == '192.168.77.163'\
+                or ip == '192.168.77.164' or ip == '192.168.77.165' or ip == '192.168.77.166' or ip == '192.168.77.167'\
+                or ip == '192.168.77.168' or ip == '192.168.77.169' or ip == '192.168.77.170' or ip == '192.168.77.171'\
+                or ip == '192.168.77.172' or ip == '192.168.77.173' or ip == '192.168.77.174' or ip == '192.168.77.175'\
+                or ip == '192.168.77.176' or ip == '192.168.77.177' or ip == '192.168.77.178' or ip == '192.168.77.179':  # 有jvm的，是jar中间件
+            username = 'root'
+            password = 'zwfw2wsx#EDC'
+            port = '22'
             midware_data['IP'] = ip
             result = python_ssh_command(ip, int(port), username, password,
                                         status='ps -ef|grep -v grep|grep java |wc -l',
-                                        curr='netstat -ant|grep 8081|grep EST|wc -l',
-                                        jvm="/opt/jdk1.8.0_171/bin/jmap -heap `/opt/jdk1.8.0_171/bin/jps |grep Bootstrap|cut -d ' ' -f1`|grep -A4 'Eden Space'|grep '% used'|awk -F' ' '{print $1}'")
+                                        curr='netstat -ant|grep 8080|grep EST|wc -l',
+                                        jvm="/usr/java/jdk1.8.0_181/bin/jmap -heap `/usr/java/jdk1.8.0_181/bin/jps |grep Bootstrap|cut -d ' ' -f1`|grep -A4 'Eden Space'|grep '% used'|awk -F' ' '{print $1}'")
             midware_data['ID'] = '3'  # 3为中间件，4为数据库
-            midware_data['MAXCONNS'] = '600'
+            midware_data['MAXCONNS'] = '256'
             print("获取jvm",result)
             if len(result)>=1 and (result[0] != 0 or  result[0]!=[]):  # 不为0则连通状态为正常
                 midware_data['STATUS'] = '1'
@@ -307,9 +327,7 @@ def midware_data():
     start = time.time()
     try:
         # 处理业务系统数据
-        #MIDDLEWARE_NAME,STATUS,MAXCONNS
-        #sql_mid = "insert into MID_DB_DATA(MIDDLEWARE_NAME,STATUS,MAXCONNS,CURCONNS,MIDDLEWARE_JVM,ID,IP,SEQID) values (:1,:2,:3,:4,:5,:6,:7,:8)"
-        sql_mid = "insert into MID_DB_DATA(MIDDLEWARE_NAME,STATUS,MAXCONNS,CURCONNS,MIDDLEWARE_JVM,ID,IP,SEQID) values (:1,:2,:3,:4,:5,:6,:7,:8)"
+        sql_mid = "insert into MID_DB_APP(MIDDLEWARE_NAME,STATUS,MAXCONNS,CURCONNS,MIDDLEWARE_JVM,ID,IP,SEQID) values (:1,:2,:3,:4,:5,:6,:7,:8)"
         # sql_mid = 'select * from dual'
         for i in data:
             print("i",i)
@@ -335,7 +353,4 @@ def midware_data():
     orcl_conn.close()
     logging.info("插入表%s共耗时%s秒" % ('MID_DB_DATA', end - start))
     # return data
-if __name__ == '__main__':
-    # #资源内部id,业务系统1，接口2，中间件3，数据库4
 
-    get_system_data()
