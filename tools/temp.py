@@ -27,7 +27,15 @@ def get_system_data():
     # {"COMENUM": 124260, "DTIME": "03-21"}]
     #拼接当前日期
     localtime = time.localtime(time.time())
-    re_str = str(0)+str(localtime.tm_mon)+'-0'+str(localtime.tm_mday)
+    print("localtime",localtime)
+    if localtime.tm_mon<10 and localtime.tm_mday<10:
+        re_str = str(0)+str(localtime.tm_mon)+'-0'+str(localtime.tm_mday)
+    if localtime.tm_mon<10 and localtime.tm_mday>10:
+        re_str = str(0)+str(localtime.tm_mon)+'-'+str(localtime.tm_mday)
+    if localtime.tm_mon > 10 and localtime.tm_mday < 10:
+        re_str = str(localtime.tm_mon) + '-0' + str(localtime.tm_mday)
+    else:#都大于10
+        re_str = str(localtime.tm_mon) + '-' + str(localtime.tm_mday)
     print("localtime",re_str)
 
     if data1 != None and data1 !='':
