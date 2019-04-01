@@ -123,8 +123,9 @@ def get_system_data():
         re_str = str(0)+str(localtime.tm_mon)+'-'+str(localtime.tm_mday)
     if localtime.tm_mon > 10 and localtime.tm_mday < 10:
         re_str = str(localtime.tm_mon) + '-0' + str(localtime.tm_mday)
-    else:#都大于10
+    if localtime.tm_mon >= 10 and localtime.tm_mday >= 10:
         re_str = str(localtime.tm_mon) + '-' + str(localtime.tm_mday)
+    system_data['current_pv'] = ''
     if data1 != None and data1 !='':
         a = json.loads(data1[9:].strip('(').strip(')'))
         print("日访问量",a['ridata'])

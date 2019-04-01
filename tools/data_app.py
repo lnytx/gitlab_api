@@ -78,6 +78,7 @@ def get_system_data():
     print("执行get_system_data")
     system_data={}
     url_app = 'http://dev-pass.ehbapp.hubei.gov.cn:8050/hbzwAppServer/app/app/ok'#政务服务网域名
+    url_app = 'http://192.168.77.160:8080/hbzwAppServer/app/app/ok'#内网IP
     data_text = requests.get(url_app)
     data1 = data_text.text
     # {"COMENUM": 124260, "DTIME": "03-21"}]
@@ -109,7 +110,7 @@ def get_system_data():
 
     orcl_conn = oracle_connect()
     orcl_cursor = orcl_conn.cursor()
-    logging.info("执行插入表:%s" % 'SERVICE_SYSTEM')
+    logging.info("执行插入表:%s" % 'SERVICE_SYSTEM_APP')
     start = time.time()
     try:
         # 处理业务系统数据
@@ -124,17 +125,17 @@ def get_system_data():
         d.append(system_data['url'])
         d.append(system_data['seqid'])
         d.append(system_data['weburl'])
-        sql_system = "insert into SERVICE_SYSTEM(CURUV,CURPV,RESPONSETIME,STATUSCODE,MAXTIME,MINITIME,AVGTIME,INTERFACEURL,SEQID,WEBURL) values (:1,:2,:3,:4,:5,:6,:7,:8,:9,:10)"
+        sql_system = "insert into SERVICE_SYSTEM_APP(CURUV,CURPV,RESPONSETIME,STATUSCODE,MAXTIME,MINITIME,AVGTIME,INTERFACEURL,SEQID,WEBURL) values (:1,:2,:3,:4,:5,:6,:7,:8,:9,:10)"
         orcl_cursor.execute(sql_system, d)#执行sql语句
     except Exception as e:
-        logging.error('插入数据库SERVICE_SYSTEM报错error:%s' % str(e))
+        logging.error('插入数据库SERVICE_SYSTEM_APP报错error:%s' % str(e))
     # orcl_cursor.execute("insert into MID_DB_DATA(STATUS,MAXCONNS,CURCONNS,MIDDLEWARE_JVM,ID,SEQID) values " \
     # "('false','200','100','10%','3',SEQ_ID.NEXTVAL)")
     orcl_conn.commit()
     end = time.time()
     orcl_cursor.close()
     orcl_conn.close()
-    logging.info("插入表%s共耗时%s秒" % ('SERVICE_SYSTEM', end - start))
+    logging.info("插入表%s共耗时%s秒" % ('SERVICE_SYSTEM_APP', end - start))
 
 
 

@@ -34,10 +34,10 @@ def get_system_data():
         re_str = str(0)+str(localtime.tm_mon)+'-'+str(localtime.tm_mday)
     if localtime.tm_mon > 10 and localtime.tm_mday < 10:
         re_str = str(localtime.tm_mon) + '-0' + str(localtime.tm_mday)
-    else:#都大于10
+    if localtime.tm_mon >= 10 and localtime.tm_mday >= 10:
         re_str = str(localtime.tm_mon) + '-' + str(localtime.tm_mday)
-    print("localtime",re_str)
-
+    print("re_str",re_str)
+    system_data['current_pv'] = ''
     if data1 != None and data1 !='':
         a = json.loads(data1[9:].strip('(').strip(')'))
         print("日访问量",a['ridata'])
@@ -75,6 +75,7 @@ def get_system_data():
     # system_data['seqid'] = get_seq()
     system_data['url'] = url3
     system_data['weburl'] = 'weburl'
+    print(system_data)
 
 if __name__=='__main__':
     get_system_data()
